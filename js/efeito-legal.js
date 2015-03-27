@@ -7,6 +7,7 @@
     var VARIACAO_DELAY = 200;
     var INTERVALO_TROCA = 15;
     var CARACTERES = ['1', '0', '!', '@', '#', '$', '%', '*', '(', ')', '£', '¢', '¬', '{', '[', ']', '}', '^', '<', '>', ',', '.', ';', ':', '?', '/', '|', '\\', "'", '"', '-', '_', '=', '+', '§'];
+    var timeoutsEfeito = [];
 
     var charAleatorio = function(){
         return CARACTERES[parseInt(Math.random() * (CARACTERES.length-1))];
@@ -17,6 +18,12 @@
         textResult+=char;
         textResult+= text.substring(pos+1, text.length);
         elem.textContent = textResult;
+    };
+    var limpaTimeouts = function(){
+        for(var i=0; i<timeoutsEfeito.length; i++){
+            clearTimeout(timeoutsEfeito[i]);
+        }
+        timeoutsEfeito = [];
     };
 
 
@@ -30,13 +37,13 @@
         var t = 0;
         for(var i=1; i<tam; i++){
             var t0 = t+tempo();
-            setTimeout(
+            timeoutsEfeito.push(setTimeout(
                 function(){
                     elem.textContent = charAleatorio() + elem.textContent;
-                }, t0);
+                }, t0));
             t+=TEMPO_MINIMO;
         }
-        setTimeout(function(){ callback(arg0, arg1); }, tam*TEMPO_MINIMO + VARIACAO_DELAY);
+        timeoutsEfeito.push(setTimeout(function(){ callback(arg0, arg1); }, tam*TEMPO_MINIMO + VARIACAO_DELAY));
     };
 
    var projetos = document.getElementsByClassName('js-projeto');
@@ -47,14 +54,15 @@
        projeto.addEventListener('mouseenter', function(ev){
            var caption = this.getElementsByClassName('caption')[0];
            var text = caption.textContent;
+           limpaTimeouts();
            zeraEPreenche(caption, function(c, text){
                var tam = text.length;
                var t = TEMPO_MINIMO;
                for(var i=0; i<tam; i++){
-                   setTimeout(
+                   timeoutsEfeito.push(setTimeout(
                        function(i){
                            trocaChar(caption, text.substring(i, i+1), i);
-                       }, t + tempo(), i);
+                       }, t + tempo(), i));
                    t+=TEMPO_MINIMO;
                }
            }, caption, text);
@@ -66,6 +74,7 @@
            }
        });
        projeto.addEventListener('mouseleave', function(){
+           limpaTimeouts();
            var caption = this.getElementsByClassName('caption')[0];
            caption.textContent = caption.getAttribute('data-text');
        });
