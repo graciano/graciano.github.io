@@ -3,36 +3,40 @@
  */
 (function(){
 
-    var TEMPO_MINIMO = 200;
-    var VARIACAO_DELAY = 500;
+    var TEMPO_MINIMO = 20;
+    var VARIACAO_DELAY = 200;
     var INTERVALO_TROCA = 15;
     var CARACTERES = ['1', '0', '!', '@', '#', '$', '%', '*', '(', ')', '£', '¢', '¬', '{', '[', ']', '}', '^', '<', '>', ',', '.', ';', ':', '?', '/', '|', '\\', "'", '"', '-', '_', '=', '+', '§'];
 
     var charAleatorio = function(){
         return CARACTERES[parseInt(Math.random() * (CARACTERES.length-1))];
     };
-    var trocaChar = function(elem, char, iMaximo){
+    var trocaChar = function(elem, char, pos){
         var text = elem.textContent;
-        if(!iMaximo)
-            iMaximo = text.length;
-        var pos = parseInt(iMaximo * Math.random());
         var textResult = ""+text.substring(0, pos);
         textResult+=char;
         textResult+= text.substring(pos+1, text.length);
         elem.textContent = textResult;
     };
 
+
+    var tempo = function(){
+        return TEMPO_MINIMO + parseInt(Math.random() * VARIACAO_DELAY);
+    };
+
     var zeraEPreenche = function(elem, callback, arg0, arg1){
         var tam = elem.textContent.length;
         elem.textContent = charAleatorio();
+        var t = 0;
         for(var i=1; i<tam; i++){
-            var tempo = TEMPO_MINIMO + parseInt(Math.random() * VARIACAO_DELAY);
+            var t0 = t+tempo();
             setTimeout(
                 function(){
                     elem.textContent = charAleatorio() + elem.textContent;
-                }, tempo);
+                }, t0);
+            t+=TEMPO_MINIMO;
         }
-        setTimeout(function(){ callback(arg0, arg1); }, TEMPO_MINIMO + VARIACAO_DELAY);
+        setTimeout(function(){ callback(arg0, arg1); }, tam*TEMPO_MINIMO + VARIACAO_DELAY);
     };
 
    var projetos = document.getElementsByClassName('js-projeto');
@@ -45,11 +49,13 @@
            var text = caption.textContent;
            zeraEPreenche(caption, function(c, text){
                var tam = text.length;
+               var t = TEMPO_MINIMO;
                for(var i=0; i<tam; i++){
                    setTimeout(
-                       (function(i){
-                           caption.textContent = caption.textContent.substring(1, tam)+text[i];
-                       })(i), TEMPO_MINIMO + parseInt(Math.random() * VARIACAO_DELAY));
+                       function(i){
+                           trocaChar(caption, text.substring(i, i+1), i);
+                       }, t + tempo(), i);
+                   t+=TEMPO_MINIMO;
                }
            }, caption, text);
            var event = ev || window.event;
