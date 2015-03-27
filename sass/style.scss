@@ -44,8 +44,10 @@ header{
   h3{
     font-size: 2em;
   }
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 80%;
+  margin-bottom: 2em;
   .projetos {
     width: 100%;
     .projeto {
@@ -60,8 +62,9 @@ header{
       }
       .caption {
         margin: 0 auto;
-        font-size: 1.4em;
+        font-size: 1.2em;
         padding-top: 2em;
+        height: 2em;
       }
     }
     .projeto:hover{
@@ -71,7 +74,7 @@ header{
 }
 
 footer {
-  padding-top: 2em;
+  border-top: #000 1px solid;
   @include centraliza();
   ul {
     list-style: none;
