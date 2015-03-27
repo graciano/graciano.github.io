@@ -69,5 +69,9 @@
            })(this), DURACAO_EFEITO);
            mostraLetras(this);
        });
+       projeto.addEventListener('mouseout', function(){
+           var caption = this.getElementsByClassName('caption')[0];
+           caption.textContent = caption.getAttribute('data-text');
+       });
    }
 })();
