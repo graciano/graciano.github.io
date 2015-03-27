@@ -14,11 +14,19 @@
 *{
   font-family: 'inconsolatamedium', serif;
 }
+
+$breakpoint: 768px;
+
 @mixin centraliza(){
-  margin: 0 auto;
-  width: 80%;
-  text-align: center;
+  @media(min-width: $breakpoint){
+    margin: 0 auto;
+    width: 80%;
+  }
+  @media(max-width: $breakpoint){
+    margin: 0 auto;
+  }
 }
+
 
 @mixin fadeIn($tempo){
   -webkit-transition: opacity $tempo ease;
@@ -33,7 +41,13 @@
 header{
   @include centraliza();
   h1{
-    font-size: 5em;
+    text-align: center;
+    @media (min-width: $breakpoint) {
+      font-size: 5em;
+    }
+    @media(max-width: $breakpoint) {
+      font-size: 3em;
+    }
   }
   h2{
     font-size: 2em;
@@ -46,16 +60,32 @@ header{
   }
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  @media(min-width: $breakpoint){
+    width: 80%;
+  }
+  @media (max-width: $breakpoint) {
+    width: 100%;
+  }
   margin-bottom: 2em;
   .projetos {
     width: 100%;
     .projeto {
-      opacity: 0.5;
-      width: 15%;
-      display: inline-block;
-      padding: 0.5em;
-      margin-left: 3em;
+      @media (min-width: $breakpoint){
+        width: 15%;
+        opacity: 0.5;
+        padding: 0.5em;
+        margin-left: 3em;
+        display: inline-block;
+      }
+      @media (max-width: $breakpoint) {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+        .caption{
+          padding-left: 2em;
+        }
+      }
       border: #000 1px solid;
       img {
         width: 100%;
@@ -67,8 +97,10 @@ header{
         height: 2em;
       }
     }
-    .projeto:hover{
-      @include fadeIn(0.35s);
+    @media(min-width: $breakpoint){
+      .projeto:hover {
+        @include fadeIn(0.35s);
+      }
     }
   }
 }
@@ -76,11 +108,20 @@ header{
 footer {
   border-top: #000 1px solid;
   @include centraliza();
+  text-align: center;
   ul {
     list-style: none;
-    li{
-      display: inline-block;
-      padding-right: 3em;
+    @media(min-width: $breakpoint){
+      li{
+        display: inline-block;
+        padding-right: 3em;
+      }
+    }
+    @media(max-width: $breakpoint){
+      li{
+        font-size: 1.2em;
+        padding-bottom: 0.5em;
+      }
     }
   }
 }

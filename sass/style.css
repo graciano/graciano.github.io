@@ -8,32 +8,56 @@
 * {
   font-family: 'inconsolatamedium', serif; }
 
-header {
-  margin: 0 auto;
-  width: 80%;
+@media (min-width: 768px) {
+  header {
+    margin: 0 auto;
+    width: 80%; } }
+@media (max-width: 768px) {
+  header {
+    margin: 0 auto; } }
+header h1 {
   text-align: center; }
-  header h1 {
-    font-size: 5em; }
-  header h2 {
-    font-size: 2em;
-    padding-left: 1em; }
+  @media (min-width: 768px) {
+    header h1 {
+      font-size: 5em; } }
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 3em; } }
+header h2 {
+  font-size: 2em;
+  padding-left: 1em; }
 
 .conteudo {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
   margin-bottom: 2em; }
   .conteudo h3 {
     font-size: 2em; }
+  @media (min-width: 768px) {
+    .conteudo {
+      width: 80%; } }
+  @media (max-width: 768px) {
+    .conteudo {
+      width: 100%; } }
   .conteudo .projetos {
     width: 100%; }
     .conteudo .projetos .projeto {
-      opacity: 0.5;
-      width: 15%;
-      display: inline-block;
-      padding: 0.5em;
-      margin-left: 3em;
       border: #000 1px solid; }
+      @media (min-width: 768px) {
+        .conteudo .projetos .projeto {
+          width: 15%;
+          opacity: 0.5;
+          padding: 0.5em;
+          margin-left: 3em;
+          display: inline-block; } }
+      @media (max-width: 768px) {
+        .conteudo .projetos .projeto {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 2em; }
+          .conteudo .projetos .projeto .caption {
+            padding-left: 2em; } }
       .conteudo .projetos .projeto img {
         width: 100%; }
       .conteudo .projetos .projeto .caption {
@@ -41,23 +65,34 @@ header {
         font-size: 1.2em;
         padding-top: 2em;
         height: 2em; }
-    .conteudo .projetos .projeto:hover {
-      -webkit-transition: opacity 0.35s ease;
-      -moz-transition: opacity 0.35s ease;
-      -ms-transition: opacity 0.35s ease;
-      -o-transition: opacity 0.35s ease;
-      transition: opacity 0.35s ease;
-      opacity: 1; }
+    @media (min-width: 768px) {
+      .conteudo .projetos .projeto:hover {
+        -webkit-transition: opacity 0.35s ease;
+        -moz-transition: opacity 0.35s ease;
+        -ms-transition: opacity 0.35s ease;
+        -o-transition: opacity 0.35s ease;
+        transition: opacity 0.35s ease;
+        opacity: 1; } }
 
 footer {
   border-top: #000 1px solid;
-  margin: 0 auto;
-  width: 80%;
   text-align: center; }
+  @media (min-width: 768px) {
+    footer {
+      margin: 0 auto;
+      width: 80%; } }
+  @media (max-width: 768px) {
+    footer {
+      margin: 0 auto; } }
   footer ul {
     list-style: none; }
-    footer ul li {
-      display: inline-block;
-      padding-right: 3em; }
+    @media (min-width: 768px) {
+      footer ul li {
+        display: inline-block;
+        padding-right: 3em; } }
+    @media (max-width: 768px) {
+      footer ul li {
+        font-size: 1.2em;
+        padding-bottom: 0.5em; } }
 
 /*# sourceMappingURL=style.css.map */
