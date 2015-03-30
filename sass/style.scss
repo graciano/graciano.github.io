@@ -41,6 +41,7 @@ $breakpoint: 768px;
 header{
   @include centraliza();
   h1{
+    margin:0;
     text-align: center;
     @media (min-width: $breakpoint) {
       font-size: 5em;
@@ -70,8 +71,11 @@ header{
   .projetos {
     width: 100%;
     .projeto {
+      vertical-align:top;
+      margin-bottom: 2em;
+      border: #000 1px solid;
       @media (min-width: $breakpoint){
-        width: 15%;
+        width: 25%;
         opacity: 0.5;
         padding: 0.5em;
         margin-left: 3em;
@@ -81,14 +85,13 @@ header{
         width: 80%;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 2em;
         .caption{
           padding-left: 2em;
         }
       }
-      border: #000 1px solid;
       img {
         width: 100%;
+        max-height: 8em;
       }
       .caption {
         margin: 0 auto;

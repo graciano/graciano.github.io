@@ -4,8 +4,8 @@
 (function(){
 
 
-    var TEMPO_MINIMO = 20;
-    var VARIACAO_DELAY = 60;
+    var TEMPO_MINIMO = 10;
+    var VARIACAO_DELAY = 70;
     var INTERVALO_TROCA = 15;
     var CARACTERES = ['1', '0', '!', '@', '#', '$', '%', '*', '(', ')', '£', '¢', '¬', '{', '[', ']', '}', '^', '<', '>', ',', '.', ';', ':', '?', '/', '|', '\\', "'", '"', '-', '_', '=', '+', '§'];
     var timeoutsEfeito = [];
@@ -71,7 +71,7 @@
 
     var desligaEvento = function(ev, context){
         limpaTimeouts();
-        var caption = context.getElementsByClassName('caption')[0];
+        var caption = context.getElementsByClassName('js-caption')[0];
         caption.textContent = caption.getAttribute('data-text');
     };
 
