@@ -40,6 +40,7 @@
             timeoutsEfeito.push(setTimeout(
                 function(){
                     elem.textContent = charAleatorio() + elem.textContent;
+
                 }, t0));
             t+=TEMPO_MINIMO;
         }
@@ -49,6 +50,7 @@
     var disparaEvento = function(ev, context){
         var caption = context.getElementsByClassName('caption')[0];
         var text = caption.textContent;
+        caption.setAttribute('data-text', text);
         limpaTimeouts();
         zeraEPreenche(caption, function(c, text){
             var tam = text.length;
@@ -79,7 +81,6 @@
     for(var i=0; i<projetos.length; i++){
 
         var projeto = projetos[i];
-        projeto.setAttribute('data-state', 'false');
 
         projeto.addEventListener('mouseenter', function(ev){
             disparaEvento(ev, this);
