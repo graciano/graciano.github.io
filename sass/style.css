@@ -89,7 +89,14 @@ header h1 {
         -ms-transition: opacity 0.35s ease;
         -o-transition: opacity 0.35s ease;
         transition: opacity 0.35s ease;
-        opacity: 1; } }
+        opacity: 1; }
+        .conteudo .projetos .projeto:hover .link {
+          -webkit-transition: opacity 0.5s ease;
+          -moz-transition: opacity 0.5s ease;
+          -ms-transition: opacity 0.5s ease;
+          -o-transition: opacity 0.5s ease;
+          transition: opacity 0.5s ease;
+          opacity: 1; } }
     @media (max-width: 768px) {
       .conteudo .projetos .projeto:hover {
         -webkit-touch-callout: none;
@@ -97,18 +104,17 @@ header h1 {
         -khtml-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        user-select: none; } }
-    .conteudo .projetos .projeto:hover .link {
-      -webkit-transition: opacity 0.5s ease;
-      -moz-transition: opacity 0.5s ease;
-      -ms-transition: opacity 0.5s ease;
-      -o-transition: opacity 0.5s ease;
-      transition: opacity 0.5s ease;
-      opacity: 1; }
+        user-select: none; }
+        .conteudo .projetos .projeto:hover .link {
+          -webkit-transition: opacity 0.05s ease;
+          -moz-transition: opacity 0.05s ease;
+          -ms-transition: opacity 0.05s ease;
+          -o-transition: opacity 0.05s ease;
+          transition: opacity 0.05s ease;
+          opacity: 1; } }
 
 footer {
-  border-top: #000 1px solid;
-  text-align: center; }
+  border-top: #000 1px solid; }
   @media (min-width: 768px) {
     footer {
       margin: 0 auto;
@@ -116,6 +122,9 @@ footer {
   @media (max-width: 768px) {
     footer {
       margin: 0 auto; } }
+  @media (min-width: 768px) {
+    footer {
+      text-align: center; } }
   footer ul {
     list-style: none; }
     @media (min-width: 768px) {
