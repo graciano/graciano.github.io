@@ -4,8 +4,8 @@
 (function(){
 
 
-    var TEMPO_MINIMO = 10;
-    var VARIACAO_DELAY = 70;
+    var TEMPO_MINIMO = 20;
+    var VARIACAO_DELAY = 50;
     var INTERVALO_TROCA = 15;
     var CARACTERES = ['1', '0', '!', '@', '#', '$', '%', '*', '(', ')', '£', '¢', '¬', '{', '[', ']', '}', '^', '<', '>', ',', '.', ';', ':', '?', '/', '|', '\\', "'", '"', '-', '_', '=', '+', '§'];
     var timeoutsEfeito = [];
@@ -31,20 +31,35 @@
         return TEMPO_MINIMO + parseInt(Math.random() * VARIACAO_DELAY);
     };
 
-    var zeraEPreenche = function(elem, callback, arg0, arg1){
-        var tam = elem.textContent.length;
-        elem.textContent = charAleatorio();
-        var t = 0;
-        for(var i=1; i<tam; i++){
-            var t0 = t+tempo();
-            timeoutsEfeito.push(setTimeout(
-                function(){
-                    elem.textContent = charAleatorio() + elem.textContent;
-
-                }, t0));
-            t+=TEMPO_MINIMO;
+    var ficaTrocandoAteVoltarCharOriginal = function(elem, posText, i, max){
+        if(i==(max-1)){
+            trocaChar(elem, elem.getAttribute('data-text').substring(posText, posText+1), posText);
         }
-        timeoutsEfeito.push(setTimeout(function(){ callback(arg0, arg1); }, tam*TEMPO_MINIMO + VARIACAO_DELAY));
+        else if(i<max){
+            trocaChar(elem, charAleatorio(), posText);
+            timeoutsEfeito.push(setTimeout(function(){
+                ficaTrocandoAteVoltarCharOriginal(elem, posText, i+1, max);
+            }, INTERVALO_TROCA));
+        }
+    };
+
+    var criaEfeito = function(elem){
+        var tam = elem.textContent.length;
+        var go = function(i){
+            if(i<tam){
+                timeoutsEfeito.push(setTimeout(function(){
+                    var t = tempo();
+                    var nTrocas = parseInt((t + (TEMPO_MINIMO * (tam - i - 1))) / INTERVALO_TROCA);
+                    var originalText = elem.getAttribute('data-text');
+                    ficaTrocandoAteVoltarCharOriginal(elem, i, 0, nTrocas);
+                }, tempo()));
+
+                timeoutsEfeito.push(setTimeout(function(){
+                    go(i+1);
+                }), tempo());
+            }
+        };
+        go(0);
     };
 
     var disparaEvento = function(ev, context){
@@ -52,17 +67,7 @@
         var text = caption.textContent;
         caption.setAttribute('data-text', text);
         limpaTimeouts();
-        zeraEPreenche(caption, function(c, text){
-            var tam = text.length;
-            var t = TEMPO_MINIMO;
-            for(var i=0; i<tam; i++){
-                timeoutsEfeito.push(setTimeout(
-                    function(i){
-                        trocaChar(caption, text.substring(i, i+1), i);
-                    }, t + tempo(), i));
-                t+=TEMPO_MINIMO;
-            }
-        }, caption, text);
+        criaEfeito(caption);
         var event = ev || window.event;
         if (event.stopPropagation) {
             event.stopPropagation();
