@@ -3,10 +3,9 @@
  */
 (function(){
 
-
-    var TEMPO_MINIMO = 20;
-    var VARIACAO_DELAY = 50;
-    var INTERVALO_TROCA = 15;
+    var TEMPO_TOTAL = 550;
+    var VARIACAO_MAXIMA = 100;
+    var INTERVALO_TROCA = 70;
     var CARACTERES = ['1', '0', '!', '@', '#', '$', '%', '*', '(', ')', '£', '¢', '¬', '{', '[', ']', '}', '^', '<', '>', ',', '.', ';', ':', '?', '/', '|', '\\', "'", '"', '-', '_', '=', '+', '§'];
     var timeoutsEfeito = [];
 
@@ -27,10 +26,6 @@
         timeoutsEfeito = [];
     };
 
-    var tempo = function(){
-        return TEMPO_MINIMO + parseInt(Math.random() * VARIACAO_DELAY);
-    };
-
     var ficaTrocandoAteVoltarCharOriginal = function(elem, posText, i, max){
         if(i==(max-1)){
             trocaChar(elem, elem.getAttribute('data-text').substring(posText, posText+1), posText);
@@ -46,23 +41,26 @@
     var criaEfeito = function(elem){
         var tam = elem.textContent.length;
         var go = function(i){
+            var tempo = TEMPO_TOTAL;
+            //garante que pelo menos a primeira letra durará o tempo todo
+            if(i!=0)
+                tempo-= parseInt(Math.random() * VARIACAO_MAXIMA);
             if(i<tam){
                 timeoutsEfeito.push(setTimeout(function(){
-                    var t = tempo();
-                    var nTrocas = parseInt((t + (TEMPO_MINIMO * (tam - i - 1))) / INTERVALO_TROCA);
-                    var originalText = elem.getAttribute('data-text');
+                    var nTrocas = parseInt(tempo / INTERVALO_TROCA);
                     ficaTrocandoAteVoltarCharOriginal(elem, i, 0, nTrocas);
-                }, tempo()));
+                }, INTERVALO_TROCA));
 
                 timeoutsEfeito.push(setTimeout(function(){
                     go(i+1);
-                }), tempo());
+                }), INTERVALO_TROCA);
             }
         };
         go(0);
     };
 
     var disparaEvento = function(ev, context){
+        limpaTimeouts();
         var caption = context.getElementsByClassName('caption')[0];
         var text = caption.textContent;
         caption.setAttribute('data-text', text);
