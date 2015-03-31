@@ -24,16 +24,26 @@ header h1 {
   @media (max-width: 768px) {
     header h1 {
       font-size: 3em; } }
-header h2 {
-  font-size: 2em;
-  padding-left: 1em; }
+@media (min-width: 768px) {
+  header h2 {
+    font-size: 2em;
+    padding-left: 1em; } }
+@media (max-width: 768px) {
+  header h2 {
+    font-size: 1.1em;
+    text-align: center; } }
 
 .conteudo {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em; }
-  .conteudo h3 {
-    font-size: 2em; }
+  @media (min-width: 768px) {
+    .conteudo h3 {
+      font-size: 2em;
+      padding-left: 1em; } }
+  @media (max-width: 768px) {
+    .conteudo h3 {
+      font-size: 1.2em; } }
   @media (min-width: 768px) {
     .conteudo {
       width: 80%; } }
@@ -46,6 +56,9 @@ header h2 {
       vertical-align: top;
       margin-bottom: 2em;
       border: #000 1px solid; }
+      .conteudo .projetos .projeto .link {
+        opacity: 0;
+        margin: 0.2em; }
       @media (min-width: 768px) {
         .conteudo .projetos .projeto {
           width: 25%;
@@ -62,7 +75,8 @@ header h2 {
             padding-left: 2em; } }
       .conteudo .projetos .projeto img {
         width: 100%;
-        max-height: 8em; }
+        max-height: 8em;
+        pointer-events: none; }
       .conteudo .projetos .projeto .caption {
         margin: 0 auto;
         font-size: 1.2em;
@@ -76,6 +90,21 @@ header h2 {
         -o-transition: opacity 0.35s ease;
         transition: opacity 0.35s ease;
         opacity: 1; } }
+    @media (max-width: 768px) {
+      .conteudo .projetos .projeto:hover {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; } }
+    .conteudo .projetos .projeto:hover .link {
+      -webkit-transition: opacity 0.5s ease;
+      -moz-transition: opacity 0.5s ease;
+      -ms-transition: opacity 0.5s ease;
+      -o-transition: opacity 0.5s ease;
+      transition: opacity 0.5s ease;
+      opacity: 1; }
 
 footer {
   border-top: #000 1px solid;
