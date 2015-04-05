@@ -16,6 +16,12 @@
 }
 
 $breakpoint: 768px;
+$borderSize: 2px;
+$colorLink: #0000EE;
+
+a, a:visited{
+  color: $colorLink;
+}
 
 @mixin centraliza(){
   @media(min-width: $breakpoint){
@@ -48,24 +54,32 @@ $breakpoint: 768px;
 
 header{
   @include centraliza();
+  padding-bottom: 2em;
   h1{
     margin:0;
     text-align: center;
     @media (min-width: $breakpoint) {
-      font-size: 5em;
+      font-size: 4.5em;
     }
     @media(max-width: $breakpoint) {
-      font-size: 3em;
+      font-size: 2.5em;
     }
   }
-  h2{
+  .servicos{
     @media (min-width: $breakpoint) {
-      font-size: 2em;
-      padding-left: 1em;
-    }
-    @media(max-width: $breakpoint) {
-      font-size: 1.1em;
       text-align: center;
+    }
+    h2{
+      @media (min-width: $breakpoint) {
+        display: inline;
+        font-size: 2em;
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+      }
+      @media(max-width: $breakpoint) {
+        font-size: 1.5em;
+        padding-left: 1em;
+      }
     }
   }
 }
@@ -76,7 +90,7 @@ header{
       padding-left: 1em;
     }
     @media(max-width: $breakpoint) {
-      font-size: 1.2em;
+      font-size: 1.3em;
     }
   }
   margin-left: auto;
@@ -91,9 +105,9 @@ header{
   .projetos {
     width: 100%;
     .projeto {
-      vertical-align:top;
+      vertical-align: middle;
       margin-bottom: 2em;
-      border: #000 1px solid;
+      border-left: #000 solid $borderSize;
       .link{
         opacity: 0;
         margin: 0.2em;
@@ -143,7 +157,7 @@ header{
 }
 
 footer {
-  border-top: #000 1px solid;
+  border-top: #000 solid 1px;
   @include centraliza();
   @media(min-width: $breakpoint){
     text-align: center;

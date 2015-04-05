@@ -8,30 +8,40 @@
 * {
   font-family: 'inconsolatamedium', serif; }
 
-@media (min-width: 768px) {
-  header {
-    margin: 0 auto;
-    width: 80%; } }
-@media (max-width: 768px) {
-  header {
-    margin: 0 auto; } }
-header h1 {
-  margin: 0;
-  text-align: center; }
+a, a:visited {
+  color: #0000EE; }
+
+header {
+  padding-bottom: 2em; }
   @media (min-width: 768px) {
-    header h1 {
-      font-size: 5em; } }
+    header {
+      margin: 0 auto;
+      width: 80%; } }
   @media (max-width: 768px) {
-    header h1 {
-      font-size: 3em; } }
-@media (min-width: 768px) {
-  header h2 {
-    font-size: 2em;
-    padding-left: 1em; } }
-@media (max-width: 768px) {
-  header h2 {
-    font-size: 1.1em;
-    text-align: center; } }
+    header {
+      margin: 0 auto; } }
+  header h1 {
+    margin: 0;
+    text-align: center; }
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 4.5em; } }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em; } }
+  @media (min-width: 768px) {
+    header .servicos {
+      text-align: center; } }
+  @media (min-width: 768px) {
+    header .servicos h2 {
+      display: inline;
+      font-size: 2em;
+      padding-right: 1.5em;
+      padding-left: 1.5em; } }
+  @media (max-width: 768px) {
+    header .servicos h2 {
+      font-size: 1.5em;
+      padding-left: 1em; } }
 
 .conteudo {
   margin-left: auto;
@@ -43,7 +53,7 @@ header h1 {
       padding-left: 1em; } }
   @media (max-width: 768px) {
     .conteudo h3 {
-      font-size: 1.2em; } }
+      font-size: 1.3em; } }
   @media (min-width: 768px) {
     .conteudo {
       width: 80%; } }
@@ -53,9 +63,9 @@ header h1 {
   .conteudo .projetos {
     width: 100%; }
     .conteudo .projetos .projeto {
-      vertical-align: top;
+      vertical-align: middle;
       margin-bottom: 2em;
-      border: #000 1px solid; }
+      border-left: #000 solid 2px; }
       .conteudo .projetos .projeto .link {
         opacity: 0;
         margin: 0.2em; }
@@ -114,7 +124,7 @@ header h1 {
           opacity: 1; } }
 
 footer {
-  border-top: #000 1px solid; }
+  border-top: #000 solid 1px; }
   @media (min-width: 768px) {
     footer {
       margin: 0 auto;
