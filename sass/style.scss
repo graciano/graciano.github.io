@@ -33,6 +33,11 @@ a, a:visited{
   }
 }
 
+@mixin centralizaHorizontal(){
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 @mixin fadeIn($tempo){
   -webkit-transition: opacity $tempo ease;
@@ -93,8 +98,7 @@ header{
       font-size: 1.3em;
     }
   }
-  margin-left: auto;
-  margin-right: auto;
+  @include centralizaHorizontal();
   @media(min-width: $breakpoint){
     width: 80%;
   }
@@ -121,8 +125,7 @@ header{
       }
       @media (max-width: $breakpoint) {
         width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        @include centralizaHorizontal();
         .caption{
           padding-left: 2em;
         }
@@ -179,81 +182,61 @@ footer {
   }
 }
 /*KONAMI DOGE MUCH NICE CODEZ*/
-
-@mixin slideLeft($time){
-  animation-name: slideLeft;
-  -webkit-animation-name: slideLeft;
-
-  animation-duration: $time;
-  -webkit-animation-duration: $time;
-
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-
-  visibility: visible !important;
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(150%);
-  }
-  50%{
-    transform: translateX(-8%);
-  }
-  65%{
-    transform: translateX(4%);
-  }
-  80%{
-    transform: translateX(-4%);
-  }
-  95%{
-    transform: translateX(2%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-@-webkit-keyframes slideLeft {
-  0% {
-    -webkit-transform: translateX(150%);
-  }
-  50%{
-    -webkit-transform: translateX(-8%);
-  }
-  65%{
-    -webkit-transform: translateX(4%);
-  }
-  80%{
-    -webkit-transform: translateX(-4%);
-  }
-  95%{
-    -webkit-transform: translateX(2%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-  }
-}
-
-
+$numberOfAnimations: 3;
+$incrementAnimation: 1.2;
 
 #konami{
   position: absolute;
-  visibility: hidden;
+  left:30%;
   top: 0;
   h1{
     color: green;
-    padding-left: 4em;
+    position: relative;
+    left: 15%;
   }
   h2{
     color: deeppink;
-    padding-left: 2em;
+    position: relative;
+    left: 10%;
   }
   h3{
     color: blue;
-    padding-left: 5em;
+    position: relative;
+    left: 25%;
   }
 }
-.slideLeft{
-  @include slideLeft(2s);
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@mixin fadeInAnimation($tempo){
+  -webkit-animation: fadein $tempo;
+     -moz-animation: fadein $tempo;
+      -ms-animation: fadein $tempo;
+       -o-animation: fadein $tempo;
+          animation: fadein $tempo;
+}
+
+@for $i from 0 through $numberOfAnimations {
+  .animate-random-#{$i}{
+    @include fadeInAnimation(((1+$i)*$incrementAnimation) * 1s);
+  }
 }
