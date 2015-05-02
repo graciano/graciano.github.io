@@ -11,13 +11,18 @@
   font-style: normal;
 
 }
-*{
-  font-family: 'inconsolatamedium', serif;
-}
 
 $breakpoint: 768px;
 $borderSize: 2px;
-$colorLink: #0000EE;
+$colorLink: #3333DD;
+$colorBackground: #FFF;
+$colorText: #333;
+
+*{
+  font-family: 'inconsolatamedium', serif;
+  background-color: $colorBackground;
+  color: $colorText;
+}
 
 a, a:visited{
   color: $colorLink;
@@ -55,6 +60,35 @@ a, a:visited{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+$inicialBlinkOpacity: 0.8;
+@keyframes blink-frame {
+  from { opacity: $inicialBlinkOpacity; }
+  to   { opacity: 1; }
+}
+@-moz-keyframes blink-frame {
+  from { opacity: $inicialBlinkOpacity; }
+  to   { opacity: 1; }
+}
+@-webkit-keyframes blink-frame {
+  from { opacity: $inicialBlinkOpacity; }
+  to   { opacity: 1; }
+}
+@-ms-keyframes blink-frame {
+  from { opacity: $inicialBlinkOpacity; }
+  to   { opacity: 1; }
+}
+@-o-keyframes blink-frame {
+  from { opacity: $inicialBlinkOpacity; }
+  to   { opacity: 1; }
+}
+
+@mixin blinkAnimation($tempo){
+  -webkit-animation: blink-frame $tempo infinite;
+     -moz-animation: blink-frame $tempo infinite;
+      -ms-animation: blink-frame $tempo infinite;
+       -o-animation: blink-frame $tempo infinite;
+          animation: blink-frame $tempo infinite;
 }
 
 header{
@@ -111,14 +145,12 @@ header{
     .projeto {
       vertical-align: middle;
       margin-bottom: 2em;
-      border-left: #000 solid $borderSize;
       .link{
         opacity: 0;
         margin: 0.2em;
       }
       @media (min-width: $breakpoint){
         width: 25%;
-        opacity: 0.5;
         padding: 0.5em;
         margin-left: 3em;
         display: inline-block;
@@ -143,8 +175,10 @@ header{
       }
     }
     .projeto:hover {
+      img{
+        @include blinkAnimation(0.1s);
+      }
       @media(min-width: $breakpoint) {
-        @include fadeIn(0.35s);
         .link{
           @include fadeIn(0.5s);
         }
@@ -160,7 +194,7 @@ header{
 }
 
 footer {
-  border-top: #000 solid 1px;
+  border-top: $colorText solid 1px;
   @include centraliza();
   @media(min-width: $breakpoint){
     text-align: center;
@@ -183,7 +217,7 @@ footer {
 }
 /*KONAMI DOGE MUCH NICE CODEZ*/
 $numberOfAnimations: 3;
-$incrementAnimation: 1.2;
+$incrementAnimation: 0.8;
 
 #konami{
   position: absolute;
