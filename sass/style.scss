@@ -122,7 +122,9 @@ a, a:visited{
       }
       img {
         width: 100%;
-        max-height: 12em;
+        @media(min-width: $breakpoint){
+          max-height: 12em;
+        }
         pointer-events: none;
         @include centraliza();
       }
