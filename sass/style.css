@@ -5,14 +5,6 @@
   src: url("../font/Inconsolata-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Inconsolata-webfont.woff2") format("woff2"), url("../font/Inconsolata-webfont.woff") format("woff"), url("../font/Inconsolata-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-* {
-  font-family: 'inconsolatamedium', serif;
-  background-color: #FFF;
-  color: #333; }
-
-a, a:visited {
-  color: #3333DD; }
-
 @keyframes blink-frame {
   from {
     opacity: 0.8; }
@@ -38,49 +30,158 @@ a, a:visited {
     opacity: 0.8; }
   to {
     opacity: 1; } }
-header {
+/*KONAMI DOGE MUCH NICE CODEZ*/
+#konami {
+  position: absolute;
+  left: 30%;
+  top: 0;
+  background-color: transparent; }
+  #konami * {
+    background-color: transparent; }
+  #konami h1 {
+    color: green;
+    position: relative;
+    left: 15%; }
+  #konami h2 {
+    color: deeppink;
+    position: relative;
+    left: 10%; }
+  #konami h3 {
+    color: blue;
+    position: relative;
+    left: 25%; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.animate-random-0 {
+  -webkit-animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -ms-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
+  animation: fadein 0.8s; }
+
+.animate-random-1 {
+  -webkit-animation: fadein 1.6s;
+  -moz-animation: fadein 1.6s;
+  -ms-animation: fadein 1.6s;
+  -o-animation: fadein 1.6s;
+  animation: fadein 1.6s; }
+
+.animate-random-2 {
+  -webkit-animation: fadein 2.4s;
+  -moz-animation: fadein 2.4s;
+  -ms-animation: fadein 2.4s;
+  -o-animation: fadein 2.4s;
+  animation: fadein 2.4s; }
+
+.animate-random-3 {
+  -webkit-animation: fadein 3.2s;
+  -moz-animation: fadein 3.2s;
+  -ms-animation: fadein 3.2s;
+  -o-animation: fadein 3.2s;
+  animation: fadein 3.2s; }
+
+* {
+  font-family: 'inconsolatamedium', sans-serif; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #333; }
+
+.header-principal {
+  color: #fff !important;
+  background-color: transparent;
   padding-bottom: 2em; }
   @media (min-width: 768px) {
-    header {
-      margin: 0 auto;
-      width: 80%; } }
-  @media (max-width: 768px) {
-    header {
+    .header-principal {
       margin: 0 auto; } }
-  header h1 {
+  @media (max-width: 768px) {
+    .header-principal {
+      margin: 0 auto; } }
+  .header-principal * {
+    background-color: transparent; }
+  .header-principal .fundo-parallax {
+    z-index: -1;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    overflow: hidden; }
+    .header-principal .fundo-parallax img {
+      width: 100%; }
+    @media (min-width: 768px) {
+      .header-principal .fundo-parallax {
+        top: -20em;
+        height: 30em; } }
+    @media (max-width: 768px) {
+      .header-principal .fundo-parallax {
+        top: 0;
+        height: 15em; } }
+  .header-principal h1 {
     margin: 0;
     text-align: center; }
     @media (min-width: 768px) {
-      header h1 {
+      .header-principal h1 {
         font-size: 4.5em; } }
     @media (max-width: 768px) {
-      header h1 {
+      .header-principal h1 {
         font-size: 2.5em; } }
   @media (min-width: 768px) {
-    header .servicos {
+    .header-principal .servicos {
       text-align: center; } }
   @media (min-width: 768px) {
-    header .servicos h2 {
+    .header-principal .servicos h2 {
       display: inline;
       font-size: 2em;
       padding-right: 1.5em;
       padding-left: 1.5em; } }
   @media (max-width: 768px) {
-    header .servicos h2 {
+    .header-principal .servicos h2 {
       font-size: 1.5em;
       padding-left: 1em; } }
+
+a, a:visited {
+  color: #3333DD; }
 
 .conteudo {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em; }
-  @media (min-width: 768px) {
-    .conteudo h3 {
-      font-size: 2em;
-      padding-left: 1em; } }
-  @media (max-width: 768px) {
-    .conteudo h3 {
-      font-size: 1.3em; } }
+  .conteudo h3 {
+    padding-left: 1em; }
+    @media (min-width: 768px) {
+      .conteudo h3 {
+        font-size: 2em; } }
+    @media (max-width: 768px) {
+      .conteudo h3 {
+        font-size: 1.3em; } }
   @media (min-width: 768px) {
     .conteudo {
       width: 80%; } }
@@ -151,14 +252,14 @@ footer {
   border-top: #333 solid 1px; }
   @media (min-width: 768px) {
     footer {
-      margin: 0 auto;
-      width: 80%; } }
+      margin: 0 auto; } }
   @media (max-width: 768px) {
     footer {
       margin: 0 auto; } }
   @media (min-width: 768px) {
     footer {
-      text-align: center; } }
+      text-align: center;
+      width: 90%; } }
   footer ul {
     list-style: none; }
     @media (min-width: 768px) {
@@ -169,76 +270,5 @@ footer {
       footer ul li {
         font-size: 1.2em;
         padding-bottom: 0.5em; } }
-
-/*KONAMI DOGE MUCH NICE CODEZ*/
-#konami {
-  position: absolute;
-  left: 30%;
-  top: 0; }
-  #konami h1 {
-    color: green;
-    position: relative;
-    left: 15%; }
-  #konami h2 {
-    color: deeppink;
-    position: relative;
-    left: 10%; }
-  #konami h3 {
-    color: blue;
-    position: relative;
-    left: 25%; }
-
-@keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-moz-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-ms-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-o-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-.animate-random-0 {
-  -webkit-animation: fadein 0.8s;
-  -moz-animation: fadein 0.8s;
-  -ms-animation: fadein 0.8s;
-  -o-animation: fadein 0.8s;
-  animation: fadein 0.8s; }
-
-.animate-random-1 {
-  -webkit-animation: fadein 1.6s;
-  -moz-animation: fadein 1.6s;
-  -ms-animation: fadein 1.6s;
-  -o-animation: fadein 1.6s;
-  animation: fadein 1.6s; }
-
-.animate-random-2 {
-  -webkit-animation: fadein 2.4s;
-  -moz-animation: fadein 2.4s;
-  -ms-animation: fadein 2.4s;
-  -o-animation: fadein 2.4s;
-  animation: fadein 2.4s; }
-
-.animate-random-3 {
-  -webkit-animation: fadein 3.2s;
-  -moz-animation: fadein 3.2s;
-  -ms-animation: fadein 3.2s;
-  -o-animation: fadein 3.2s;
-  animation: fadein 3.2s; }
 
 /*# sourceMappingURL=style.css.map */
