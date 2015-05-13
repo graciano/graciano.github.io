@@ -126,7 +126,7 @@ html, body {
       margin: 0 auto; } }
   .header-principal * {
     background-color: transparent; }
-  .header-principal .fundo-parallax {
+  .header-principal .fundo-imagem {
     z-index: -1;
     position: absolute;
     padding: 0;
@@ -134,14 +134,14 @@ html, body {
     width: 100%;
     left: 0;
     overflow: hidden; }
-    .header-principal .fundo-parallax img {
+    .header-principal .fundo-imagem img {
       width: 100%; }
-    @media (min-width: 768px) {
-      .header-principal .fundo-parallax {
+    @media (min-width: 900px) {
+      .header-principal .fundo-imagem {
         top: -20em;
         height: 30em; } }
-    @media (max-width: 768px) {
-      .header-principal .fundo-parallax {
+    @media (max-width: 900px) {
+      .header-principal .fundo-imagem {
         top: 0;
         height: 15em; } }
   .header-principal h1 {
@@ -150,22 +150,33 @@ html, body {
     @media (min-width: 768px) {
       .header-principal h1 {
         font-size: 4.5em; } }
-    @media (max-width: 768px) {
+    @media (max-width: 768px) and (min-width: 380px) {
       .header-principal h1 {
         font-size: 2.5em; } }
+    @media (max-width: 380px) {
+      .header-principal h1 {
+        font-size: 2em; } }
   @media (min-width: 768px) {
     .header-principal .servicos {
       text-align: center; } }
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     .header-principal .servicos h2 {
       display: inline;
       font-size: 2em;
       padding-right: 1.5em;
       padding-left: 1.5em; } }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) and (min-width: 768px) {
+    .header-principal .servicos h2 {
+      font-size: 2em;
+      padding-left: 1em; } }
+  @media (max-width: 768px) and (max-width: 380px) {
     .header-principal .servicos h2 {
       font-size: 1.5em;
       padding-left: 1em; } }
+  @media (max-width: 380px) {
+    .header-principal .servicos h2 {
+      font-size: 1.5em;
+      padding-left: 0.5em; } }
 
 a, a:visited {
   color: #3333DD; }
@@ -270,10 +281,15 @@ footer {
       width: 90%; } }
   footer ul {
     list-style: none; }
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
       footer ul li {
         display: inline-block;
-        padding-right: 3em; } }
+        padding-right: 2.5em; } }
+    @media (min-width: 768px) and (max-width: 900px) {
+      footer ul li {
+        display: inline-block;
+        padding-right: 1em;
+        padding-bottom: 1em; } }
     @media (max-width: 768px) {
       footer ul li {
         font-size: 1.2em;

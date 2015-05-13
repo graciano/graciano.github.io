@@ -2,6 +2,8 @@
 @import "konami";
 
 $breakpoint: 768px;
+$breakpointBig: 900px;
+$breakpointSmall: 380px;
 $borderSize: 2px;
 $colorLink: #3333DD;
 $colorBackground: #FFF;
@@ -27,7 +29,7 @@ html,body{
   *{
     background-color: rgba(0,0,0,0);
   }
-  .fundo-parallax{
+  .fundo-imagem{
     img{
       width: 100%;
     }
@@ -38,11 +40,11 @@ html,body{
     width: 100%;
     left: 0;
     overflow: hidden;
-    @media (min-width: $breakpoint) {
+    @media (min-width: $breakpointBig) {
       top: -20em;
       height: 30em;
     }
-    @media(max-width: $breakpoint) {
+    @media(max-width: $breakpointBig) {
       top: 0;
       height: 15em;
     }
@@ -54,8 +56,11 @@ html,body{
     @media (min-width: $breakpoint) {
       font-size: 4.5em;
     }
-    @media(max-width: $breakpoint) {
+    @media(max-width: $breakpoint) and (min-width: $breakpointSmall) {
       font-size: 2.5em;
+    }
+    @media(max-width: $breakpointSmall){
+      font-size: 2em;
     }
   }
   .servicos{
@@ -63,15 +68,23 @@ html,body{
       text-align: center;
     }
     h2{
-      @media (min-width: $breakpoint) {
+      @media (min-width: $breakpointBig) {
         display: inline;
         font-size: 2em;
         padding-right: 1.5em;
         padding-left: 1.5em;
       }
-      @media(max-width: $breakpoint) {
+      @media (max-width: $breakpointBig) and (min-width: $breakpoint){
+        font-size: 2em;
+        padding-left: 1em;
+      }
+      @media(max-width: $breakpoint) and (max-width: $breakpointSmall){
         font-size: 1.5em;
         padding-left: 1em;
+      }
+      @media(max-width: $breakpointSmall){
+        font-size: 1.5em;
+        padding-left: 0.5em;
       }
     }
   }
@@ -163,10 +176,17 @@ footer {
   }
   ul {
     list-style: none;
-    @media(min-width: $breakpoint){
+    @media(min-width: $breakpointBig){
       li{
         display: inline-block;
-        padding-right: 3em;
+        padding-right: 2.5em;
+      }
+    }
+    @media(min-width: $breakpoint) and (max-width: $breakpointBig){
+      li{
+        display: inline-block;
+        padding-right: 1em;
+        padding-bottom: 1em;
       }
     }
     @media(max-width: $breakpoint){
