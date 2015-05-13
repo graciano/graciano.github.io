@@ -245,11 +245,11 @@ a, a:visited {
       animation: blink-frame 0.1s infinite; }
     @media (min-width: 768px) {
       .conteudo .projetos .projeto:hover .link {
-        -webkit-transition: opacity 0.5s ease;
-        -moz-transition: opacity 0.5s ease;
-        -ms-transition: opacity 0.5s ease;
-        -o-transition: opacity 0.5s ease;
-        transition: opacity 0.5s ease;
+        -webkit-transition: opacity 0.5s ease-in;
+        -moz-transition: opacity 0.5s ease-in;
+        -ms-transition: opacity 0.5s ease-in;
+        -o-transition: opacity 0.5s ease-in;
+        transition: opacity 0.5s ease-in;
         opacity: 1; } }
     @media (max-width: 768px) {
       .conteudo .projetos .projeto:hover {
@@ -260,11 +260,11 @@ a, a:visited {
         -ms-user-select: none;
         user-select: none; }
         .conteudo .projetos .projeto:hover .link {
-          -webkit-transition: opacity 0.05s ease;
-          -moz-transition: opacity 0.05s ease;
-          -ms-transition: opacity 0.05s ease;
-          -o-transition: opacity 0.05s ease;
-          transition: opacity 0.05s ease;
+          -webkit-transition: opacity 0.05s ease-in;
+          -moz-transition: opacity 0.05s ease-in;
+          -ms-transition: opacity 0.05s ease-in;
+          -o-transition: opacity 0.05s ease-in;
+          transition: opacity 0.05s ease-in;
           opacity: 1; } }
 
 footer {

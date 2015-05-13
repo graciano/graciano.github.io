@@ -19,11 +19,11 @@
 
 
 @mixin fadeIn($tempo){
-  -webkit-transition: opacity $tempo ease;
-  -moz-transition: opacity $tempo ease;
-  -ms-transition: opacity $tempo ease;
-  -o-transition: opacity $tempo ease;
-  transition: opacity $tempo ease;
+  -webkit-transition: opacity $tempo ease-in;
+  -moz-transition: opacity $tempo ease-in;
+  -ms-transition: opacity $tempo ease-in;
+  -o-transition: opacity $tempo ease-in;
+  transition: opacity $tempo ease-in;
   opacity: 1;
 }
 
