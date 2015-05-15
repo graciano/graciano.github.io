@@ -98,6 +98,9 @@ a, a:visited{
 }
 
 .conteudo{
+  @media(max-width: $breakpoint){
+    padding-top: 1em;
+  }
   h3{
     padding-left: 1em;
     @media (min-width: $breakpoint) {

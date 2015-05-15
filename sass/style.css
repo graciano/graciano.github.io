@@ -189,6 +189,9 @@ a, a:visited {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em; }
+  @media (max-width: 768px) {
+    .conteudo {
+      padding-top: 1em; } }
   .conteudo h3 {
     padding-left: 1em; }
     @media (min-width: 768px) {
