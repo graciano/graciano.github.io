@@ -44,7 +44,11 @@ html,body{
       top: -20em;
       height: 30em;
     }
-    @media(max-width: $breakpointBig) {
+    @media(max-width: $breakpointBig) and (min-width: $breakpoint) {
+      top: 0;
+      height: 18em;
+    }
+    @media(max-width: $breakpoint) {
       top: 0;
       height: 15em;
     }
