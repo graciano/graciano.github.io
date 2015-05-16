@@ -65,10 +65,5 @@ $inicialBlinkOpacity: 0.8;
   animation: blink-frame $tempo infinite;
 }
 @mixin centraliza(){
-  @media(min-width: $breakpoint){
-    margin: 0 auto;
-  }
-  @media(max-width: $breakpoint){
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 }
