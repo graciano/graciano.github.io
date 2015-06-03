@@ -115,15 +115,10 @@ html, body {
   color: #333; }
 
 .header-principal {
+  margin: 0 auto;
   color: #fff !important;
   background-color: transparent;
   padding-bottom: 2em; }
-  @media (min-width: 768px) {
-    .header-principal {
-      margin: 0 auto; } }
-  @media (max-width: 768px) {
-    .header-principal {
-      margin: 0 auto; } }
   .header-principal * {
     background-color: transparent; }
   .header-principal .fundo-imagem {
@@ -136,11 +131,11 @@ html, body {
     overflow: hidden; }
     .header-principal .fundo-imagem img {
       width: 100%; }
-    @media (min-width: 900px) {
+    @media (min-width: 950px) {
       .header-principal .fundo-imagem {
         top: -20em;
         height: 30em; } }
-    @media (max-width: 900px) and (min-width: 768px) {
+    @media (max-width: 950px) and (min-width: 768px) {
       .header-principal .fundo-imagem {
         top: 0;
         height: 18em; } }
@@ -163,13 +158,13 @@ html, body {
   @media (min-width: 768px) {
     .header-principal .servicos {
       text-align: center; } }
-  @media (min-width: 900px) {
+  @media (min-width: 950px) {
     .header-principal .servicos h2 {
       display: inline;
       font-size: 2em;
       padding-right: 1.5em;
       padding-left: 1.5em; } }
-  @media (max-width: 900px) and (min-width: 768px) {
+  @media (max-width: 950px) and (min-width: 768px) {
     .header-principal .servicos h2 {
       font-size: 2em;
       padding-left: 1em; } }
@@ -207,20 +202,26 @@ a, a:visited {
     .conteudo {
       width: 100%; } }
   .conteudo .projetos {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
     .conteudo .projetos .projeto {
       vertical-align: middle;
       margin-bottom: 2em; }
       .conteudo .projetos .projeto .link {
         opacity: 0;
         margin: 0.2em; }
-      @media (min-width: 768px) {
+      @media (min-width: 950px) {
         .conteudo .projetos .projeto {
           width: 25%;
           padding: 0.5em;
           margin-left: 3em;
           display: inline-block; } }
-      @media (max-width: 768px) {
+      @media (max-width: 950px) and (min-width: 380px) {
+        .conteudo .projetos .projeto {
+          width: 40%;
+          padding: 0.5em;
+          display: inline-block; } }
+      @media (max-width: 380px) {
         .conteudo .projetos .projeto {
           width: 80%;
           margin-left: auto;
@@ -228,17 +229,13 @@ a, a:visited {
           .conteudo .projetos .projeto .caption {
             padding-left: 2em; } }
       .conteudo .projetos .projeto img {
-        width: 100%;
-        pointer-events: none; }
-        @media (min-width: 768px) {
+        width: 90%;
+        pointer-events: none;
+        margin: 0 auto; }
+        @media (min-width: 380px) {
           .conteudo .projetos .projeto img {
-            max-height: 12em; } }
-        @media (min-width: 768px) {
-          .conteudo .projetos .projeto img {
-            margin: 0 auto; } }
-        @media (max-width: 768px) {
-          .conteudo .projetos .projeto img {
-            margin: 0 auto; } }
+            max-height: 12em;
+            max-width: 12em; } }
       .conteudo .projetos .projeto .caption {
         margin: 0 auto;
         font-size: 1.2em;
@@ -275,24 +272,19 @@ a, a:visited {
           opacity: 1; } }
 
 footer {
-  border-top: #333 solid 1px; }
-  @media (min-width: 768px) {
-    footer {
-      margin: 0 auto; } }
-  @media (max-width: 768px) {
-    footer {
-      margin: 0 auto; } }
+  border-top: #333 solid 1px;
+  margin: 0 auto; }
   @media (min-width: 768px) {
     footer {
       text-align: center;
       width: 90%; } }
   footer ul {
     list-style: none; }
-    @media (min-width: 900px) {
+    @media (min-width: 950px) {
       footer ul li {
         display: inline-block;
         padding-right: 2.5em; } }
-    @media (min-width: 768px) and (max-width: 900px) {
+    @media (min-width: 768px) and (max-width: 950px) {
       footer ul li {
         display: inline-block;
         padding-right: 1em;
