@@ -8,6 +8,7 @@ $borderSize: 2px;
 $colorLink: #3333DD;
 $colorBackground: #FFF;
 $colorText: #333;
+$colorBgImagemHeader: #333;
 $colorTitle: #fff;
 
 *{
@@ -24,14 +25,11 @@ html,body{
 
 .header-principal{
   @include centraliza();
-  color: $colorTitle!important;
-  background-color: rgba(0,0,0,0);
-  *{
-    background-color: rgba(0,0,0,0);
-  }
+  color: $colorTitle;
   .fundo-imagem{
     img{
       width: 100%;
+      background-color: $colorBgImagemHeader;
     }
     z-index: -1;
     position: absolute;
