@@ -23,6 +23,10 @@ config.js = {
     "buildFolder" : config.buildFolder+"/js",
     "compiled" : "all.min.js"
 };
+config.fonts = {
+    "files" : "font/**/*.{ttf,woff,eof,svg,eot,woff2}",
+    "buildFolder" : config.buildFolder+"/font"
+};
 gulp.task('default', function(){
     gulp.src(config.sass.files)
         .pipe(scss())
@@ -35,6 +39,8 @@ gulp.task('default', function(){
         .pipe(uglify())
         .pipe(gulp.dest(config.js.buildFolder))
         .pipe(livereload());
+    gulp.src(config.fonts.files)
+        .pipe(gulp.dest(config.fonts.buildFolder));
 });
 
 gulp.task('watch', function(){
