@@ -35,35 +35,6 @@
   -ms-user-select: none;
   user-select: none;
 }
-$inicialBlinkOpacity: 0.8;
-@keyframes blink-frame {
-  from { opacity: $inicialBlinkOpacity; }
-  to   { opacity: 1; }
-}
-@-moz-keyframes blink-frame {
-  from { opacity: $inicialBlinkOpacity; }
-  to   { opacity: 1; }
-}
-@-webkit-keyframes blink-frame {
-  from { opacity: $inicialBlinkOpacity; }
-  to   { opacity: 1; }
-}
-@-ms-keyframes blink-frame {
-  from { opacity: $inicialBlinkOpacity; }
-  to   { opacity: 1; }
-}
-@-o-keyframes blink-frame {
-  from { opacity: $inicialBlinkOpacity; }
-  to   { opacity: 1; }
-}
-
-@mixin blinkAnimation($tempo){
-  -webkit-animation: blink-frame $tempo infinite;
-  -moz-animation: blink-frame $tempo infinite;
-  -ms-animation: blink-frame $tempo infinite;
-  -o-animation: blink-frame $tempo infinite;
-  animation: blink-frame $tempo infinite;
-}
 @mixin centraliza(){
   margin: 0 auto;
 }

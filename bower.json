@@ -1,0 +1,19 @@
+{
+  "name": "graciano.github.io",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Matheus Graciano <graciano.dev@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/graciano/graciano.github.io",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
