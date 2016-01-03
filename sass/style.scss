@@ -183,6 +183,10 @@ a, a:visited{
   }
 }
 
+.img-dinofauro{
+  border-radius: 50%;
+}
+
 footer {
   border-top: $colorText solid 1px;
   @include centraliza();
