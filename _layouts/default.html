@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    {% seo %}
+  </head>
+
+  <body>
+    <header>
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.description }}</p>
+    </header>
+
+    <div class="container">
+      {{ content }}
+    </div> <!-- /.container -->
+
+    <footer>
+      <hr>
+      <ul>
+        <li>twitter <a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a></li>
+        <li>github <a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
