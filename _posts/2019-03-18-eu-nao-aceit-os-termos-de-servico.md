@@ -2,9 +2,12 @@
 layout: post
 title:  "Eu não aceito os termos de Serviço"
 date:   2019-03-18 10:00:0 -0300
+excerpt_separator: <!--more-->
 categories: internet democracia direitos
 ---
+<!--more-->
 Depois de décadas existindo, muita gente ainda acha que a Internet é algum tipo de selva. Talvez um estado natural da humanidade em que não existe estado, lei ou proteções individuais. No Brasil, mais ou menos nos últimos 5 anos (verificar) o número de pessoas com acesso à Internet ultrapassou o número de pessoas que não possuem acesso a Internet. Com isso, cada vez menos se ouve falar na tal da inclusão digital.
+<!--more-->
 A inclusão no nosso Brasil neoliberal é uma inclusão pelo consumo. Hoje, ter um espertofone é o suficiente pra dizerem: bem-vindo ao clube. Aqui está a Internet. É a pessoa fica ao Deus dará. Só que no caso is deuses são os monopólios internacionais como Google, Apple, Amazon e Facebook. Aí está a Internet e ponto. Mataram o super herói conhecido como hiper-link (Facebook globo do mundo). O acesso é majoritária ente por um celular a Droid que já vem Facebook e adjacentes (Instagram e WhatsApp, mesmo dono) instalados.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">we really need to move towards a consensus as a society that algorithms changing things behind your back because they think they know you better than you do is emotionally abusive</p>&mdash; badidea 💫 (@0xabad1dea) <a href="https://twitter.com/0xabad1dea/status/1104434607204827136?ref_src=twsrc%5Etfw">March 9, 2019</a></blockquote>
