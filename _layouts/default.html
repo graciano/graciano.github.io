@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     {% seo %}
+    <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}">
+    {% feed_meta %}
   </head>
 
   <body>
@@ -11,10 +13,21 @@
       <h1>{{ site.title }}</h1>
     </a>
     {{ content }}
-    <footer>
-      <ul>
-        <li>twitter <a href="https://twitter.com/{{ site.twitter.username }}">@{{ site.twitter.username }}</a></li>
-        <li>github <a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a></li>
+    <footer class="main-footer">
+      <ul class="social-media-list">
+        <li>
+          <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>
+          <a href="https://twitter.com/{{ site.twitter.username }}">@{{ site.twitter.username }}</a>
+        </li>
+        <li>
+          <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+          <a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a>
+        </li>
+        <li>
+          <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use></svg>
+          <a href="https://instagram.com/{{ site.instagram_username }}">@{{ site.instagram_username }}</a>
+        </li>
+        <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         <li>feito com &lt;3 no <a href="https://jekyllrb.com/">jekyll</a></li>
       </ul>
     </footer>

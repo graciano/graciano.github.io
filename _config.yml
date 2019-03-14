@@ -25,6 +25,7 @@ timezone: America/Sao_Paulo
 future: true
 show_excerpts: true
 lang: pt_BR
+github_username: wtfgraciano
 twitter:
   username: wtfgraciano
   card: summary
