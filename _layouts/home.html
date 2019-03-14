@@ -3,25 +3,23 @@ layout: default
 ---
 
 <header>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
+    <p><em>{{ site.description }}</em></p>
 </header>
 {{ content }}
 <ul class="post-list">
     {%- for post in site.posts -%}
     <li>
-        {%- assign date_format = site.jimi.date_format | default: '%d-%m-%Y' -%}
-        {{ post | json }}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-            </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-        aaa
-            <!-- <p>{{ post.excerpt | strip_html | truncatewords: 5 }} ...</p> -->
-        {%- endif -%}
+      <span>
+        {% include date.html date=post.date %}
+      </span>
+      <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+      </h3>
+      {%- if site.show_excerpts -%}
+          <p>{{ post.description }}</p>
+      {%- endif -%}
     </li>
     {%- endfor -%}
 </ul>
