@@ -1,11 +1,6 @@
 ---
 layout: default
 ---
-
-<header>
-    <p><em>{{ site.description }}</em></p>
-</header>
-{{ content }}
 <ul class="post-list">
     {%- for post in site.posts -%}
     <li>
@@ -23,7 +18,7 @@ layout: default
     </li>
     {%- endfor -%}
 </ul>
-
+{{ content }}
 <p class="feed-subscribe"><svg class="svg-icon orange">
     <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
 </svg><a href="{{ '/feed.xml' | relative_url }}">Subscribe</a></p>
