@@ -1,0 +1,13 @@
+.post-list {
+  .date {
+    font-size: smaller;
+    font-style: italic;
+
+    @include text-3d();
+  }
+
+  a,
+  a:visited {
+    color: $color-blue;
+  }
+}

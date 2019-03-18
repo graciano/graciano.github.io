@@ -4,9 +4,15 @@ layout: default
 <ul class="post-list">
     {%- for post in site.posts -%}
     <li>
-      <span>
+      <span class="date">
         {% include date.html date=post.date %}
       </span>
+      {%- if post.img %}
+        {% assign alt_descrpition = post.altimg || post.description%}
+        <img src="{{ site.url }}/{{ post.img }}" alt="{{ alt_descrpition }}">
+      {%- else -%}
+        <img src="{{ 'assets/img/not-found.jpg' | relative_url }}" alt="pessoa bloqueada do episódio white christmas de black mirror">
+      {%- endif -%}
       <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}

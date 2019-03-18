@@ -5,6 +5,7 @@
 @import "minima";
 @import "fonts";
 @import "vars";
+@import "mixins";
 
 html,
 body {
@@ -23,5 +24,14 @@ a:hover {
   text-decoration: none;
 }
 
+a {
+  color: $color-blue;
+}
+
+a:visited {
+  color: $color-purple;
+}
+
 @import "header";
+@import "home";
 @import "footer";

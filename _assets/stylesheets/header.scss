@@ -14,7 +14,8 @@
 
   a {
     color: #fff;
-    text-shadow: -0.06em 0 red, 0.06em 0 cyan;
+
+    @include text-3d();
   }
 
   h1 {
