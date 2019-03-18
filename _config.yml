@@ -36,6 +36,22 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-assets
+
+assets:
+
+  assets:
+    - "*.png"
+    - "*.jpg"
+    - "*.woff2"
+    - "*.otf"
+
+  autoprefixer:
+    browsers: ["last 2 versions","> 5%"]
+
+  sources:
+    # - _assets/img
+    - _assets/stylesheets
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
