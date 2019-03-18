@@ -7,10 +7,10 @@ layout: default
       <span class="date">
         {% include date.html date=post.date %}
       </span>
-      {%- if post.img %}
+      {%- if post.image %}
         {% assign alt_descrpition = post.altimg || post.description%}
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ site.url }}/{{ post.img }}" alt="{{ alt_descrpition }}">
+          <img src="{{ site.url }}/{{ post.image }}" alt="{{ alt_descrpition }}">
         </a>
       {%- else -%}
         <a href="{{ post.url | relative_url }}">
