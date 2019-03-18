@@ -9,9 +9,13 @@ layout: default
       </span>
       {%- if post.img %}
         {% assign alt_descrpition = post.altimg || post.description%}
-        <img src="{{ site.url }}/{{ post.img }}" alt="{{ alt_descrpition }}">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ site.url }}/{{ post.img }}" alt="{{ alt_descrpition }}">
+        </a>
       {%- else -%}
-        <img src="{{ 'assets/img/not-found.jpg' | relative_url }}" alt="pessoa bloqueada do episódio white christmas de black mirror">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ 'assets/img/not-found.jpg' | relative_url }}" alt="pessoa bloqueada do episódio white christmas de black mirror">
+          </a>
       {%- endif -%}
       <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">

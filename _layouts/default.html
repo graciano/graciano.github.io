@@ -51,5 +51,8 @@
         <li>feito com &lt;3 no <a href="https://jekyllrb.com/">jekyll</a></li>
       </ul>
     </footer>
+    {% if jekyll.environment == 'production' %}
+      {% include analytics.html %}
+    {% endif %}
   </body>
 </html>
