@@ -2,6 +2,20 @@
 
 .main-header {
   font-family: 'Fira Code', monospace;
+  background:
+    linear-gradient(
+      darken($color-pink, 5%) -20%,
+      darken($color-blue, 5%) 120%
+    );
+  height: $header-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: #fff;
+    text-shadow: -0.06em 0 red, 0.06em 0 cyan;
+  }
 
   h1 {
     font-weight: bold;

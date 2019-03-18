@@ -8,12 +8,12 @@
 
 html,
 body {
-  font-family: 'Veleka', sans-serif;
+  font-family: 'Veleka', Times, sans-serif;
+  color: $color-grey;
 }
 
 .main-content,
-.main-footer,
-.main-header {
+.main-footer {
   margin: $content-margin;
 }
 
