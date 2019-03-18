@@ -1,9 +1,14 @@
 .post-list {
   .date {
-    font-size: smaller;
     font-style: italic;
 
     @include text-3d();
+  }
+
+  img {
+    min-width: 90%;
+    max-height: 15em;
+    object-fit: cover;
   }
 
   a,

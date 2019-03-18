@@ -31,3 +31,19 @@
     }
   }
 }
+
+.social-nav {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7em;
+  margin-top: 1em;
+  ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+  li {
+    display: flex;
+    align-items: center;
+  }
+}
