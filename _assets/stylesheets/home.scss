@@ -8,6 +8,9 @@
   img {
     min-width: 90%;
     max-height: 15em;
+    @include breakpoint($tablet) {
+      max-height: 15em;
+    }
     object-fit: cover;
   }
 

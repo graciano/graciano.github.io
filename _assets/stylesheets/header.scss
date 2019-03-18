@@ -1,5 +1,3 @@
-@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
-
 .main-header {
   font-family: 'Fira Code', monospace;
   background:
@@ -20,15 +18,9 @@
 
   h1 {
     font-weight: bold;
-    font-size: 27px;
+    font-size: 1.7em;
     margin: 0;
     text-align: center;
-  }
-
-  @include breakpoint($not-phone) {
-    h1 {
-      font-size: 32px;
-    }
   }
 }
 

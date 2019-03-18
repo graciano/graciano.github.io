@@ -3,6 +3,7 @@
 ---
 
 @import "minima";
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "fonts";
 @import "vars";
 @import "mixins";
@@ -11,6 +12,10 @@ html,
 body {
   font-family: 'Veleka', Times, sans-serif;
   color: $color-grey;
+  font-size: 16px;
+  @include breakpoint($not-phone) {
+    font-size: 20px;
+  }
 }
 
 .main-content,
