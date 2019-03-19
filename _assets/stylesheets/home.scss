@@ -1,4 +1,23 @@
+
 .post-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  li {
+    width: 100%;
+    padding: $grid-gap / 2;
+
+    @include breakpoint($tablet) {
+      width: calc(50% - #{$grid-gap});
+    }
+
+    @include breakpoint($desktop) {
+      width: calc(33% - #{$grid-gap});
+    }
+  }
+
   .date {
     font-style: italic;
 
@@ -6,11 +25,8 @@
   }
 
   img {
-    min-width: 90%;
+    width: 100%;
     max-height: 15em;
-    @include breakpoint($tablet) {
-      max-height: 15em;
-    }
     object-fit: cover;
   }
 
