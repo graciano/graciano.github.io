@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Eu não aceito os termos de Serviço"
-date:   2019-03-18 10:00:00 -0300
+date:   2019-03-19 00:17:00 -0300
 description: Ainda acham que a Internet é algum tipo de selva. Mas aqui não é bagunça e você não pode fazer o que quiser sem consequências. Por que os algoritmos podem?
 image: assets/img/eula.jpg
 altimg: EULA (end user license agreement) do Windows XP
@@ -11,9 +11,7 @@ A inclusão no nosso Brasil neoliberal é uma inclusão pelo consumo. Hoje, ter 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">we really need to move towards a consensus as a society that algorithms changing things behind your back because they think they know you better than you do is emotionally abusive</p>&mdash; badidea 💫 (@0xabad1dea) <a href="https://twitter.com/0xabad1dea/status/1104434607204827136?ref_src=twsrc%5Etfw">March 9, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote>
-    Nós realmente preciamos nos mover na direção de um consenso enquanto sociedade de que algoritmos mudando coisas pelas suas costas porque pensam que sabem mais do que você é emocionalmente abusivo.
-</blockquote>
+> Tradução: Nós realmente preciamos nos mover na direção de um consenso enquanto sociedade de que algoritmos mudando coisas pelas suas costas porque pensam que sabem mais do que você é emocionalmente abusivo.
 
 Nesse contexto surge a necessidade de um debate sobre consentimento e software. Sem informação sobre com a Internet funciona - e consequentemente sobre como poderia funcionar - não se pode dizer que um cidadão faz uma escolha consciente de usar essas ferramentas entendendo realmente como elas funcionam. (ver algo do Chomsky aqui, falar sobre forjar consentimento)
 
