@@ -10,7 +10,7 @@ layout: default
       {%- if post.image -%}
         {% assign alt_descrpition = post.altimg | default: post.description %}
         <a href="{{ post.url | relative_url }}">
-          <img src="{{ site.url }}/{{ post.image }}" alt="{{ alt_descrpition }}">
+          <img src="{{ post.image | relative_url }}" alt="{{ alt_descrpition }}">
         </a>
       {%- else -%}
         <a href="{{ post.url | relative_url }}">
