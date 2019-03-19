@@ -3,7 +3,10 @@ layout: about
 title: Sobre mim
 permalink: /about/
 ---
+
+# Sobre mim
 ![rapaz branco na praia sorrindo com o pikachu do lado](/assets/img/jimi-com-pikachu.jpg)
+{: .center-elem.img-fit }
 
 Oi, meu nome é Matheus Graciano (*ou pode me chamar de Jimi*) e sou um **escritor de código** já tem mais de 10 anos. Chamam isso de programador, mas como tenho um pé nas humanas gosto de me identificar como *escritor*. Até porque um código bem escrito conta a história da intenção que o programador tem que o computador execute alguma tarefa. Atualmente trabalhando no Rio de Janeiro.
 

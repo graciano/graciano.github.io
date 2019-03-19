@@ -22,6 +22,14 @@
     }
   }
 
+  .img-fit {
+    &,
+    img {
+      max-height: 25em;
+      object-fit: cover;
+    }
+  }
+
   blockquote {
     font-size: 0.9em;
   }

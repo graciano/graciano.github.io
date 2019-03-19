@@ -10,4 +10,4 @@ Eu finalmente dei ouvidos para meus amigos e comecei um blog. Eu até tive um *[
 
 Também sempre tive vontade de ter meu próprio código como blog, tipo meu cafofo na internet. Então vocês podem ver o código [aqui](https://github.com/graciano/graciano.github.io), baseado no [jekyll](https://jekyllrb.com/).
 
-De lá do medium eu trouxe o que achei que valia a pena, que foi só o [texto sobre o facebook]({% post_url 2016-04-20-o-facebook-e-a-globo-do-mundo %}). Mas o legal mesmo é o post de estreia, que eu queria falar de [internet e consentimento]({% post_url 2019-03-18-eu-nao-aceito-os-termos-de-servico %}).
+De lá do medium eu trouxe o que achei que valia a pena, que foi só o [texto sobre o facebook]({% post_url 2016-04-20-o-facebook-e-a-globo-do-mundo %}). Mas o legal mesmo é o post de estreia, que eu queria falar de [internet e consentimento]({% post_url 2019-03-19-eu-nao-aceito-os-termos-de-servico %}).
