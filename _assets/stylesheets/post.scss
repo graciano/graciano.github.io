@@ -7,6 +7,14 @@
     max-width: $desktop;
   }
 
+  .date {
+    font-style: italic;
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2em;
+
+    @include text-3d();
+  }
+
   .post-title {
     font-size: 2em;
     font-weight: bold;
