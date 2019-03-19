@@ -1,0 +1,45 @@
+.post {
+  margin: 0 auto;
+  line-height: 1.6;
+
+  iframe {
+    width: 100%;
+    max-width: $desktop;
+  }
+
+  .post-title {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .center-elem {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+      display: inline;
+    }
+  }
+
+  blockquote {
+    font-size: 0.9em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1em;
+    font-weight: bold;
+  }
+}
+
+.twitter-tweet {
+  width: unset !important; // prevent tweet embeded from breaking layout and side scrolling
+  display: flex !important; // force center
+  align-self: center;
+  justify-content: center;
+}
