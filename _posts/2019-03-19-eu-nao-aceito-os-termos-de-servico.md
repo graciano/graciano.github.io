@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Eu não aceito os termos de Serviço
-date:   2019-03-19 00:17:00 -0300
+date:   2019-03-19 11:31:00 -0300
 description: Ainda acham que a Internet é algum tipo de selva. Mas aqui não é bagunça e você não pode fazer o que quiser sem consequências. Por que os algoritmos podem?
 image: assets/img/eula.jpg
 altimg: EULA (end user license agreement) do Windows XP
