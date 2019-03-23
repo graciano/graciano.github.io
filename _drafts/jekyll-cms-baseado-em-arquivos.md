@@ -3,8 +3,8 @@ layout: post
 title:  "Jekyll: CMS baseado em arquivos"
 date:   2019-03-21 12:24:00 -0300
 description: Flat file CMS e outras palavrinhas em inglês (aka buzzwords) sobre como programei o blog.
-# image: path pra imagem
-# altimg: descreva sua img
+image: assets/img/anaglyph-jekyll.png
+altimg: Logo do Jekyll com efeito de óculos 3D antigo
 ---
 Vou explicar o processo de criação deste blog e falar umas **buzzwords** da hora. Pois isso é bom pra **SEO** por causa das **keywords**. Peço perdão para quem não é da área de **TI**, eu me esforcei pra ser o mais didático possível na minha **approach**, mas algumas coisas vão acabar ficando complicadas de entender.
 
