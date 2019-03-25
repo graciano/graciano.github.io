@@ -12,8 +12,11 @@
 
   a {
     color: #fff;
-
     @include text-3d();
+
+    &:hover {
+      background: none;
+    }
   }
 
   h1 {
