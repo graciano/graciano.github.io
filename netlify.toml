@@ -1,4 +1,5 @@
 [context.deploy-preview]
+[context.preview]
   [build]
     command = "jekyll build --drafts"
     publish = "_site"
