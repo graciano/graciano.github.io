@@ -43,10 +43,18 @@ a:hover {
 
 a {
   color: $color-blue;
+  &:hover {
+    color: #fff;
+    background: $color-blue;
+  }
 }
 
 a:visited {
   color: $color-purple;
+  &:hover {
+    color: #fff;
+    background: $color-purple;
+  }
 }
 
 @import "header";
