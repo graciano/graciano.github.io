@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jekyll: CMS baseado em arquivos"
-date:   2019-03-21 12:24:00 -0300
+date:   2019-03-26 10:30:00 -0300
 description: Flat file CMS e outras palavrinhas em inglês (aka buzzwords) sobre como programei o blog.
 image: assets/img/anaglyph-jekyll.png
 altimg: Logo do Jekyll com efeito de óculos 3D antigo
