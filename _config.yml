@@ -36,6 +36,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-assets
 
+disqus:
+  shortname: graciano
+
 assets:
 
   assets:
