@@ -1,7 +1,4 @@
 [context.deploy]
-  [build]
     command = "jekyll build --drafts"
     publish = "_site"
-
-  [build.environment]
     JEKYLL_ENV = "testing"
