@@ -36,5 +36,8 @@ Quem toca violão ou teclado está acostumado a achar arquivos de partitura em s
 
 A partir desse formato, o principal obstáculo do projeto foi superado e agora, se você quiser [mandar PR](https://github.com/tananamusic/tanana/fork) você não precisa saber nada sobre teoria musical, inclusive criei [issues rotuladas dessa maneira](https://github.com/tananamusic/tanana/issues?q=is%3Aissue+is%3Aopen+label%3Ano-need-for-music-knowledge).
 
-### A questão da UX
-Estou considerando usar vuejs para a interface. Comenta aí o que tu acha
+### A questão da UX e frameworks javascript
+
+UX é um negócio difícil. No nosso caso aqui, em algum nível é necessário o tal do *gerenciamento de estado*. Estado é só uma buzzword pra dados. Por isso nos próximos commits será visível que eu vou usar o [redux](https://redux.js.org/) pra isso. Algumas pessoas me perguntaram então porque eu não uso react ou [vue](https://vuejs.org/) ou alguma outra *framework* javascript. Para o caso do react a minha resposta é fácil: não sou fã. Só isso mesmo.
+
+Para o caso de qualquer outra *framework* no entanto a resposta é um pouco mais complicada. Este é um projeto educativo, não só no nível musical. Tenho a ambição de que desenvolvedores iniciantes possam usar o tananã como aprendizado. Inclusive eu tenho um amigo iniciante a quem estou ensinando javascript usando o próprio tananã. Não sei o quanto isso pode dar certo, mas vale a pena tentar. Pretendo inclusive usar este blog para falar dos avanços do tananã. Diz aí o que acha nos comentários ;)
