@@ -1,4 +1,4 @@
 [context.preview]
     command = "jekyll build --drafts"
-    publish = "_site"
-    JEKYLL_ENV = "testing"
+    [context.preview.environment]
+        JEKYLL_ENV = "dev"
