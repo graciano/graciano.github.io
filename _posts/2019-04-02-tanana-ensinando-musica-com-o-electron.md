@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  "Tananã: ensinando música com o Electron"
-date:   2019-03-29 10:00:00 -0300
+date:   2019-04-02 9:55:00 -0300
 description: Um projeto open source para aprender partituras em cima do electron, uma ferramenta javascript usada por Spotify, Discord, Slack, Skype e outros para criar apps que rodem em windows/gnu-linux/mac.
-# image: path pra imagem
-# altimg: descreva sua img
 ---
 
 Antes de falar do Tananã, o app com nome mais charmoso do Brasil, queria primeiro explicar o que é o [electron](https://electronjs.org/). Talvez você já tenha ouvido falar do [atom](https://atom.io/): o "editor de texto hackeável" do github. É um editor escrito em *javascript*. Por causa disso e também por executar na santíssima trindade *windows/gnu-linux/mac*, extraíram esse pedaço do código do atom (que antes se chamava *atom shell*) e deram o nome *electron*, usando a engine do chromium. Então basicamente, quando se usa o Spotify, o Slack, o Discord ou qualquer outro *electron app*, na prática o seu computador está ligando um navegador interno que roda o app. Na época em que foi criado, o atom disputava seus usuários com o Sublime Text. Hoje rivaliza mais com o também feito em electron VS Code, da microsoft, que comprou o github ¯\\_(ツ)_/¯
