@@ -22,7 +22,7 @@ url: "https://graciano.me/" # the base hostname & protocol for your site
 github_username: graciano
 timezone: America/Sao_Paulo
 show_excerpts: true
-lang: pt_BR
+lang: pt-BR
 instagram_username: wtfgraciano
 twitter:
   username: wtfgraciano
