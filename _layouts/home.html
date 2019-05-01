@@ -2,7 +2,7 @@
 layout: default
 ---
 <ul class="post-list">
-    {%- for post in site.posts -%}
+    {%- for post in paginator.posts -%}
     <li>
       <span class="date">
         {% include date.html date=post.date %}
@@ -28,5 +28,23 @@ layout: default
     </li>
     {%- endfor -%}
 </ul>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" title="anterior" class="previous">
+      &lt;&lt;
+    </a>
+  {% else %}
+    <span class="previous" title="anterior">&lt;&lt;</span>
+  {% endif %}
+  <span class="page_number">
+    Página {{ paginator.page }} de {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next" title="próxima">&gt;&gt;</a>
+  {% else %}
+    <span class="next" title="próxima">&gt;&gt;</span>
+  {% endif %}
+</div>
 
 {{ content }}

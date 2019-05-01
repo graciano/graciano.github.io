@@ -28,13 +28,13 @@ twitter:
   username: wtfgraciano
   card: summary
 
-# Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-assets
+  - jekyll-paginate-v2
 
 disqus:
   shortname: graciano
@@ -53,6 +53,15 @@ assets:
   sources:
     # - _assets/img
     - _assets/stylesheets
+
+pagination:
+  enabled: true
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  per_page: 3
+  permalink: 'pagina/:num/' # TEM QUE TER BARRA NO FINAL AQUI !!!
+  title: ':title - página :num'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

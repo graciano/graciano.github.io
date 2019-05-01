@@ -33,8 +33,13 @@
   a,
   a:visited {
     color: $color-blue;
+
     &:hover {
       background: none;
     }
   }
+}
+
+.pagination {
+  font-family: 'Fira Code', monospace;
 }

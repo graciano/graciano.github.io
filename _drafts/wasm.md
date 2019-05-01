@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "O que é Web Assembly?"
+date:   2019-04-28 14:40:00 -0300
+description: Contexto e justificativas para a criação do web assembly, aka WASM, e como o WASI pode ser a JVM que deu certo
+# image: path pra imagem
+# altimg: descreva sua img
+---
+
+> *"Nem só de javascript viverá a humanidade"*
+
+*Javascript* é uma ótima linguagem. Inclusive [há](https://www.quora.com/Is-JavaScript-really-going-to-take-over-all-other-languages) [quem](https://www.forumone.com/ideas/javascript-taking-over-world-and-its-got-us-too/) [diga](https://hackernoon.com/the-javascript-phenomenon-is-a-mass-psychosis-57adebb09359) [que](https://dev.to/anthonydelgado/javascript-is-eating-the-world) [ela](http://radar.oreilly.com/2013/04/will-javascript-take-over-the-programming-world.html) [vai](https://www.wired.com/2016/05/javascript-conquered-web-now-taking-desktop/) [dominar](https://medium.com/fed-or-dead/javascript-really-is-overtaking-the-world-5b59b5af41ed) [o](https://www.techrepublic.com/article/the-worlds-most-popular-programming-language-is-javascript-but-why/) [universo](https://github.blog/2018-11-15-state-of-the-octoverse-top-programming-languages/). Óbvio que isso é um exagero e muitos desses links afirmam isso. Mas, ao mesmo tempo, tem um fundo de verdade, que na minha humilde opinião, é uma consequência que não se limita aos aspectos técnicos do javascript em específico: a internet está dominando o mundo. Literalmente.
+
+O sistema dominante atual é capitalista e nos últimos 20 anos, [as maiores empresas do planeta são majoritariamente de tecnologia](https://www.visualcapitalist.com/animation-top-15-global-brands-2000-2018/) no critério "valor da marca". O top 4, em números de 2018, são Apple, Google, Amazon e Microsoft. No vídeo, pode-se notar que empresas que focavam em *hardware* como GE e IBM foram ultrapassadas pelos citados cavaleiros do apocalipse, que atuam desde o *hardware* em si, como por exemplo a Amazon AWS, até as interfaces com o usuário, já que Google e Apple são quem domina os sistemas operacinais de celulares. Enfim, todas em algum aspecto fundamental da sua existência (ou mais de um) usam (e moldam) a internet.
+
+O javascript é simplesmente a linguagem da internet. Em um dos textos linkados no primeiro parágrafo, *"Will JavaScript take over the programming world?"* o autor afirma:
+> "For a long time, “write once run anywhere” was supposed to mean Java, with its armies of virtual machines for every platform" (...) As developers realized that the Web was the easiest way to create user interfaces for shared data, more and more programming activity shifted away from ‘classic’ GUI implementation to building web applications.
+
+Java foi criado para ser onipresente, mas não é. Cada novo hardware precisaria da jvm além de seu sistema operacional. Como a internet dominou todos esses aspectos, javascript se tornou **de fato** onipresente. Quem faz sistemas operacionais está sempre preocupado com sua própria atualização (via internet) e com a experiência do usuário. O que torna impensável não existir alguma forma de acesso do usuário a internet (mesmo que não seja usuário final do produto, como o caso de uma geladeira ou um fogão, onde javascript ainda não é tão forte). O [texto](http://radar.oreilly.com/2013/04/will-javascript-take-over-the-programming-world.html), por ser de 2013, também citou o [asm.js](http://asmjs.org/), que é tipo um pai ausente do *Web Assembly* que não chegou a ser padronizado na w3c, mas possui pollyfills e pode ser usado em produção. Como é o caso do [Adobe Lightroom, que usa código "legado" em C++ no browser](https://spectrum.ieee.org/computing/software/webassembly-will-finally-let-you-run-highperformance-applications-in-your-browser).
+
+## Tá, mas esse tal de WASM?
+*Wasm* é apenas uma abreviação de [Web Assembly](https://webassembly.org/). Uma maneira rápida de descrever o que esta tecnologia faz, que seria **"uma maneira de usar linguagens que não javascript num navegador"**, como disse a [Lin Clark, engenheira da Mozilla em entrevista ao podcast Bike Shed](http://bikeshed.fm/195). Porém, a coisa não se limita por aí. Como o wasm não é uma linguagem em si, mas um *"compile target"*, as possibilidades de portabilidade e onipresença são enormes. Afinal, o wasm seria como um "bytecode" que roda na runtime do javascript, podendo ser executado fora do browser também. É aí que vem o [WASI](https://www.theregister.co.uk/2019/03/29/mozilla_wasi_spec/), que tem todo o potencial de ser a jvm que deu certo, já que:
+
+ * Como o WASI usa o POSIX, seus binários poderão rodar em qualquer sistema unix ou GNU, sem a necessidade de se instalar uma máquina virtual nesses sistemas
+ * A [segurança](https://webassembly.org/docs/security/) por padrão do wasm tem vantagens em relação a compiladores nativos de C++, de java então, nem se fala
+ * Por ser desenvolvida na w3c e não numa empresa *for-profit* como a Sun (dona do java), os interesses de toda a comunidade de desenvolvedores estará melhor representado
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If WASM+WASI existed in 2008, we wouldn&#39;t have needed to created Docker. That&#39;s how important it is. Webassembly on the server is the future of computing. A standardized system interface was the missing link. Let&#39;s hope WASI is up to the task! <a href="https://t.co/wnXQg4kwa4">https://t.co/wnXQg4kwa4</a></p>&mdash; Solomon Hykes (@solomonstre) <a href="https://twitter.com/solomonstre/status/1111004913222324225?ref_src=twsrc%5Etfw">March 27, 2019</a></blockquote>
+ <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> "Se WASM+WASI existissem em 2008, nós não precisaríamos ter criado o Docker. Este é o quão importante isso se tornou. Webassembly nos servidores é o futuro da computação. Um padrão de interfaces de sistemas era o elo que faltava. Espero que WASI esteja a altura desta missão." - Solomon Hykes, co-fundador do Docker
+
+Enfim, o objetivo aqui foi mais de contexto e algumas pirações para o futuro, fico devendo um tutorial de como programar para o wasm de fato. Até porque eu ainda estou aprendendo ¯\\\_(ツ)\_/¯
