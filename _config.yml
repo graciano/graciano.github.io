@@ -60,7 +60,7 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
   per_page: 3
-  permalink: 'pagina/:num/'
+  permalink: 'pagina/:num/' # TEM QUE TER BARRA NO FINAL AQUI !!!
   title: ':title - página :num'
 
 # Exclude from processing.
