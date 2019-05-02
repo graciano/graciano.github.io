@@ -9,10 +9,6 @@ altimg: uma edição boba da logo da globo com a do facebook
 
 *Um pequeno aviso: eu explico coisas básicas do que é internet, HTML e falo um pouco do surgimento do facebook. Se o leitor já souber disso, pule a parte do hipertexto, motores de busca e redes sociais ali de baixo.*
 
-![Observe minha incrível habilidade de edição de imagem.](https://cdn-images-1.medium.com/max/2000/1*hPTGrTSMxjSzu9sYVDg-2A.png){: .center-elem}
-> *Observe minha incrível habilidade de edição de imagem.*
-{: .center-elem}
-
 A mídia, antes da internet, era sobre poderosos que mantinham seus espaços. Poderosos que definiam quem seria ouvido e como essa mensagem chegaria na população. Seja no rádio ou na TV. Agora, é falado por aí que qualquer um pode ser ouvido; mas isso não é 100% verdade.
 
 Qualquer um pode criar e encontrar conteúdo de qualidade, isso é verdade. Qualquer um pode ter acesso a conhecimento sobre como criar e melhorar esse conteúdo, seja jornalístico, artístico, entretenimento, etc — *apesar de isto estar sendo constantemente ameaçado por ações como [SOPA](https://en.wikipedia.org/wiki/Stop_Online_Piracy_Act), [PIPA](https://en.wikipedia.org/wiki/PROTECT_IP_Act), o [TPP](https://en.wikipedia.org/wiki/Trans-Pacific_Partnership) e no Brasil o [limite abusivo de franquia na internet fixa.](https://secure.avaaz.org/po/petition/Vivo_GVT_OI_NET_Claro_Anatel_Ministerio_Publico_Federal_Contra_o_Limite_na_Franquia_de_Dados_na_Banda_Larga_Fixa/?pv=44)* Mas como esse conteúdo chega para o seu público? Antes é necessário falar do que é necessariamente a internet e como ela é feita. É necessário explicar o básico disso porque o mais para frente será argumentado que o facebook se tornou a “**anti-internet**”.
