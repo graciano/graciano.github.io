@@ -53,6 +53,13 @@
   }
 }
 
+.post-img-header {
+  margin: 0 auto;
+  display: block;
+  max-height: 30vh;
+  object-fit: cover;
+}
+
 .twitter-tweet {
   width: unset !important; // prevent tweet embeded from breaking layout and side scrolling
   display: flex !important; // force center

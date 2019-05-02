@@ -2,7 +2,10 @@
 layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
+  {%- if page.image %}
+    {% assign alt_descrpition = page.altimg | default: page.description %}
+    <img src="{{ page.image | relative_url }}" alt="{{ alt_descrpition }}" class="post-img-header">
+  {%- endif -%}
   <header class="post-header">
     <h2 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h2>
     <p class="post-meta">
