@@ -30,7 +30,7 @@ exports.handler = async (event) => {
 
 A ideia do S3 é basicamente você ter um HD na internet. Pode ser usado pra guardar *assets*, backups, relatórios... Enfim, qualquer tipo de arquivo. Cada *bucket* é um "HD" desses. No nosso caso, um parceiro sobe o arquivo de uma remessa para o nosso bucket. Esta ação é o *trigger* que dispara a nossa função lambda, ou seja, os dados sobre o arquivo estão no objeto `event`, que seria um dos argumentos da lambda.
 
-Na função `processaArquivo` usada dentro da `handler`, recebemos como argumento a `string` da URL do nosso arquivo dentro do bucket, algo como `http://https://s3-sa-east-1.amazonaws.com/nome-do-meu-bucket/caminho/para/o/arquivo.txt`. Usamos a sdk da própria Amazon para baixar o arquivo, a partir da promise `getObject`:
+Na função `processaArquivo` usada dentro da `handler`, recebemos como argumento a `string` da URL do nosso arquivo dentro do bucket, algo como `https://s3-sa-east-1.amazonaws.com/nome-do-meu-bucket/caminho/para/o/arquivo.txt`. Usamos a sdk da própria Amazon para baixar o arquivo, a partir da promise `getObject`:
 
 ~~~ javascript
 // classe de acesso ao bucket no s3:
@@ -48,16 +48,49 @@ const processaArquivo = async (arquivo) => {
 
 ## Streaming
 
-Imagine agora que este arquivo é muito grande. No exemplo acima, esperamos a Promise ser resolvida para aí então iterar pelas linhas do arquivo (alocando ele todo na memória)
+Imagine agora que este arquivo é muito grande. No exemplo acima, esperamos a Promise ser resolvida para aí então iterar pelas linhas do arquivo e ainda alocando ele todo na memória para isso. Um streaming de leitura é um objeto que emite um evento toda vez que ele recebe dados. A função `getObject` da sdk da AWS possui uma outra função `createReadStream()` que é exatamente este stream de leitura. O código abaixo é uma adaptação do código anterior, usando a API de streams.
 
+~~~ javascript
+const readlineS3 = arquivo => new S3().getObject(arquivo).createReadStream();
+
+const processaArquivo = (arquivo) => new Promise((resolve) => {
+    const rl = readlineS3(arquivo);
+    rl.on('data', async (chunk) => {
+        // faz uma cacetada de operações de rede com o arquivo
+    });
+    rl.on('close', () => {
+        console.log('Arquivo lido com sucesso e mensagens enviadas a filas');
+        console.log('Total de linhas >', totalDeLinhas);
+        resolve('sucesso');
+    });
+});
+~~~
+Porém este código não funciona, pois o evento do streaming da AWS não devolve uma linha exata do arquivo, mas um "chunk" de dados. Como streams podem ser conectadas, isso pode ser resolvido com o pacote disponível no npm `linebyline`:
 ~~~ javascript
 // cria um Streaming de evento, que converte os "chunks" do arquivo em linhas no evento 'line'
 const byline = require('linebyline');
+
+const readlineS3 = arquivo => byline(new S3().getObject(arquivo)
+    .createReadStream());
+const processaArquivo = (arquivo) => new Promise((resolve) => {
+    const rl = readlineS3(arquivo);
+    rl.on('line', async (line) => {
+        // aqui de fato é uma linha do arquivo
+    });
+    rl.on('close', () => {
+        //...
+        resolve('sucesso');
+    });
+});
+~~~
+
+## Nem tudo são flores
+
+Como avisado anteriormente, este é um exemplo do mundo real, onde as coisas podem ficar bem feias. Você pode ter notado que na parte em que processamos a linha, eu deixei um comentário que dizia *"faz uma cacetada de operações de rede com o arquivo"*. Acontece que, na AWS, há um limite de requests abertos ao mesmo tempo, e cada evento de `line` não é garantido de entrar na mesma ordem ou mesmo de serem sequenciais no [event loop](https://medium.com/@bohou/understanding-nodejs-event-loop-without-a-computer-science-degree-e1c9250d583f). Consequência: o arquivo era bastante grande e esse limite causava erros. Por causa disso, precisávamos limitar um tamanho máximo de dados para ser processado por vez.
+
+~~~ javascript
 // explicar o throttle
 const { Throttle } = require('stream-throttle');
-// classe de acesso ao bucket no s3:
-const { S3 } = require('aws-sdk');
-
 const readlineS3 = arquivo => byline(new S3().getObject(arquivo)
     .createReadStream()
     .pipe(new Throttle({ rate: 9 * 1024 })));
@@ -68,8 +101,9 @@ const processaArquivo = (arquivo) => new Promise((resolve) => {
         // faz uma cacetada de operações de rede com o arquivo
     });
     rl.on('close', () => {
-        logger.info('Arquivo lido com sucesso e mensagens enviadas a filas , total de linhas >', totalDeLinhas)
-        resolve();
+        console.log('Arquivo lido com sucesso e mensagens enviadas a filas');
+        console.log('Total de linhas >', totalDeLinhas);
+        resolve('sucesso');
     });
 });
 ~~~
