@@ -86,24 +86,18 @@ const processaArquivo = (arquivo) => new Promise((resolve) => {
 
 ## Nem tudo são flores
 
-Como avisado anteriormente, este é um exemplo do mundo real, onde as coisas podem ficar bem feias. Você pode ter notado que na parte em que processamos a linha, eu deixei um comentário que dizia *"faz uma cacetada de operações de rede com o arquivo"*. Acontece que, na AWS, há um limite de requests abertos ao mesmo tempo, e cada evento de `line` não é garantido de entrar na mesma ordem ou mesmo de serem sequenciais no [event loop](https://medium.com/@bohou/understanding-nodejs-event-loop-without-a-computer-science-degree-e1c9250d583f). Consequência: o arquivo era bastante grande e esse limite causava erros. Por causa disso, precisávamos limitar um tamanho máximo de dados para ser processado por vez.
+Como avisado anteriormente, este é um exemplo do mundo real, onde as coisas podem ficar bem feias. Você pode ter notado que na parte em que processamos a linha, eu deixei um comentário que dizia *"faz uma cacetada de operações de rede com o arquivo"*. Acontece que na AWS há um limite de requests HTTP abertos ao mesmo tempo, e cada evento de `line` não é garantido de entrar na mesma ordem ou mesmo de serem sequenciais no [event loop](https://medium.com/@bohou/understanding-nodejs-event-loop-without-a-computer-science-degree-e1c9250d583f). Consequência: o arquivo era bastante grande e esse limite causava erros. Por causa disso, precisávamos criar um tamanho máximo de dados para ser processado por vez.
+Mais uma vez, um pacote do npm para nos salvar, no caso o `stream-throttle`, que pega qualquer stream e limita a publicação dos eventos dela de acordo com um número de bytes que você informa, em que no caso a função `readlineS3` ficou assim, limitando a *2KB*:
 
 ~~~ javascript
-// explicar o throttle
 const { Throttle } = require('stream-throttle');
 const readlineS3 = arquivo => byline(new S3().getObject(arquivo)
     .createReadStream()
-    .pipe(new Throttle({ rate: 9 * 1024 })));
-
-const processaArquivo = (arquivo) => new Promise((resolve) => {
-    const rl = readlineS3(arquivo);
-    rl.on('line', async (line) => {
-        // faz uma cacetada de operações de rede com o arquivo
-    });
-    rl.on('close', () => {
-        console.log('Arquivo lido com sucesso e mensagens enviadas a filas');
-        console.log('Total de linhas >', totalDeLinhas);
-        resolve('sucesso');
-    });
-});
+    .pipe(new Throttle({ rate: 2 * 1024 }))); // 2KB de throttle
 ~~~
+
+### OK, mas e a busca binária?
+
+O limite de *2KB* acima foi totalmente arbritário. Tratamos isso como um limite inferior, no mínimo esse seria o parâmetro. Porém, ao mesmo tempo em que já funcionava, a AWS cobra por cada 100ms de execução da nossa função. Então se tornava necessário descobrir qual o limite superior de bytes da operação. Multipliquei esse valor por 10 e tentei rodar a função com 20KB. O erro aconteceu. Lembrando que como o arquivo era grande, um teste demorava em torno de 2 minutos com o throttling de 2KB.
+
+**Agora nós temos exatamente o enunciado de uma busca binária.**. Sabemos o limite superior e o inferior de um conjunto ordenado. Agora é achar o meio do caminho para achar um novo limite superior ou inferior. E repetir o processo até achar um valor que faça sentido. O meio do caminho entre 2 e 20 seria `((20KB - 2KB) / 2) + 2KB = 11KB`. Ainda dava erro. 11KB se tornou o novo limite superior. `((11KB - 2KB) / 2) + 2KB = 6.5KB` que funcionava. Se tornou o limite inferior, e assim por diante... 8.75 dava erro e 8.25 não. Eu poderia continuar para mais precisão, mas achei justo parar por aqui e coloquei no código: `{ rate: 8.25 * 1024 }`. Achei um número otimizado em 4 tentativas. Mais ou menos 5 minutos. Imagine quantas tentativas seria se eu fosse incrementando 2.1KB, 2.2KB...
