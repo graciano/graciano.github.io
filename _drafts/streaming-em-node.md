@@ -30,7 +30,7 @@ exports.handler = async (event) => {
 
 A ideia do S3 é basicamente você ter um HD na internet. Pode ser usado pra guardar *assets*, backups, relatórios... Enfim, qualquer tipo de arquivo. Cada *bucket* é um "HD" desses. No nosso caso, um parceiro sobe o arquivo de uma remessa para o nosso bucket. Esta ação é o *trigger* que dispara a nossa função lambda, ou seja, os dados sobre o arquivo estão no objeto `event`, que seria um dos argumentos da lambda.
 
-Na função `processaArquivo` usada dentro da `handler`, recebemos como argumento a `string` da URL do nosso arquivo dentro do bucket, algo como `https://s3-sa-east-1.amazonaws.com/nome-do-meu-bucket/caminho/para/o/arquivo.txt`. Usamos a sdk da própria Amazon para baixar o arquivo, a partir da promise `getObject`:
+Na função `processaArquivo` usada dentro da `handler`, recebemos como argumento a `string` da URL do nosso arquivo dentro do bucket, algo como `s3-sa-east-1.amazonaws.com/nome-do-meu-bucket/caminho/para/o/arquivo.txt`. Usamos a sdk da própria Amazon para baixar o arquivo, a partir da promise `getObject`:
 
 ~~~ javascript
 // classe de acesso ao bucket no s3:
@@ -98,8 +98,27 @@ const readlineS3 = arquivo => byline(new S3().getObject(arquivo)
 
 ### OK, mas e a busca binária?
 
-O limite de *2KB* acima foi totalmente arbritário. Tratamos isso como um limite inferior, no mínimo esse seria o parâmetro. Porém, ao mesmo tempo em que já funcionava, a AWS cobra por cada 100ms de execução da nossa função. Então se tornava necessário descobrir qual o limite superior de bytes da operação. Multipliquei esse valor por 10 e tentei rodar a função com 20KB. O erro aconteceu. Lembrando que como o arquivo era grande, um teste demorava **em torno de 2 minutos** com o throttling de 2KB.
+O limite de *2KB* acima foi totalmente arbritário. Tratamos isso como um limite inferior, por ser um valor baixo e demorar para executar. No mínimo esse seria o parâmetro. Porém, ao mesmo tempo em que já funcionava, a AWS cobra por cada 100ms de execução da nossa função. Então se tornava necessário descobrir qual o limite superior de bytes da operação. Multipliquei esse valor por 10 e tentei rodar a função com 20KB. O erro aconteceu. Lembrando que como o arquivo era grande, um teste demorava **em torno de 2 minutos** com o throttling de 2KB.
 
 **Agora nós temos exatamente o enunciado de uma busca binária.**. Sabemos o limite superior e o inferior de um conjunto ordenado. Agora é testar se funciona no meio do caminho para achar um novo limite superior ou inferior. E então, dividir e conquistar: repetir o processo "recursivamente" com os novos valores para limite superior e inferior até achar um valor que faça sentido.
+
+Em código, uma versão **bem simplificada** seria:
+~~~ javascript
+const busca = (inicio, fim, lista, valor) => {
+    const meio = Math.floor((inicio + fim) / 2);
+  if (lista[meio] === valor) return meio;
+    if (lista[meio] > valor) return busca(meio, fim, lista, valor);
+    return busca(inicio, meio, lista, valor);
+}
+~~~
+E adaptando para a ideia aqui, não há uma lista e quem vai rodar a "busca" é a minha cabeça, então seria algo como o código abaixo, dentro de um critério de precisão, já que não há condição de parada.
+~~~ javascript
+const busca = (ini, fim) => {
+    const meio = ((fim - ini) / 2) + ini;
+    if( rodaSemErro(meio) ) return buscaInt(meio, fim);
+    // critério de precisão...
+    return buscaInt(ini, meio);
+}
+~~~~
 
 O meio do caminho entre 2 e 20 seria `((20KB - 2KB) / 2) + 2KB = 11KB`. Ainda dava erro. 11KB se tornou o novo limite superior. `((11KB - 2KB) / 2) + 2KB = 6.5KB` que funcionava. Se tornou o limite inferior, e assim por diante... 8.75 dava erro e 7.25 não. Eu poderia continuar para mais precisão, mas achei justo parar por aqui e coloquei no código: `{ rate: 7.25 * 1024 }`. Achei um número otimizado em 4 tentativas. Mais ou menos 5 minutos. Imagine quantas tentativas seria se eu fosse incrementando 2.1KB, 2.2KB...
