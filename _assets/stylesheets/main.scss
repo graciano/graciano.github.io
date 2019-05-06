@@ -12,18 +12,11 @@ html,
 body {
   font-family: 'Merriweather', Times, sans-serif;
   color: $color-grey;
-  font-size: 16px;
+  @include font-size(16px);
 
   &,
   * {
     box-sizing: border-box;
-  }
-
-  @include breakpoint($tablet) {
-    font-size: 20px;
-  }
-  @include breakpoint($desktop) {
-    font-size: 24px;
   }
 }
 
@@ -55,6 +48,11 @@ a:visited {
     color: #fff;
     background: $color-purple;
   }
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  @include font-size(12px);
 }
 
 @import "header";
