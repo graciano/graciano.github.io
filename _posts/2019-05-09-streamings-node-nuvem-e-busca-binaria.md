@@ -3,8 +3,8 @@ layout: post
 title:  "Causo: streamings, node, nuvem e busca binária"
 date:   2019-05-09 17:06:00 -0300
 description: O dia em que saber um algoritmo desses da faculdade me economizou muito tempo. Além disso, um pequeno guia introdutório para S3 e lambda da AWS usando um exemplo do mundo real, onde as coisas não são tão bonitinhas.
-# image: path pra imagem
-# altimg: descreva sua img
+image: assets/img/cloud.jpg
+altimg: Nuvens vistas de cima no céu. Com o efeito 3D de sempre
 ---
 
 Vou contar a história do dia em que saber um algoritmo desses da faculdade (*busca binária*) me economizou muito tempo. E ao mesmo tempo, para contexto, o post acaba se tornando uma espécie de guia introdutório para *streaming* no node, *S3* e *lambda* da AWS usando um exemplo do mundo real, onde as coisas não são tão bonitinhas. Se você já sabe [promises](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), vem comigo.
