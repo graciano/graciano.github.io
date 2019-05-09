@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Causo: streamings, node, nuvem e busca binária"
-date:   2019-04-17 13:40:00 -0300
+date:   2019-05-09 17:06:00 -0300
 description: O dia em que saber um algoritmo desses da faculdade me economizou muito tempo. Além disso, um pequeno guia introdutório para S3 e lambda da AWS usando um exemplo do mundo real, onde as coisas não são tão bonitinhas.
 # image: path pra imagem
 # altimg: descreva sua img
