@@ -7,7 +7,7 @@ description: O dia em que saber um algoritmo desses da faculdade me economizou m
 # altimg: descreva sua img
 ---
 
-Vou contar a história do dia em que saber um algoritmo desses da faculdade (*busca binária*) me economizou muito tempo. E ao mesmo tempo, para contexto, o post acaba se tornando uma espécie de guia introdutório para *streaming* no node, *S3* e *lambda* da AWS usando um exemplo do mundo real, onde as coisas não são tão bonitinhas. Se você já sabe [promises], vem comigo.
+Vou contar a história do dia em que saber um algoritmo desses da faculdade (*busca binária*) me economizou muito tempo. E ao mesmo tempo, para contexto, o post acaba se tornando uma espécie de guia introdutório para *streaming* no node, *S3* e *lambda* da AWS usando um exemplo do mundo real, onde as coisas não são tão bonitinhas. Se você já sabe [promises](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), vem comigo.
 
 ## Lambda
 
