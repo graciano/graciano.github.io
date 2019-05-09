@@ -7,7 +7,7 @@ description: O dia em que saber um algoritmo desses da faculdade me economizou m
 # altimg: descreva sua img
 ---
 
-A maioria dos blogs de programação por aí te dão tutoriais super formais com exemplos abstratos. Isso tem sua utilidade, mas sinto que falta um toque mais de *"contar causo"*, pois com as experiências reais se aprende muito. Por isso este post não é um tutorial comum como se vê por aí. O objetivo é falar sobre o dia em que saber um algoritmo desses da faculdade (*busca binária*) me economizou muito tempo. E ao mesmo tempo ser uma espécie de guia introdutório para *streaming* no node, *S3* e *lambda* da AWS usando um exemplo do mundo real, onde as coisas não são tão bonitinhas. Se você já sabe [promises], vem comigo.
+Vou contar a história do dia em que saber um algoritmo desses da faculdade (*busca binária*) me economizou muito tempo. E ao mesmo tempo, para contexto, o post acaba se tornando uma espécie de guia introdutório para *streaming* no node, *S3* e *lambda* da AWS usando um exemplo do mundo real, onde as coisas não são tão bonitinhas. Se você já sabe [promises], vem comigo.
 
 ## Lambda
 
@@ -122,3 +122,5 @@ const busca = (ini, fim) => {
 ~~~~
 
 O meio do caminho entre 2 e 20 seria `((20KB - 2KB) / 2) + 2KB = 11KB`. Ainda dava erro. 11KB se tornou o novo limite superior. `((11KB - 2KB) / 2) + 2KB = 6.5KB` que funcionava. Se tornou o limite inferior, e assim por diante... 8.75 dava erro e 7.25 não. Eu poderia continuar para mais precisão, mas achei justo parar por aqui e coloquei no código: `{ rate: 7.25 * 1024 }`. Achei um número otimizado em 4 tentativas. Mais ou menos 5 minutos. Imagine quantas tentativas seria se eu fosse incrementando 2.1KB, 2.2KB...
+
+A maioria dos blogs de programação por aí te dão tutoriais super formais com exemplos abstratos. Isso tem sua utilidade, mas sinto que falta um toque mais de *"contar causo"*, uma vibe de bar mesmo, pois com as experiências reais se aprende muito. Se gostar me conta aí nos comentários ;) 
