@@ -42,6 +42,39 @@ $.ajax({
   });
 ~~~
 Esse tipo de abordagem acabou se padronizando para o uso de um callback único, que informa um erro no primeiro argumento e os argumentos de sucesso em sequência, por exemplo:
-~~~
+~~~ javascript
 
 callback(err, data);
+
+const retornaAlgoDoBanco = (parametro, qualquerCoisa, callback) => {
+    //
+    callback(erro);
+    callback(null, dados)
+}
+
+///callback hell
+retornaAlgoDoBanco({
+    id: 1
+}, true, (err, dados) => {
+    if (err) {
+        return;
+    }
+    retornaAlgoDoBanco({
+        id: 1
+    }, true, (err, dados) => {
+        if (err) {
+            return;
+        }
+        usa(dados);
+        retornaAlgoDoBanco({
+            id: 1
+        }, true, (err, dados) => {
+            if (err) {
+                return;
+            }
+            usa(dados);
+        })
+    })
+    usa(dados);
+})
+~~~
