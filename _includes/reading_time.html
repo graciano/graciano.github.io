@@ -1,0 +1,9 @@
+<span class="reading-time" title="Tempo estimado de leitura">
+    {% include clock.html %}
+    {% assign words = include.content | number_of_words %}
+    {% if words < 360 %}
+    1 minuto
+    {% else %}
+    {{ words | divided_by:180 }} minutos
+    {% endif %}
+</span>

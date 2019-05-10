@@ -12,10 +12,12 @@ layout: default
       <time class="date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         <em>{% include date.html date=page.date %}</em>
       </time>
+      {%- include reading_time.html content=content -%}
       {%- if page.author -%}
       • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{
           page.author | escape }}</span></span>
-      {%- endif -%}</p>
+      {%- endif -%}
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
