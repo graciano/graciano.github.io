@@ -86,6 +86,8 @@ Ao exemplo de cima damos o nome de *callback hell*. E [alguém genial traduziu p
 
 ## Promises
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E-uCHxs170k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Quando alguém promete alguma coisa, como foi o meu caso ali em cima, só existem duas possibilidades: ou cumpre-se a promessa, ou se rejeita a ação. No Javascript é a mesma coisa. Ironicamente, a declaração de uma `Promise` se dá com um `callback`.
 ~~~ javascript
 const promessaDoBanco = (parametros, booleanAleatorio) => new Promise((resolve, reject) => {
