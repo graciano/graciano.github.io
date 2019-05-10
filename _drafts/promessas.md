@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Promessas em javascript
-date:   2019-04-05 13:20:00 -0300
+date:   2019-05-10 15:45:00 -0300
 description: Eu te prometo que você finalmente vai entender esse conceito do javascript e seus usos reais depois de ler este texto.
 # image: path pra imagem
 # altimg: descreva sua img
@@ -41,40 +41,58 @@ $.ajax({
       console.log('terminei');
   });
 ~~~
-Esse tipo de abordagem acabou se padronizando para o uso de um callback único, que informa um erro no primeiro argumento e os argumentos de sucesso em sequência, por exemplo:
+Esse tipo de abordagem acabou se padronizando para o uso de um callback único, que informa um erro no primeiro argumento e os argumentos de sucesso em sequência como `callback(erro, dados)`, por exemplo:
 ~~~ javascript
-
-callback(err, data);
-
-const retornaAlgoDoBanco = (parametro, qualquerCoisa, callback) => {
-    //
+const retornaAlgoDoBanco = (parametros, booleanAleatorio, callback) => {
+    // chama o banco usando os parametros e o booleanAleatorio
+    // caso dê erro, "retorna" o erro, desta maneira
     callback(erro);
-    callback(null, dados)
+    // caso de sucesso, o erro é nulo e os dados são "retornados" no segundo argumento
+    callback(null, dados);
 }
+~~~
 
-///callback hell
+Agora imagine se precisamos fazer chamadas dessas em sequência:
+
+~~~ javascript
 retornaAlgoDoBanco({
     id: 1
 }, true, (err, dados) => {
     if (err) {
+        console.log(err);
+        // interrompe a execução da função, pois não há dados para serem usados
         return;
     }
-    retornaAlgoDoBanco({
-        id: 1
-    }, true, (err, dados) => {
+    outraFuncComCalback(dados, (err, retornoDessaOutraFunc) => {
         if (err) {
+            console.log(err);
             return;
         }
         usa(dados);
         retornaAlgoDoBanco({
-            id: 1
-        }, true, (err, dados) => {
+            id: 2
+        }, true, (err, maisDadosAinda) => {
             if (err) {
+                console.log(err);
                 return;
             }
-            usa(dados);
+            usa(maisDadosAinda);
         })
-    })
-    usa(dados);
-})
+    });
+});
+~~~
+
+Ao exemplo de cima damos o nome de *callback hell*. E [alguém genial traduziu para "pirâmide da desgraça" no guia da Mozilla em português](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Usando_promises).
+
+## Promises
+
+Quando alguém promete alguma coisa, como foi o meu caso ali em cima, só existem duas possibilidades: ou cumpre-se a promessa, ou se rejeita a ação. No Javascript é a mesma coisa. Ironicamente, a declaração de uma `Promise` se dá com um `callback`.
+~~~ javascript
+const promessaDoBanco = (parametros, booleanAleatorio) => new Promise((resolve, reject) => {
+    // chama o banco usando os parametros e o booleanAleatorio
+    // caso dê erro, "retorna" o erro, desta maneira
+    reject(erro);
+    // caso de sucesso "retorna" os dados
+    resolve(dados);
+});
 ~~~
