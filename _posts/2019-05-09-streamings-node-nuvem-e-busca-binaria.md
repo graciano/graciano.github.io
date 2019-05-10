@@ -37,7 +37,6 @@ Na função `processaArquivo` usada dentro da `handler`, recebemos como argument
 const { S3 } = require('aws-sdk');
 
 const processaArquivo = async (arquivo) => {
-    const rl = readlineS3(arquivo);
     const conteudo = await new S3().getObject(arquivo);
     conteudo.split('\n').map(async (line) => {
         // faz uma cacetada de operações de rede com cada linha do arquivo
