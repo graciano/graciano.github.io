@@ -115,16 +115,14 @@ promessaDeAlgoDoBanco({ id: 1 }, true)
     .then(res => console.log('restultado do banco', res))
     .catch(err => console.log('erro de acesso ao banco', err));
 ~~~
-A função `promisify` assume que seu último argumento é um *callback* naquele modelo `callback(erro, resultado)`. Uma implementação para o promisify um tanto ingênua seria o código abaixo. Aqui tem um [polyfill](https://github.com/ljharb/util.promisify/blob/master/implementation.js) para versões antes de node 8 que seria mais genérica e confiável.
+A função `promisify` assume que seu último argumento é um *callback* naquele modelo `callback(erro, resultado)`. Uma implementação para o promisify um tanto ingênua seria o código abaixo. [Aqui tem um polyfill](https://github.com/ljharb/util.promisify/blob/master/implementation.js) para versões antes de node 8 que seria mais genérica e confiável.
 
+> Note a assinatura desta primeira linha, que é uma função que retorna outra função (que receberia os argumentos da função que usa callback). Por fim, esta função "de dentro" retorna uma nova promise.
 ~~~ javascript
-// note a assinatura desta primeira linha, que é uma função que retorna outra função (que receberia os argumentos da função que usa callback) e que esta função "de dentro" retorna uma nova promise
 const promisify = (funcaoLegado) => (...args) => new Promise(
     (resolve, reject) => funcaoLegado(args, (res, err) => {
-        if (err) {
-            reject(err);
-        }
-        resolve(res);
+        if (err) reject(err);
+        else resolve(res);
     })
 );
 ~~~
@@ -132,3 +130,33 @@ const promisify = (funcaoLegado) => (...args) => new Promise(
 Agora ainda fica uma questão. Mesmo que seja uma *arrow function* bonitinha, nós **ainda estamos usando callbacks**, mesmo que seja de uma maneira mais padronizada. E é aí que vem um *[açúcar sintático](https://pt.wikipedia.org/wiki/A%C3%A7%C3%BAcar_sint%C3%A1tico)*: as keywords async/await.
 
 ### Async/Await
+`async` é um açúcar sintático para declarar uma função assíncrona que retorna uma promise implicitamente. E `await` é um açúcar sintático para esperar o resultado de uma promise. Em caso de rejeição, um erro é lançado e será necessário usar o bloco *try/catch*. E é só isso. Isso resolve a *pirâmide da desgraça* de uma vez por todas. Vamos aos exemplos, baseados nos exemplos anteriores:
+~~~ javascript
+try {
+    const promessaDeAlgoDoBanco = promisify(retornaAlgoDoBanco);
+    const resultado = await promessaDeAlgoDoBanco({ id: 1 }, true);
+} catch(err) {
+    console.log('erro de acesso ao banco', err);
+}
+~~~
+
+Ou se fosse o caso de implementar o acesso ao banco diretamente como uma função assíncrona:
+~~~ javascript
+const retornaAlgoDoBanco = async (parametros, booleanAleatorio) => {
+    // chama o banco usando os parametros e o booleanAleatorio
+    // caso dê erro
+    throw new Error('erro de acesso ao banco');
+    // caso de sucesso, o erro é nulo e os dados são "retornados" no segundo argumento
+    return dados;
+}
+~~~
+
+Ao afirmar que uma função assíncrona retorna uma Promise de maneira *implícita*, significa que o interpretador do Javascript é *bem espertinho* e vai resolver as promises que forem possíveis de serem resolvidas *antes da execução*. O que torna o seguinte código redundante:
+~~~ javascript
+const assincrono = async () => {
+    // ...
+    return await dados;
+}
+~~~
+
+Bem, era isso. Espero ter cumprido minha promessa (;
