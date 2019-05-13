@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Promessas em javascript
-date:   2019-05-10 15:45:00 -0300
+date:   2019-05-13 11:45:00 -0300
 description: Eu te prometo que você finalmente vai entender esse conceito do javascript e seus usos reais depois de ler este texto.
 # image: path pra imagem
 # altimg: descreva sua img
@@ -96,3 +96,37 @@ const promessaDoBanco = (parametros, booleanAleatorio) => new Promise((resolve, 
     resolve(dados);
 });
 ~~~
+
+Porém, raríssimas são as vezes em que o programador declara uma nova Promise. Em geral, você vai **usar** uma API que **retorna** uma Promise, e cabe ao programador lidar com o sucesso ou a rejeição da Promise. Por exemplo, a função [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API) faz exatamente o que o antigo ajax do jQuery fazia:
+~~~ javascript
+fetch('https://swapi.co/api/people/5/')
+    .then(res => console.log('dados da Princesa Leia', res.json()))
+    .catch(err => console.log('erro de acesso na api do Star Wars', err));
+~~~
+
+Uma maneira de consertar a *pirâmide da desgraça* ali de cima seria com uma função `promisify`, por exemplo `promisify(retornaAlgoDoBanco)`, que retorna uma função que retorna uma Promise. Em node (mas também é possível usar no browser), o uso seria algo como:
+~~~ javascript
+const { promisify } = require('util'); // o pacote 'util' já vem no node nativo, a partir da versão 8
+const promessaDeAlgoDoBanco = promisify(retornaAlgoDoBanco);
+
+promessaDeAlgoDoBanco({ id: 1 }, true)
+    .then(res => console.log('restultado do banco', res))
+    .catch(err => console.log('erro de acesso ao banco', err));
+~~~
+A função `promisify` assume que seu último argumento é um *callback* naquele modelo `callback(erro, resultado)`. Uma implementação para o promisify um tanto ingênua seria o código abaixo. Aqui tem um [polyfill](https://github.com/ljharb/util.promisify/blob/master/implementation.js) para versões antes de node 8 que seria mais genérica e confiável.
+
+~~~ javascript
+// note a assinatura desta primeira linha, que é uma função que retorna outra função (que receberia os argumentos da função que usa callback) e que esta função "de dentro" retorna uma nova promise
+const promisify = (funcaoLegado) => (...args) => new Promise(
+    (resolve, reject) => funcaoLegado(args, (res, err) => {
+        if (err) {
+            reject(err);
+        }
+        resolve(res);
+    })
+);
+~~~
+
+Agora ainda fica uma questão. Mesmo que seja uma *arrow function* bonitinha, nós **ainda estamos usando callbacks**, mesmo que seja de uma maneira mais padronizada. E é aí que vem um *[açúcar sintático](https://pt.wikipedia.org/wiki/A%C3%A7%C3%BAcar_sint%C3%A1tico)*: as keywords async/await.
+
+### Async/Await
