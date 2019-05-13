@@ -87,6 +87,7 @@ Ao exemplo de cima damos o nome de *callback hell*. E [alguém genial traduziu p
 ## Promises
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E-uCHxs170k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{: .center-elem}
 
 Quando alguém promete alguma coisa, como foi o meu caso ali em cima, só existem duas possibilidades: ou cumpre-se a promessa, ou se rejeita a ação. No Javascript é a mesma coisa. Ironicamente, a declaração de uma `Promise` se dá com um `callback`.
 ~~~ javascript
@@ -118,6 +119,7 @@ promessaDeAlgoDoBanco({ id: 1 }, true)
 A função `promisify` assume que seu último argumento é um *callback* naquele modelo `callback(erro, resultado)`. Uma implementação para o promisify um tanto ingênua seria o código abaixo. [Aqui tem um polyfill](https://github.com/ljharb/util.promisify/blob/master/implementation.js) para versões antes de node 8 que seria mais genérica e confiável.
 
 > Note a assinatura desta primeira linha, que é uma função que retorna outra função (que receberia os argumentos da função que usa callback). Por fim, esta função "de dentro" retorna uma nova promise.
+
 ~~~ javascript
 const promisify = (funcaoLegado) => (...args) => new Promise(
     (resolve, reject) => funcaoLegado(args, (res, err) => {
