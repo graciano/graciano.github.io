@@ -151,6 +151,13 @@ const retornaAlgoDoBanco = async (parametros, booleanAleatorio) => {
 }
 ~~~
 
+Inclusive, este código é **equivalente** ao anterior, podendo ser usado com a função `then`:
+~~~ javascript
+retornaAlgoDoBanco(parametros, false)
+    .then(resultado => console.log(resultado))
+    .catch(/* ... */);
+~~~
+
 Ao afirmar que uma função assíncrona retorna uma Promise de maneira *implícita*, significa que o interpretador do Javascript é *bem espertinho* e vai resolver as promises que forem possíveis de serem resolvidas *antes da execução*. O que torna o seguinte código redundante:
 ~~~ javascript
 const assincrono = async () => {
