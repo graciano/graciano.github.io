@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  Promessas em javascript
-date:   2019-05-14 10:39:00 -0300
+date:   2019-05-15 10:30:00 -0300
 description: Eu te prometo que você finalmente vai entender esse conceito do javascript e seus usos reais depois de ler este texto.
-# image: path pra imagem
-# altimg: descreva sua img
+image: assets/img/corrente-e-cadeado-numa-porta.jpg
+altimg: Corrente e cadeado numa porta de madeira, com o efeito 3D de sempre
 ---
 ## Antes de explicar o que é Promessa, uma Promessa
 
