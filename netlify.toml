@@ -1,4 +1,4 @@
 [context.preview]
-    command = "jekyll build --drafts"
+    command = "jekyll build --drafts --future"
     [context.preview.environment]
         JEKYLL_ENV = "dev"
