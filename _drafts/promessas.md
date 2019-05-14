@@ -1,18 +1,18 @@
 ---
 layout: post
 title:  Promessas em javascript
-date:   2019-05-13 11:45:00 -0300
+date:   2019-05-14 10:39:00 -0300
 description: Eu te prometo que você finalmente vai entender esse conceito do javascript e seus usos reais depois de ler este texto.
 # image: path pra imagem
 # altimg: descreva sua img
 ---
 ## Antes de explicar o que é Promessa, uma Promessa
 
-Eu prometo que vou explicar as promises, mas **antes, vou trazer aqui o contexto de como elas surgiram**, porque o mundo real não é um tutorial de internet e você vai acabar se deparando com um sistema legado cheio de *callbacks* por aí.
+Eu prometo que vou explicar as promises, mas **antes, vou trazer aqui o contexto de como elas surgiram**, porque o mundo real não é um tutorial isolado em que tudo funciona... e você pode acabar se deparando com um sistema legado cheio de *callbacks* por aí.
 
 ## Callbacks
 
-Em Javascript, funções são um tipo de variável, por exemplo `const minhaFunc = () => 'olá mundo';`. Que, caso você não conheça ainda as *arrow functions*, é a mesma coisa que:
+Em Javascript, funções são um tipo de variável, por exemplo `const minhaFunc = () => 'olá mundo'`. Que, caso você não conheça ainda as *arrow functions*, é a mesma coisa que:
 ~~~ javascript
 const minhaFunc = function() {
     return 'olá mundo';
@@ -25,7 +25,7 @@ const minhaFunc = () => {
 }
 ~~~
 
-Sendo as funções um tipo, pode-se passar uma função como argumento de outra, para ela ser executada no futuro. A esta função que é argumento de outra, dá-se o nome de *callback*. Um exemplo disso existe desde a era das trevas da linguagem e se chama `setTimeout`, por exemplo `setTimeout(() => console.log('Julinho da Van'), 3000)` printa "Julinho da Van" no seu console depois de 3 segundos (ou 3000 milissegundos).
+Sendo as funções um tipo, pode-se passar uma função como argumento de outra, para ela ser executada no futuro. A esta função que é argumento de outra, dá-se o nome de *callback*. Um exemplo disso existe desde a idade da pedra da linguagem e se chama `setTimeout`, por exemplo `setTimeout(() => console.log('Julinho da Van'), 3000)` printa "Julinho da Van" no seu console depois de 3 segundos (ou 3000 milissegundos).
 
 Então, quem ainda usa jQuery deve conhecer a função `$.ajax`.
 ~~~ javascript
@@ -129,7 +129,23 @@ const promisify = (funcaoLegado) => (...args) => new Promise(
 );
 ~~~
 
-Agora ainda fica uma questão. Mesmo que seja uma *arrow function* bonitinha, nós **ainda estamos usando callbacks**, mesmo que seja de uma maneira mais padronizada. E é aí que vem um *[açúcar sintático](https://pt.wikipedia.org/wiki/A%C3%A7%C3%BAcar_sint%C3%A1tico)*: as keywords async/await.
+O uso de promessas *"thenable"* (que possuem o método `then()`) permite o [encadeamento](https://javascript.info/promise-chaining), desta maneira:
+
+~~~ javascript
+retornaAlgoDoBanco({
+    id: 1
+}, true)
+    .then(dados => outraFuncDessaVezUmaPromise(dados))
+    .then(dados => usa(dados))
+    .then(dados => retornaAlgoDoBanco({
+            id: 2
+        }, true))
+    .then(maisDadosAinda => usa(maisDadosAinda))
+    .catch(err => /* trata o erro uma vez para qualquer parte do encadeamento */);
+fazAlgumaOutraCoisa();
+~~~
+
+Agora ainda fica uma questão. Mesmo que seja uma *arrow function* bonitinha, nós **ainda estamos usando callbacks**, mesmo que seja de uma maneira mais padronizada. A linha em que eu coloquei o `fazAlgumaOutraCoisa()` não vai acontecer depois das promessas serem cumpridas (ou rejeitadas). Ou não. O código é **assíncrono**. Para solucionar este problema, foi criado um *[açúcar sintático](https://pt.wikipedia.org/wiki/A%C3%A7%C3%BAcar_sint%C3%A1tico)*: as keywords async/await.
 
 ### Async/Await
 `async` é um açúcar sintático para declarar uma função assíncrona que retorna uma promise implicitamente. E `await` é um açúcar sintático para esperar o resultado de uma promise. Em caso de rejeição, um erro é lançado e será necessário usar o bloco *try/catch*. E é só isso. Isso resolve a *pirâmide da desgraça* de uma vez por todas. Vamos aos exemplos, baseados nos exemplos anteriores:
