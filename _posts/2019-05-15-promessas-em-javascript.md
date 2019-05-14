@@ -5,6 +5,7 @@ date:   2019-05-15 10:30:00 -0300
 description: Eu te prometo que você finalmente vai entender esse conceito do javascript e seus usos reais depois de ler este texto.
 image: assets/img/corrente-e-cadeado-numa-porta.jpg
 altimg: Corrente e cadeado numa porta de madeira, com o efeito 3D de sempre
+img_full: true
 ---
 ## Antes de explicar o que é Promessa, uma Promessa
 
