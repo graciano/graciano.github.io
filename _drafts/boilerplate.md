@@ -3,8 +3,9 @@ layout: post
 title:  Título da hora
 date:   2009-03-18 10:00:00 -0300
 description: Chamadinha caça-clique
-# image: path pra imagem
+# image: assets/img/path/da/imagem.jpg
 # altimg: descreva sua img
+# img_full: true
 ---
 ## Referência de kramdown
 

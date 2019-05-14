@@ -63,6 +63,9 @@
   display: block;
   max-height: 30vh;
   object-fit: cover;
+  &.full-width {
+    width: 100%;
+  }
 }
 
 .reading-time {
