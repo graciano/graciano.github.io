@@ -16,7 +16,7 @@
 title: graciano codes
 email: matheusgraciano@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  "Matheus Graciano: Escritor de software, rubro negro e músico. Cara esquisito de exatas que lê poesia. Grande apreciador de batidas de limão."
+  Matheus Graciano: Escritor de software, rubro negro e músico. Cara esquisito de exatas que lê poesia. Grande apreciador de batidas de limão.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://graciano.me/" # the base hostname & protocol for your site
 github_username: graciano
