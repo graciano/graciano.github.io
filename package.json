@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"webpack js/index.js -o assets/bundle.js --mode=development --watch --env=dev --progress --profile --colors\" \"bundle exec jekyll serve\"",
-    "build": "webpack --env=prod --progress --profile --colors && bundle exec jekyll build",
+    "build:preview": "webpack js/index.js -o assets/bundle.js --env=prod --progress --profile --colors && bundle exec jekyll build --drafts --future",
+    "build": "webpack js/index.js -o assets/bundle.js --env=prod --progress --profile --colors && bundle exec jekyll build",
     "serve:dist": "npx http-server _site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,4 +1,6 @@
+[context.production]
+  command = "npm run build"
 [context.preview]
-    command = "jekyll build --drafts --future"
-    [context.preview.environment]
-        JEKYLL_ENV = "dev"
+  command = "npm run build:preview"
+  [context.preview.environment]
+    JEKYLL_ENV = "dev"
