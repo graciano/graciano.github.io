@@ -1,22 +1,32 @@
 {
-  "name": "graciano.github.io",
-  "version": "1.0.0",
-  "description": "",
+  "name": "graciano.me",
+  "version": "2.0.0",
+  "description": "meu blog vaporwave feito em jekyll",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently \"webpack js/index.js -o assets/bundle.js --mode=development --watch --env=dev --progress --profile --colors\" \"bundle exec jekyll serve\"",
+    "build": "webpack --env=prod --progress --profile --colors && bundle exec jekyll build",
+    "serve:dist": "npx http-server _site",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/graciano/graciano.github.io.git"
+    "url": "git+https://github.com/graciano/graciano.me.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/graciano/graciano.github.io/issues"
+    "url": "https://github.com/graciano/graciano.me/issues"
   },
-  "homepage": "https://github.com/graciano/graciano.github.io#readme",
+  "homepage": "https://github.com/graciano/graciano.me#readme",
   "dependencies": {
-    "breakpoint-sass": "^2.7.1"
+    "breakpoint-sass": "^2.7.1",
+    "embaralha": "^0.2.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "devDependencies": {
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "concurrently": "^4.1.0"
   }
 }
