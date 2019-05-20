@@ -42,4 +42,11 @@
 
 .pagination {
   font-family: 'Fira Code', monospace;
+  display: flex;
+  justify-content: center;
+
+  span,
+  a {
+    padding: 0.3em;
+  }
 }
