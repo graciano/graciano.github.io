@@ -1,5 +1,5 @@
 {% assign text = page.description %}
-{% assign url = page.url %}
+{% assign url = site.url | append: page.url %}
 
 <nav class="social-sharing">
   <a href="https://twitter.com/intent/tweet?text={{ text}}&url={{ url }}">tuita</a>
