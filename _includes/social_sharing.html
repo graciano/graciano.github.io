@@ -1,0 +1,9 @@
+{% assign text = page.description %}
+{% assign url = page.url | relative_url %}
+
+<nav class="social-sharing">
+  <a href="https://twitter.com/intent/tweet?text={{ text}}&url={{ url }}">tuita</a>
+  <a href="web+mastodon://share?text={{ text }}+{{ url }}">dá um toot</a>
+  <a href="whatsapp://send?text={{ url }}" data-action="share/whatsapp/share">vai de zap</a>
+  <a href="tg://msg_url?url={{ url }}">vai de zap azul</a>
+</nav>
