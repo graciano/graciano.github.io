@@ -1,9 +1,23 @@
 {% assign text = page.description %}
 {% assign url = site.url | append: page.url %}
 
-<nav class="social-sharing">
-  <a href="https://twitter.com/intent/tweet?text={{ text}}&url={{ url }}">tuita</a>
-  <a href="web+mastodon://share?text={{ text }}+{{ url }}">dá um toot</a>
-  <a href="whatsapp://send?text={{ url }}" data-action="share/whatsapp/share">vai de zap</a>
-  <a href="tg://msg_url?url={{ url }}">vai de zap azul</a>
+<nav class="social-sharing social-nav">
+  <ul>
+    <li>
+      {%- include svg_social.html network='twitter' -%}
+      <a href="https://twitter.com/intent/tweet?text={{ text}}&url={{ url }}">tuitar</a>
+    </li>
+    <li>
+      {%- include svg_social.html network='mastodon' -%}
+      <a href="web+mastodon://share?text={{ text }}+{{ url }}">toot</a>
+    </li>
+    <li>
+      {%- include svg_social.html network='whatsapp' -%}
+      <a href="whatsapp://send?text={{ url }}" data-action="share/whatsapp/share">zap</a>
+    </li>
+    <li>
+      {%- include svg_social.html network='telegram' -%}
+      <a href="tg://msg_url?url={{ url }}">zap azul</a>
+    </li>
+  </ul>
 </nav>
