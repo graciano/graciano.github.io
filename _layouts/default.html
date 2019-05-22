@@ -34,11 +34,9 @@
       {{ content }}
     </div>
     <footer class="main-footer">
-      <ul class="social-media-list">
+      <ul>
         <li>
-          <svg class="svg-icon orange">
-            <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-          </svg><a href="{{ '/feed.xml' | relative_url }}">Assine</a>
+          {%- include svg_social.html network='rss' -%}<a href="{{ '/feed.xml' | relative_url }}">Assine</a>
         </li>
         <li><a href="{{ 'about' | relative_url }}">Sobre mim</a></li>
         <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>

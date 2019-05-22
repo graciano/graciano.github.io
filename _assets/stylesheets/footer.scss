@@ -1,4 +1,9 @@
 .main-footer {
   font-family: 'Fira Code', monospace;
   text-align: left;
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
 }
