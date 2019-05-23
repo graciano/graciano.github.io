@@ -24,7 +24,7 @@ Respeito muito o jQuery, mas já passou o seu tempo. Ainda tem uma função educ
 ## 6: Angular 1.x
 ![]({{ site.url }}/assets/img/angular.png)
 {: .center-elem }
-Assim como o jQuery, já cumpriu seu papel na Terra e está fazendo hora extra. E eu me recuso a chamar a ferramenta pelo seu novo nome "angularJS". A Google fez cagada em não dar um nome diferente pros outros monstrinhos completamente diferentes que são angular 2, 3, 4...
+Assim como o jQuery, já cumpriu seu papel na Terra e está fazendo hora extra. E eu me recuso a chamar a ferramenta pela nomenclatura retroativa de "angularJS". A Google fez cagada em não dar um nome diferente pros outros monstrinhos completamente diferentes que são angular 2, 3, 4... Inclusive, a própria ferramenta de busca do google não entende que antes de 2017 angular é angularJS, e depois disso são coisas diferentes.
 
 ## 5: PHP 5
 ![]({{ site.url }}/assets/img/pqp.jpg)
@@ -50,7 +50,7 @@ Sério, a Adobe deveria ser condenada por crimes contra a internet. Flash nem é
 ![]({{ site.url }}/assets/img/angular.png)
 {: .center-elem }
 
-*And the oscar goes to...* era óbvio né? Pra começar que eu nem consigo apontar nem qual versão ficaria aqui, que são diferentes das outras e introduzem *breaking changes* a torto e a direito. Daí resolvi colocar os anos. Nem tem a desculpa de não darem mais suporte como outros itens da lista. Especificamente este período porque é o período em que eu tenho **provas** de que é uma bosta. Seguem os dados:
+*And the oscar goes to...* era óbvio né? Pra começar que eu nem consigo apontar nem qual versão ficaria aqui, que são diferentes das outras e introduzem *breaking changes* a torto e a direito. Daí resolvi colocar os anos. Nem tem a desculpa de não darem mais suporte como outros itens da lista. A mudança em relação ao angular 1 veio [tarde demais](https://medium.com/@chriscordle/why-angular-2-4-is-too-little-too-late-ea86d7fa0bae). Coloquei especificamente este período porque é o período em que eu tenho **provas** de que é uma bosta. Seguem os dados:
 
 ![]({{ site.url }}/assets/img/numeros-pq-angular-eh-ruim.jpg)
 {: .center-elem }
