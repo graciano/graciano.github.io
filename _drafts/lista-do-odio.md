@@ -54,4 +54,6 @@ Sério, a Adobe deveria ser condenada por crimes contra a internet. Flash nem é
 
 ![]({{ site.url }}/assets/img/numeros-pq-angular-eh-ruim.jpg)
 {: .center-elem }
-> Pesquisa do [State of JS de 2018](https://2018.stateofjs.com/front-end-frameworks/overview/) mostra que angular é a única framework frontend com mais gente usando que quer deixar de usar (34%, eu incluso) do que gente usando que quer continuar usando (24%).
+> Pesquisa do [State of JS de 2018](https://2018.stateofjs.com/front-end-frameworks/overview/) mostra que angular é a única framework frontend com mais gente usando que quer deixar de usar (34%, inclusive eu) do que gente usando que quer continuar usando (24%).
+
+Enfim, agora que **números provam** que angular é ruim, fique a vontade para reclamar nos comentários.
