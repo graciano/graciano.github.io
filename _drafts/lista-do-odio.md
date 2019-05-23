@@ -15,18 +15,43 @@ No entanto, de boas intenções o inferno está cheio. Nos vemos no inferno.
 
 **Observação:** Se aquela bosta que você usa no trabalho não apareceu aqui, provavelmente é porque eu nunca usei, sinta-se livre pra comentar :)
 
-## 5: jQuery
+## 7: jQuery
+![]({{ site.url }}/assets/img/jQuery.jpg)
+{: .center-elem }
 Respeito muito o jQuery, mas já passou o seu tempo. Ainda tem uma função educativa muito boa, ao introduzir pessoas para o mundo web. Porém se você usa em produção (*ou seja, no mundo real, com usuários reais*) em um sistema desta década que não seja legado, *eu amaldiçoarei suas próximas 5 gerações,* **principalmente se você mistura jQuery com react, angular ou outra framework mais moderna.**
 
-## 4: Angular 1.x
+
+## 6: Angular 1.x
+![]({{ site.url }}/assets/img/angular.png)
+{: .center-elem }
 Assim como o jQuery, já cumpriu seu papel na Terra e está fazendo hora extra. E eu me recuso a chamar a ferramenta pelo seu novo nome "angularJS". A Google fez cagada em não dar um nome diferente pros outros monstrinhos completamente diferentes que são angular 2, 3, 4...
 
-## 3: PHP 5
+## 5: PHP 5
+![]({{ site.url }}/assets/img/pqp.jpg)
+{: .center-elem }
 Dessa água já bebi, e como disse antes, é meio injusto porque nem há mais suporte pra essa versão tem uns 3 anos já. Só que é bizarro: papo de uns 70% da internet inteira ainda deve estar em PHP 5, sendo que não há mais suporte pra essa versão da linguagem. Festa dos hackers.
 
-## 2: SQL server
+## 4: Dreamweaver
+![]({{ site.url }}/assets/img/dreamweaver.png)
+{: .center-elem }
+Se você passou por essa desgraça na sua vida, isso formou o seu caráter hoje.
+
+## 3: SQL server
+![]({{ site.url }}/assets/img/sql-server.jpg)
+{: .center-elem }
 É impressionante como tudo que a microsoft tocou antes de 2010 é o mais puro lixo. Só não ficou atrás do PHP 5 porque o próprio PHP não dava mais suporte pra SQL Server na versão 5.
 
+## 2: Flash Builder
+![]({{ site.url }}/assets/img/flash-builder.jpg)
+{: .center-elem }
+Sério, a Adobe deveria ser condenada por crimes contra a internet. Flash nem é gente.
+
 ## 1: Angular 2018~2019
+![]({{ site.url }}/assets/img/angular.png)
+{: .center-elem }
 
 *And the oscar goes to...* era óbvio né? Pra começar que eu nem consigo apontar nem qual versão ficaria aqui, que são diferentes das outras e introduzem *breaking changes* a torto e a direito. Daí resolvi colocar os anos. Nem tem a desculpa de não darem mais suporte como outros itens da lista. Especificamente este período porque é o período em que eu tenho **provas** de que é uma bosta. Seguem os dados:
+
+![]({{ site.url }}/assets/img/numeros-pq-angular-eh-ruim.jpg)
+{: .center-elem }
+> Pesquisa do [State of JS de 2018](https://2018.stateofjs.com/front-end-frameworks/overview/) mostra que angular é a única framework frontend com mais gente usando que quer deixar de usar (34%, eu incluso) do que gente usando que quer continuar usando (24%).
