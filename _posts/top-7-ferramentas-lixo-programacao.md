@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Top 5 ferramentas lixo de programação
+title:  Top 7 ferramentas lixo de programação
 date:   2019-05-23 17:30:00 -0300
 description: Vem comigo compartilhar de ódio gratuito. Ou nem tão gratuito assim, porque tem muita bosta por aí.
 image: assets/img/emoticon-angry.jpg
