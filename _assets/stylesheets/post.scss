@@ -10,6 +10,10 @@
   .post-meta {
     display: flex;
     align-items: center;
+
+    @include themed() {
+      color: theme-prop('color-main-text');
+    }
   }
 
   .date {

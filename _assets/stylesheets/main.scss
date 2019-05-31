@@ -6,13 +6,17 @@
 @import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "fonts";
 @import "vars";
+@import "theme";
 @import "mixins";
 
 html,
 body {
   font-family: 'Merriweather', Times, sans-serif;
-  color: $color-grey;
   @include font-size(16px);
+  @include themed() {
+    color: theme-prop('color-main-text');
+    background: theme-prop('bg');
+  }
 
   &,
   * {
@@ -35,18 +39,23 @@ a:hover {
 }
 
 a {
-  color: $color-blue;
-  &:hover {
-    color: #fff;
-    background: $color-blue;
+  @include themed() {
+    color: theme-prop('color-link');
+
+    &:hover {
+      color: theme-prop('color-link-hover');
+      background: theme-prop('color-link');
+    }
   }
 }
 
 a:visited {
-  color: $color-purple;
-  &:hover {
-    color: #fff;
-    background: $color-purple;
+  @include themed() {
+    color: theme-prop('color-link-visited');
+    &:hover {
+      color: theme-prop('color-link-hover');
+      background: theme-prop('color-link-visited');
+    }
   }
 }
 

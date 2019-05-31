@@ -12,3 +12,21 @@ $color-green: #05ffa1;
 $color-purple: #b967ff;
 $color-yellow: #fffb96;
 $color-grey: #1d1d1d;
+$color-white: #fff;
+
+$themes: (
+    default: (
+        color-link: $color-blue,
+        color-link-visited: $color-purple,
+        color-link-hover: $color-white,
+        bg: $color-white,
+        color-main-text: $color-grey,
+    ),
+    dark: (
+        color-link: $color-blue,
+        color-link-visited: $color-purple,
+        color-link-hover: $color-grey,
+        bg: $color-grey,
+        color-main-text: $color-white,
+    ),
+);

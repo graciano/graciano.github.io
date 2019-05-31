@@ -33,7 +33,7 @@ Com nome inspirado no BrainFuck, o JS Fuck é javascript **válido**. São apena
 assembly esotérico, feito po um brasileiro
 https://esolangs.org/wiki/Ases
 
-# Javagrid
+## Javagrid
 
 É uma linguagem 2D. Isso é hilário. Veja abaixo uma implementação do famoso *FizzBuzz*
 

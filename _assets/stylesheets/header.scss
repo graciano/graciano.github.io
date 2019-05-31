@@ -10,13 +10,14 @@
   justify-content: center;
   align-items: center;
 
-  a {
-    color: #fff;
-    @include text-3d();
-
-    &:hover {
-      background: none;
+  a,
+  a:visited,
+  a:hover {
+    @include themed {
+      color: theme-prop('color-main-text');
     }
+    background: none;
+    @include text-3d();
   }
 
   h1 {

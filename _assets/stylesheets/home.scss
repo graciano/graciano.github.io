@@ -32,7 +32,9 @@
 
   a,
   a:visited {
-    color: $color-blue;
+    @include themed() {
+      color: theme-prop('color-link');
+    }
 
     &:hover {
       background: none;
