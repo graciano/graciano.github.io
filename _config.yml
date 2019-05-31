@@ -35,6 +35,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-assets
   - jekyll-paginate-v2
+  - jekyll-gist
 
 disqus:
   shortname: graciano
