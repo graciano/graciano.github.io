@@ -17,3 +17,13 @@ code {
     background: theme-prop('bg-code');
   }
 }
+
+.theme--dark {
+  @import "../partials/rouge-syntax-highlight-theme-dark";
+}
+
+.theme--default {
+  // arquivo gerado com a gem
+  // rougify style gruvbox.light > _assets/stylesheets/partials/_rouge-syntax-highlight-theme-default.scss
+  @import "../partials/rouge-syntax-highlight-theme-default";
+}

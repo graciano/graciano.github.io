@@ -23,7 +23,7 @@ $themes: (
     color-main-text: $color-grey,
     color-main-code: darken($color-grey, 10%),
     color-inline-code: darken($color-green, 10%),
-    bg-code: $color-white,
+    bg-code: darken($color-white, 10%),
   ),
   dark: (
     color-link: $color-blue,

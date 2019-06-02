@@ -13,10 +13,9 @@
   a,
   a:visited,
   a:hover {
-    @include themed {
-      color: theme-prop('color-main-text');
-    }
+    color: $color-white;
     background: none;
+
     @include text-3d();
   }
 
