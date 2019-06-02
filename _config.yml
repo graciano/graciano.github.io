@@ -60,6 +60,7 @@ assets:
   sources:
     # - _assets/img
     - _assets/stylesheets
+    - _assets/comments
 
 pagination:
   enabled: true

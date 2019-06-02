@@ -1,4 +1,5 @@
 import { embaralha } from 'embaralha';
+import './comments';
 
 const tempoEmbaralha = 800;
 const intervaloEmbaralha = 5 * 1000;

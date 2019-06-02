@@ -1,0 +1,12 @@
+@import "../stylesheets/partials/vars";
+@import "../stylesheets/partials/theme";
+
+#disqus_thread {
+  iframe,
+  body {
+    @include themed() {
+      color: theme-prop('color-main-text') !important;
+      background: theme-prop('bg');
+    }
+  }
+}
