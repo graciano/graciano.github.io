@@ -8,6 +8,7 @@
 @import "vars";
 @import "theme";
 @import "mixins";
+@import "rouge-syntax-highlight-theme";
 
 html,
 body {
@@ -59,9 +60,22 @@ a:visited {
   }
 }
 
+.highlighter-rouge {
+  @include themed() {
+    color: theme-prop('color-inline-code');
+    background: theme-prop('bg-code');
+  }
+}
+
+.highlight,
+.highlighter-rouge pre,
 code {
   font-family: 'Fira Code', monospace;
   @include font-size(12px);
+  @include themed() {
+    color: theme-prop('color-main-code');
+    background: theme-prop('bg-code');
+  }
 }
 
 @for $i from 1 through 6 {

@@ -15,18 +15,24 @@ $color-grey: #1d1d1d;
 $color-white: #fff;
 
 $themes: (
-    default: (
-        color-link: $color-blue,
-        color-link-visited: $color-purple,
-        color-link-hover: $color-white,
-        bg: $color-white,
-        color-main-text: $color-grey,
-    ),
-    dark: (
-        color-link: $color-blue,
-        color-link-visited: $color-purple,
-        color-link-hover: $color-grey,
-        bg: $color-grey,
-        color-main-text: $color-white,
-    ),
+  default: (
+    color-link: $color-blue,
+    color-link-visited: $color-purple,
+    color-link-hover: $color-white,
+    bg: $color-white,
+    color-main-text: $color-grey,
+    color-main-code: darken($color-grey, 10%),
+    color-inline-code: darken($color-green, 10%),
+    bg-code: $color-white,
+  ),
+  dark: (
+    color-link: $color-blue,
+    color-link-visited: $color-purple,
+    color-link-hover: $color-grey,
+    bg: $color-grey,
+    color-main-text: $color-white,
+    color-main-code: darken($color-white, 10%),
+    color-inline-code: darken($color-green, 10%),
+    bg-code: darken($color-grey, 10%),
+  ),
 );
