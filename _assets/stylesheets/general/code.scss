@@ -1,0 +1,19 @@
+.highlighter-rouge {
+  @include themed() {
+    color: theme-prop('color-inline-code');
+    background: theme-prop('bg-code');
+  }
+}
+
+.highlight,
+.highlighter-rouge pre,
+code {
+  font-family: 'Fira Code', monospace;
+
+  @include font-size(12px);
+
+  @include themed() {
+    color: theme-prop('color-main-code');
+    background: theme-prop('bg-code');
+  }
+}
