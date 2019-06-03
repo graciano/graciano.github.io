@@ -39,6 +39,12 @@
     }
   }
 
+  .small-img {
+    img {
+      max-height: 12em;
+    }
+  }
+
   .img-fit {
     &,
     img {
@@ -64,6 +70,17 @@
   .social-sharing {
     margin-bottom: 1.5em;
   }
+
+  hr {
+    border: none;
+    margin-bottom: 1.2em;
+    &::before {
+      content: '***';
+      display: block;
+      text-align: center;
+    }
+  }
+
 }
 
 .post-img-header {

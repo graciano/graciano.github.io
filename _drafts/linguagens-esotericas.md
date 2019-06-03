@@ -19,7 +19,7 @@ Lembrando que **todas** elas são *Turing Completas*, ou seja, **teoricamente** 
 **Javascript for the moon**
 
 ![meme doge "such code", "many html"]({{ '/assets/img/esotericas/codedoge.jpg' | relative_url }})
-{: .center-elem }
+{: .center-elem .small-img}
 
 Como eu gostava desse meme. Como declarar uma string? `very value is 'banana'`. [É uma linguagem que compila pra javascript](https://dogescript.io/). Você me pergunta *"por quê?"* e eu te devolvo com *"por que não?"*
 
@@ -57,15 +57,52 @@ Você acabou de ler o *"hello world"* da linguagem [Arnoldc](https://github.com/
 
 ## Javagrid
 
-É uma linguagem 2D. Isso é hilário. Veja abaixo uma implementação do famoso *FizzBuzz*
-
-https://esolangs.org/wiki/Javagrid
+É [uma linguagem](https://esolangs.org/wiki/Javagrid) **2D**. Isso é uma piração muito grande que eu não sei explicar, só mostrar mesmo. É uma abordagem bem interessante, programar pra isso deve ser como jogar um jogo, montar um cubo mágico. Veja abaixo uma implementação do famoso *FizzBuzz*
+```
+                 |i:number,j:number|                 
+                 |print(i)         |                 
+                 |down(i+1,j)      |                 
+                 |                 |                 
+                 |                 |                 
+                 |                 |                 
+-----------------@-----------------@-----------------
+i:number,j:number|i:number,j:number|i:number,j:number
+print("Fizz")    |i>j end()        |print("FizzBuzz")
+right(i+1,j)     |i%15=0 right(i,j)|left(i+1,j)      
+                 |i%5=0 down(i,j)  |                 
+                 |i%3=0 left(i,j)  |                 
+                 |up(i,j)          |                 
+-----------------@-----------------@-----------------
+                 |i:number,j:number|                 
+                 |print("Buzz")    |                 
+                 |up(i+1,j)        |                 
+                 |                 |                 
+                 |                 |                 
+                 |                 |
+```
 
 ## BIRL
+![Logo da linguagem: um homem musculoso com os braços para cima]({{ '/assets/img/esotericas/birl.png' | relative_url }})
+{: .center-elem .small-img }
 
-Apenas apreciem esta obra de arte que é a linguagem do Bambam
-https://birl-language.github.io/
+```
+HORA DO SHOW
+    CE QUER VER ESSA PORRA? ("Hello, World! Porra!\n");
+    BORA CUMPADE 0;
+BIRL
+```
 
-## Yorlang (yoruba)
-https://github.com/anoniscoding/yorlang
-https://anoniscoding.github.io/yorlang/
+Apenas apreciem esta [obra de arte](https://birl-language.github.io/) que é a linguagem do Bambam. Ou melhor, a **B**ambam's "**I**t's show time" **R**ecursive **L**anguage.
+
+## Yorlang
+
+```
+sọpé "báwo ni ayé";
+```
+> "hello world" em yorlang
+
+[Yorlang](https://anoniscoding.github.io/yorlang/) é uma linguagem esotérica baseada no idioma nigeriano/congolês Iorubá. No [repositório do github](https://github.com/anoniscoding/yorlang), o [autor](https://github.com/anoniscoding) diz que tem o objetivo de programar na sua linguagem nativa. Eu pessoalmente nunca tinha visto algo parecido com um idioma que não fosse ocidental, por isso achei muito interessante.
+
+* * *
+
+E aí, conhece alguma linguagem que eu não mencionei? Manda aí nos comentários ;)
