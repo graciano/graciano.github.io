@@ -10,7 +10,7 @@ img_full: true
 
 A definição do que é uma Linguagem de programação não é algo que nossa categoria de trabalhadores pensa muito. Na Ciência da Computação é a mesma coisa que dizer que é uma *Máquina de Turing Completa*. Nos termos das Humanas (pois é, o [Chomsky é um cara foda](https://pt.wikipedia.org/wiki/Hierarquia_de_Chomsky)) é dizer que é uma linguagem *sensível ao contexto*. Nos termos de *uma conversa de bar* é um bagulho que consegue fazer o que um computador consegue, mas não necessariamente o que um ser humano consegue.
 
-Dada essa definição rápida, o termo *esotérica* aqui qualifica que a linguagem está fora do mercado. Se as linguagens que você conhece estão inseridas no dia a dia do trabalhador de código, essas são feitas por qualquer motivo que não seja o de produzir algo para o seu chefe: experimentação acadêmica, arte, zueira... E é por isso que infelizmente não se fala muito delas, apesar de existirem muitas. [São mais de mil resultados no github](https://github.com/search?p=1&q=esoteric&type=Repositories). Então aqui eu trago uma curadoria, uma *exposição* se preferir, de algumas dessas linguagens.
+Dada essa definição rápida, o termo *esotérica* aqui qualifica que a linguagem está fora do mercado. Enquanto as linguagens que você conhece estão inseridas no dia a dia do trabalhador de código, essas são feitas por qualquer motivo que não seja o de produzir algo para o seu chefe: experimentação acadêmica, arte, zueira... E é por isso que infelizmente não se fala muito delas, apesar de existirem muitas. [São mais de mil resultados no github](https://github.com/search?p=1&q=esoteric&type=Repositories). Então aqui eu trago uma curadoria, uma *exposição* se preferir, de algumas dessas linguagens.
 
 Lembrando que **todas** elas são *Turing Completas*, ou seja, **teoricamente** poderiam sim ser usadas para qualquer coisa.
 
@@ -101,8 +101,8 @@ sọpé "báwo ni ayé";
 ```
 > "hello world" em yorlang
 
-[Yorlang](https://anoniscoding.github.io/yorlang/) é uma linguagem esotérica baseada no idioma nigeriano/congolês Iorubá. No [repositório do github](https://github.com/anoniscoding/yorlang), o [autor](https://github.com/anoniscoding) diz que tem o objetivo de programar na sua linguagem nativa. Eu pessoalmente nunca tinha visto algo parecido com um idioma que não fosse ocidental, por isso achei muito interessante.
+[Yorlang](https://anoniscoding.github.io/yorlang/) é uma linguagem esotérica baseada no idioma nigeriano/congolês Iorubá. No [repositório do github](https://github.com/anoniscoding/yorlang), o [autor](https://github.com/anoniscoding) diz que tem o objetivo de programar na sua linguagem nativa. Me chamou a atenção porque não conhecia algo parecido com um idioma que não fosse ocidental.
 
 * * *
 
-E aí, conhece alguma linguagem que eu não mencionei? Manda aí nos comentários ;)
+E aí, conhece alguma linguagem *esotérica* que eu não mencionei? Manda aí nos comentários ;)
