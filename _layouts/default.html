@@ -9,40 +9,12 @@
   </head>
 
   <body>
-    <header class="main-header">
-      <a href="{{ site.url }}">
-        <h1 class="h1-embaralha">{{ site.title }}</h1>
-      </a>
-    </header>
-    <nav class="social-nav">
-      <ul>
-        <li>
-          {%- include svg_social.html network='twitter' -%}
-          <a href="https://twitter.com/{{ site.twitter.username }}">@{{ site.twitter.username }}</a>
-        </li>
-        <li>
-          {%- include svg_social.html network='github' -%}
-          <a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a>
-        </li>
-        <li>
-          {%- include svg_social.html network='instagram' -%}
-          <a href="https://instagram.com/{{ site.instagram_username }}">@{{ site.instagram_username }}</a>
-        </li>
-      </ul>
-    </nav>
+    {% include default/main-header.html %}
+    {% include default/social-nav.html %}
     <div class="main-content">
       {{ content }}
     </div>
-    <footer class="main-footer">
-      <ul>
-        <li>
-          {%- include svg_social.html network='rss' -%}<a href="{{ '/feed.xml' | relative_url }}">Assine</a>
-        </li>
-        <li><a href="{{ 'about' | relative_url }}">Sobre mim</a></li>
-        <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        <li>feito com &lt;3 no <a href="https://jekyllrb.com/">jekyll</a></li>
-      </ul>
-    </footer>
+    {% include default/main-footer.html %}
     {% if jekyll.environment == 'production' %}
       {% include analytics.html %}
     {% endif %}

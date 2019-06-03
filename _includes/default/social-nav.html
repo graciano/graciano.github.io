@@ -1,0 +1,16 @@
+<nav class="social-nav">
+  <ul>
+    <li>
+      {%- include svg_social.html network='twitter' -%}
+      <a href="https://twitter.com/{{ site.twitter.username }}">@{{ site.twitter.username }}</a>
+    </li>
+    <li>
+      {%- include svg_social.html network='github' -%}
+      <a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a>
+    </li>
+    <li>
+      {%- include svg_social.html network='instagram' -%}
+      <a href="https://instagram.com/{{ site.instagram_username }}">@{{ site.instagram_username }}</a>
+    </li>
+  </ul>
+</nav>
