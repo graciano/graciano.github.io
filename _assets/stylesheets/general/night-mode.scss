@@ -1,0 +1,17 @@
+#btn-night-mode {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border: none;
+  padding: 0.5em;
+  cursor: pointer;
+  background: none;
+
+  .fill {
+    fill: lighten($color-blue, 15%);
+  }
+
+  &.active .fill {
+    fill: $color-blue;
+  }
+}
