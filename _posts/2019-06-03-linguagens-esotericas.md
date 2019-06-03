@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Linguagens Esotéricas
-date:   2019-06-04 10:20:00 -0300
+date:   2019-06-03 17:20:00 -0300
 description: Uma lista de linguagens de programação que não foram feitas para servir a uma lógica de mercado.
 image: assets/img/matrix.jpg
 altimg: rosto do agente Smith com o efeito de caracteres verdes do filme Matrix
