@@ -29,15 +29,21 @@ Com nome inspirado no BrainFuck, o JS Fuck é javascript **válido**. São apena
 
 ## Arnoldc
 
-## Ases
-assembly esotérico, feito po um brasileiro
-https://esolangs.org/wiki/Ases
+## Emojicode 😆
+
+Nessa linguagem, o tipo boolean (👌) pode ser `true` (👍) ou `false` (👎).
+https://www.emojicode.org/docs/reference/basics.html
 
 ## Javagrid
 
 É uma linguagem 2D. Isso é hilário. Veja abaixo uma implementação do famoso *FizzBuzz*
 
 https://esolangs.org/wiki/Javagrid
+
+## BIRL
+
+Apenas apreciem esta obra de arte que é a linguagem do Bambam
+https://birl-language.github.io/
 
 ## Yorlang (yoruba)
 https://github.com/anoniscoding/yorlang
