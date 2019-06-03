@@ -13,8 +13,10 @@
   a,
   a:visited,
   a:hover {
-    color: $color-white;
-    background: none;
+    @include themed() {
+      color: $color-white;
+      background: none;
+    }
 
     @include text-3d();
   }
