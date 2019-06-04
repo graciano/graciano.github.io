@@ -30,9 +30,15 @@ Para a próxima década, o momento é de amadurecimento da internet. Enquanto no
  - AMP, que é disponibilizado por servidores da google, apesar de ser "open web"
  - PWA, que torna sites mais parecidos com apps nativos de celular, agora estarão disponíveis na *Play Store*, da google
 
+Estas tecnologias, por mais interessantes que sejam, criam um ambiente em que para ser relevante na internet anti-link de hoje você se adapte ao ambiente criado por estas empresas. Até mesmo as ferramentas que se usa hoje para programar para a internet, salvo raras exceções, são [ou do facebook](react) ou da [própria](polymer) [google](angular).
+
 ## Inclusão* Digital
 
 inclusão digital pelo consumo vs inclusão digital democrática
+
+Para incluir as pessoas na internet de maneira democrática precisamos de alternativa tecnológica (infraestrutura), mas também militante (superestrutura). Na parte tecnológica, o feed é algo que tem potencial de ser descentralizado, compatível com várias plataformas. Por isso, não é um latifúndio como o youtube, que só poderia ser de fato democratizado na base da expropriação mesmo. O feed rss foi criado pelo Aaron Schwartz numa reivindicação de uma internet "aberta" sim, mas também democrática. Se você usa o Feedly, o meu site [tem um feed](link-feed) 😉
+
+Na parte militante, hoje exite uma cacetada de podcasts excelentes >elaborar, "podosfera antifa", central3, halfdeaf, etc<. Desde 2017 se promete que *"ano que vem será o ano dos podcasts"*. E, olha só, podcasts usam a tecnologia do feed. Isso significa que muitas plataformas diferentes podem usar e há potencial de migração de uma para outra.
 
 * * *
 
