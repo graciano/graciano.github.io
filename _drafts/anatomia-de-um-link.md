@@ -12,9 +12,10 @@ description: >-
 
 Quando inventaram o tal do **HTML**, ferramenta que ainda é a alma da internet, o link era uma ferramenta de citação bibliográfica. Tinha um objetivo acadêmico e de classificar a informação. Até meados dos anos 2000 o link tomou um papel social na internet: um blog dava link pra outro, para uma página na wikipédia, para um flogão... Mas não peguei essa época. Não enquanto usuário pleno, consciente, da internet. Comecei a usar a internet muito mais no finalzinho da adolescência, com o twitter e o tumblr, já em 2010.
 
-Até essa época, minha experiência com o link era de descoberta, a tal da navegação na internet. É pra isso que serve o link. A internet era feita de links. *Apps* e *espertofones* eram novidade, coisa de rico.
+<iframe src="https://giphy.com/embed/dwmNhd5H7YAz6" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-> talvez colocar aqui alguma quote de impacto sobre links, surfando na web, meme dos anos 90, algo mais vaporwave
+Até essa época, minha experiência com o link era de descoberta, a tal da navegação na internet. É pra isso que serve o link. A internet era feita de links. *Apps* e *espertofones* &mdash; *que usam a infraestrutura da internet sem se basear nos links* &mdash; eram novidade, coisa de rico.
+
 
 No início da década atual, um tal de Facebook estava começando a ameaçar desbancar o orkut como rede social *de fato* do Brasil. Em 2011, criei meu perfil para ajudar meu pai, que estava começando um [negócio de fotografia](http://madsongraciano.com.br). Desde essa época, para o facebook, o link era inimigo[^1]. Os posts com link tinham o último lugar na fila do algoritmo. Ah, o *`algoritmo`*{: style="letter-spacing: 0.4em;"}! Palavra que entrou no vocabulário do povo. Pelo menos para quem já era **incluído*** digitalmente.
 

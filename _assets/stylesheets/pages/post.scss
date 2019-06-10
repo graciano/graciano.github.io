@@ -2,7 +2,7 @@
   margin: 0 auto;
   line-height: 1.6;
 
-  iframe {
+  iframe:not(.giphy-embed) {
     width: 100%;
     max-width: $desktop;
   }
@@ -81,6 +81,13 @@
     }
   }
 
+}
+
+.giphy-embed {
+  float: left;
+  width: 300px;
+  height: 300px;
+  padding-right: 1em;
 }
 
 .post-img-header {
