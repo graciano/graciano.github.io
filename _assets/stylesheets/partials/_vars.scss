@@ -17,7 +17,7 @@ $color-white: #fff;
 $themes: (
   default: (
     color-link: $color-blue,
-    color-link-visited: $color-purple,
+    color-link-visited: darken($color-purple, 10%),
     color-link-hover: $color-white,
     bg: $color-white,
     color-main-text: $color-grey,
