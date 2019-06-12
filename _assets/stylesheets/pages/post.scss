@@ -1,6 +1,9 @@
 .post {
   margin: 0 auto;
   line-height: 1.6;
+  hyphens: auto;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-chars: auto 3;
 
   iframe:not(.giphy-embed) {
     width: 100%;

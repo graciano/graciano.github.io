@@ -24,52 +24,8 @@ body {
   }
 }
 
-.main-content,
-.main-footer {
-  max-width: $max-width;
-  width: 100%;
-  margin: 0 auto;
-  padding: $content-margin;
-}
-
-a,
-a:visited,
-a:hover {
-  text-decoration: none;
-}
-
-a {
-  @include themed() {
-    color: theme-prop('color-link');
-
-    &:hover {
-      color: theme-prop('color-link-hover');
-      background: theme-prop('color-link');
-    }
-  }
-}
-
-a:visited {
-  @include themed() {
-    color: theme-prop('color-link-visited');
-    &:hover {
-      color: theme-prop('color-link-hover');
-      background: theme-prop('color-link-visited');
-    }
-  }
-}
-
-@for $i from 1 through 6 {
-  h#{$i} {
-    font-weight: bold;
-  }
-}
-
-.svg-icon {
-  padding: 0;
-  margin-right: 0.2em;
-}
-
+@import "general/links";
+@import "general/content";
 @import "general/header";
 @import "general/code";
 @import "general/night-mode";
