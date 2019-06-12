@@ -88,8 +88,12 @@
 
 .giphy-embed {
   float: left;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
+  @include breakpoint($not-phone) {
+    width: 300px;
+    height: 300px;
+  }
   padding-right: 1em;
 }
 
