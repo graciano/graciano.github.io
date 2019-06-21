@@ -12,11 +12,15 @@ Depois que o zap zap elegeu o presidente atual, o zap azul contribui com as pró
 
 ## Hackers não invadiram o Telegram
 
+![Poster "I want you to crack Telegram" referência ao recrutamento do exército estadunidense]({{ '/assets/img/zap-azul/telegram-concurso.jpg' | relative_url }})
+{: .center-elem .medium-img }
+
 Se alguém quebrar a criptografia do telegram, tem uma [recompensa gorda esperando pra ser paga](https://telegram.org/blog/cryptocontest).
 
 ## Criptografia ponta a ponta
 
 O telegram possui uma função de chat secreto que **não funciona em grupos** e não é a padrão. Ou seja, se você não apertar o botão "chat secreto" seu chato **não é criptografado**. O que claramente é o caso do vazamento, já que sabemos que o applicativo em si não foi a vulnerabilidade explorada.
+A criptografia de ponta a ponta significa que os servidores do telegram não conseguem ler sua mensagem, diferente dos chats normais. A mensagem é "embaralhada" no seu celular e "desembaralhada" no celular de quem recebe a mensagem. Os comos e porquês disso não vem ao caso pra hoje, até porque os envolvidos na *#vazaJato* não usaram essa função. Ou se usaram, praticamente **não tem como a gente saber**. Além disso, é importante lembrar que ao enviar a mensagem para a outra pessoa, ela é imediatamente apagada dos servidores.
 
 ## Invasão de celulares
 
@@ -36,8 +40,12 @@ Isso é muito irresponsável, mesmo que no contexto de uma piada. Tem muita desi
 
 ## As mensagens estão salvas na nuvem
 
+![Nuvens no céu com o efeito 3D do site]({{ '/assets/img/cloud.jpg' | relative_url }})
+{: .float-left .small-img }
 O ex-juíz disse (ou por ingenuidade, ou na canalhice) que as mensagens não existem mais. Na audiência do senado, teve um senador que levantou a possibilidade de se requerer as mensagens nos servidores do telegram, no que o ministro do governo Bolsonaro respondeu que as mensagens não existem mais. Disse ainda que tem o "mal hábito de comprar celulares baratos" que possuem pouca memória, de "16 mega ou giga, que fala né". De novo, por ingenuidade ou burrice.
+
 Seria *impossível* você fazer login num novo dispositivo do telegram (ou qualquer outro aplicativo) e acessar as conversas sem que as mesmas estejam salvas em algum lugar. No caso do whatsapp, o app te impede de acessar mais de um dispositivo ao mesmo tempo. Com a exceção do navegador, mas isso é o que nós programadores chamamos de gambiarra; tanto é gambiarra que o whatsapp precisa que seu celular esteja ligado e conectado à internet para que sua versão web funcione. Ao entrar num novo celular, para recuperar as conversas você precisa de um backup, no que muita gente usa o Google Drive para isso.
+
 No caso do telegram, como o usuário não gerencia esse backup, as mensagens estão nos servidores do telegram. Não existe outra possibilidade. Por isso a afirmação de que o que o ex-juíx alega é **impossível**.
 
 ## Criptomoedas, aves misteriosas e etc
@@ -60,9 +68,9 @@ Digamos que o Deltan tenha logado no telegram web, que é o cliente de browser d
 
 Se você estiver lendo este texto num navegador do computador, e não no celular, aperte `Ctrl+S`. Você vai salvar uma versão *offline* do site. Ao entrar no computador logado no telegram web e fazer essa ação pronto: você tem uma pasta que pode ser enviada anonimamente pra qualquer jornal do mundo.
 
-### Um pouco menos simples
+### Outro jeito mais simples ainda
 
-Via telegram desktop...
+O cliente telegram desktop possui uma funcionalidade de [exportar os dados do seu chat para um formato JSON ou HTML](https://telegram.org/blog/export-and-more) muito parecido com o processo descrito acima.
 
 ### Um tanto complicada, mas qualquer usuário mais avançado poderia fazer
 

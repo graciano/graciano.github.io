@@ -48,6 +48,12 @@
     }
   }
 
+  .medium-img {
+    img {
+      max-height: 20em;
+    }
+  }
+
   .img-fit {
     &,
     img {
@@ -86,15 +92,19 @@
 
 }
 
+.float-left,
 .giphy-embed {
   float: left;
+  padding-right: 1em;
+}
+
+.giphy-embed {
   width: 200px;
   height: 200px;
   @include breakpoint($not-phone) {
     width: 300px;
     height: 300px;
   }
-  padding-right: 1em;
 }
 
 .post-img-header {
