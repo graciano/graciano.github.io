@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ! '"Oi, eu sou o hacker"'
-date: 2019-06-21 11:10:00 -0300
+date: 2019-06-21 12:33:00 -0300
 description: ! '#VazaJato: Algumas explicações sobre hackers, criptografia e tecnologia que os jornais erram a rodo. E o seu Moro também.'
 image: assets/img/zap-azul/moro-png.jpg
 altimg: Moro com a mão no nariz
