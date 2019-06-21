@@ -2,7 +2,7 @@
 layout: post
 title: "Oi, eu sou o hacker"
 date: 2019-06-21 11:10:00 -0300
-description: \#VazaJato: Algumas explicações sobre hackers, criptografia e tecnologia que os jornais erram a rodo. E o seu Moro também.
+description: ! '#VazaJato: Algumas explicações sobre hackers, criptografia e tecnologia que os jornais erram a rodo. E o seu Moro também.'
 # image: assets/img/path/da/imagem.jpg
 # altimg: descreva sua img
 # img_full: true
