@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Oi, eu sou o hacker"
+title: ! '"Oi, eu sou o hacker"'
 date: 2019-06-21 11:10:00 -0300
 description: ! '#VazaJato: Algumas explicações sobre hackers, criptografia e tecnologia que os jornais erram a rodo. E o seu Moro também.'
 # image: assets/img/path/da/imagem.jpg
@@ -20,12 +20,15 @@ Se alguém quebrar a criptografia do telegram, tem uma [recompensa gorda esperan
 ## Criptografia ponta a ponta
 
 O telegram possui uma função de chat secreto que **não funciona em grupos** e não é a padrão. Ou seja, se você não apertar o botão "chat secreto" seu chato **não é criptografado**. O que claramente é o caso do vazamento, já que sabemos que o applicativo em si não foi a vulnerabilidade explorada.
+
 A criptografia de ponta a ponta significa que os servidores do telegram não conseguem ler sua mensagem, diferente dos chats normais. A mensagem é "embaralhada" no seu celular e "desembaralhada" no celular de quem recebe a mensagem. Os comos e porquês disso não vem ao caso pra hoje, até porque os envolvidos na *#vazaJato* não usaram essa função. Ou se usaram, praticamente **não tem como a gente saber**. Além disso, é importante lembrar que ao enviar a mensagem para a outra pessoa, ela é imediatamente apagada dos servidores.
 
 ## Invasão de celulares
 
 Este **não parece ser o caso** da *#vazajato* na minha opinião, mas como é possível e não estão explicando direito, vou deixar registrado aqui.
+
 Existe um tipo de ataque hacker *"middle man"* que é possível de ser feito se você [puder controlar uma wifi, chamado SS7](https://delhitrainingcourses.com/blog/ss7-attacks-hack-phone-whatsapp-read-messages-2018/). Desta maneira, usando a vulnerabilidade dos protocolos de ligações, o criminoso pode tomar conta das suas ligações e mensagens SMS. Curiosamente, esse tipo de ataque se tornou público com as revelações do próprio Snowden no que culminou na criação do The Intercept. O criminoso que usava isso era o próprio governo dos EUA.
+
 Com acesso a ligações e SMS, o hacker pode acessar seu whatsapp, mas isso faria com que o celular da vítima perdesse o acesso, como eu explico mais pra frente. No caso do telegram, a vítima receberia uma notificação com o IP e outras informações de onde o login foi feito.
 
 ## Detalhes específicos de quem parece que não leu as matérias
