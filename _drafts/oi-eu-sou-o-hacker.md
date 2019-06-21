@@ -3,12 +3,13 @@ layout: post
 title: ! '"Oi, eu sou o hacker"'
 date: 2019-06-21 11:10:00 -0300
 description: ! '#VazaJato: Algumas explicações sobre hackers, criptografia e tecnologia que os jornais erram a rodo. E o seu Moro também.'
-# image: assets/img/path/da/imagem.jpg
-# altimg: descreva sua img
-# img_full: true
+image: assets/img/zap-azul/moro-png.jpg
+altimg: Moro com a mão no nariz
+img_full: true
+permalink: /:categories/:year/:month/:day/fake-news-pavao-the-intercept-glenn-greenwald-vazajato-fact-cheking-ti
 ---
 
-Depois que o zap zap elegeu o presidente atual, o zap azul contribui com as próprias trapalhadas do governo para cair sua popularidade. Muitos propagadores de fake news e pessoas bem intencionadas, mas desinformadas, estão cometendo equívocos na parte tecnológica do assunto, então aqui vão algumas informações **#factCheckingDeTI**.
+Depois que o zap zap elegeu o presidente atual, o zap azul agora contribui com o governo na suas trapalhadas que diminuem a sua popularidade. Muitos propagadores de fake news e pessoas bem intencionadas, mas desinformadas, estão cometendo equívocos na parte tecnológica do assunto, então aqui vão algumas informações **#factCheckingDeTI**.
 
 ## Hackers não invadiram o Telegram
 
@@ -19,19 +20,19 @@ Se alguém quebrar a criptografia do telegram, tem uma [recompensa gorda esperan
 
 ## Criptografia ponta a ponta
 
-O telegram possui uma função de chat secreto que **não funciona em grupos** e não é a padrão. Ou seja, se você não apertar o botão "chat secreto" seu chato **não é criptografado**. O que claramente é o caso do vazamento, já que sabemos que o applicativo em si não foi a vulnerabilidade explorada.
+O telegram possui uma função de chat secreto que **não funciona para grupos** e não é a padrão. Ou seja, se você não apertar o botão "chat secreto" seu chato **não é criptografado**. O que claramente é o caso do vazamento, já que sabemos que o applicativo em si não teve a vulnerabilidade explorada.
 
 A criptografia de ponta a ponta significa que os servidores do telegram não conseguem ler sua mensagem, diferente dos chats normais. A mensagem é "embaralhada" no seu celular e "desembaralhada" no celular de quem recebe a mensagem. Os comos e porquês disso não vem ao caso pra hoje, até porque os envolvidos na *#vazaJato* não usaram essa função. Ou se usaram, praticamente **não tem como a gente saber**. Além disso, é importante lembrar que ao enviar a mensagem para a outra pessoa, ela é imediatamente apagada dos servidores.
 
 ## Invasão de celulares
 
-Este **não parece ser o caso** da *#vazajato* na minha opinião, mas como é possível e não estão explicando direito, vou deixar registrado aqui.
+Este não parece ser o caso da #vazajato na minha opinião, mas como é possível e não estão explicando direito, vou deixar registrado aqui.
 
 Existe um tipo de ataque hacker *"middle man"* que é possível de ser feito se você [puder controlar uma wifi, chamado SS7](https://delhitrainingcourses.com/blog/ss7-attacks-hack-phone-whatsapp-read-messages-2018/). Desta maneira, usando a vulnerabilidade dos protocolos de ligações, o criminoso pode tomar conta das suas ligações e mensagens SMS. Curiosamente, esse tipo de ataque se tornou público com as revelações do próprio Snowden no que culminou na criação do The Intercept. O criminoso que usava isso era o próprio governo dos EUA.
 
 Com acesso a ligações e SMS, o hacker pode acessar seu whatsapp, mas isso faria com que o celular da vítima perdesse o acesso, como eu explico mais pra frente. No caso do telegram, a vítima receberia uma notificação com o IP e outras informações de onde o login foi feito.
 
-## Detalhes específicos de quem parece que não leu as matérias
+## Detalhes específicos por quem parece que não leu as matérias
 
 Alguns podcasts, blogueiros e até mesmo parlamentares de esquerda disseram coisas **falsas** como:
 
@@ -39,7 +40,7 @@ Alguns podcasts, blogueiros e até mesmo parlamentares de esquerda disseram cois
 - Teve áudios divulgados com a voz do Moro (*pelo menos até a data de publicação o único áudio divulgado pelo the intercept era um segundo de nada*)
 - Moro disse "textualmente" que queria prejudicar politicamente o PT (*essa é uma interpretação óbvia, mas não é **textual**, cara pálida*)
 
-Isso é muito irresponsável, mesmo que no contexto de uma piada. Tem muita desinformação por aí e esse tipo de falta de atenção na minha opinião só atrapalha. E dá margem para o governo se defender. É muito fácil se defender de mentiras. Sendo que não precisa inventar nada, é só parar uns minutinhos e ler as matérias. Por favor, [leia as matérias](https://theintercept.com/series/mensagens-lava-jato/)
+Isso é muito irresponsável, mesmo no contexto de uma piada. Tem muita desinformação por aí e esse tipo de falta de atenção na minha opinião só atrapalha. E dá margem para o governo se defender. É muito fácil se defender de mentiras. Sendo que não precisa inventar nada, é só parar uns minutinhos e ler as matérias. Por favor, [leia as matérias](https://theintercept.com/series/mensagens-lava-jato/).
 
 ## As mensagens estão salvas na nuvem
 
@@ -54,7 +55,7 @@ No caso do telegram, como o usuário não gerencia esse backup, as mensagens est
 ## Criptomoedas, aves misteriosas e etc
 
 Criptomoedas são praticamente [irrastreáveis](https://brasil.elpais.com/brasil/2017/05/12/economia/1494621106_047933.html). Se alguém comete crimes (enquanto seu Moro ainda não proibiu os crimes) e recebe ilegamente algo em bitcoin por exemplo, não é num registro **público** que cabe num print de celular que alguém vai descobrir. Nem a família bozo é tão incompetente assim (ou talvez seja 😆).
-Sinceramente, eu até ia me esforçar mais sobre esse assunto, mas já fizeram um [trabalho muito melhor do que eu poderia fazer](https://www.tudocelular.com/curiosidade/noticias/n143010/fake-news-pavao-bitcoins-russia-the-intercept-glenn-greenwald-vaza-jato.html).
+Sinceramente, eu até ia me esforçar mais para falar sobre assunto, mas já fizeram um [trabalho muito melhor do que eu poderia fazer](https://www.tudocelular.com/curiosidade/noticias/n143010/fake-news-pavao-bitcoins-russia-the-intercept-glenn-greenwald-vaza-jato.html).
 
 ## A fonte do Intercept não é conhecida
 
