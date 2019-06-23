@@ -20,9 +20,9 @@ Se alguém quebrar a criptografia do telegram, tem uma [recompensa gorda esperan
 
 ## Criptografia ponta a ponta
 
-O telegram possui uma função de chat secreto que **não funciona para grupos** e não é a padrão. Ou seja, se você não apertar o botão "chat secreto" seu chato **não é criptografado**. O que claramente é o caso do vazamento, já que sabemos que o applicativo em si não teve a vulnerabilidade explorada.
+O telegram possui uma função de chat secreto que **não funciona para grupos** e não é a padrão. Ou seja, se você não apertar o botão "chat secreto" seu chat **não é criptografado**. O que claramente é o caso do vazamento, já que sabemos que o applicativo em si não teve a vulnerabilidade explorada.
 
-A criptografia de ponta a ponta significa que os servidores do telegram não conseguem ler sua mensagem, diferente dos chats normais. A mensagem é "embaralhada" no seu celular e "desembaralhada" no celular de quem recebe a mensagem. Os comos e porquês disso não vem ao caso pra hoje, até porque os envolvidos na *#vazaJato* não usaram essa função. Ou se usaram, praticamente **não tem como a gente saber**. Além disso, é importante lembrar que ao enviar a mensagem para a outra pessoa, ela é imediatamente apagada dos servidores.
+A criptografia de ponta a ponta significa que os servidores do telegram não conseguem ler sua mensagem, diferente dos chats normais. A mensagem é "embaralhada" no seu celular e "desembaralhada" no celular de quem recebe a mensagem. Os comos e porquês disso não vem ao caso pra hoje, até porque os envolvidos na *#vazaJato* não usaram essa função. Ou se usaram, praticamente **não tem como a gente saber**. Além disso, é importante lembrar que ao enviar a mensagem **do chat secreto** para a outra pessoa, ela é imediatamente apagada dos servidores.
 
 ## Invasão de celulares
 
@@ -32,7 +32,7 @@ Existe um tipo de ataque hacker *"middle man"* que é possível de ser feito se 
 
 Com acesso a ligações e SMS, o hacker pode acessar seu whatsapp, mas isso faria com que o celular da vítima perdesse o acesso, como eu explico mais pra frente. No caso do telegram, a vítima receberia uma notificação com o IP e outras informações de onde o login foi feito.
 
-## Detalhes específicos por quem parece que não leu as matérias
+## Detalhes específicos por que tem gente que não lê as matérias
 
 Alguns podcasts, blogueiros e até mesmo parlamentares de esquerda disseram coisas **falsas** como:
 
@@ -48,9 +48,9 @@ Isso é muito irresponsável, mesmo no contexto de uma piada. Tem muita desinfor
 {: .float-left .small-img }
 O ex-juíz disse (ou por ingenuidade, ou na canalhice) que as mensagens não existem mais. Na audiência do senado, teve um senador que levantou a possibilidade de se requerer as mensagens nos servidores do telegram, no que o ministro do governo Bolsonaro respondeu que as mensagens não existem mais. Disse ainda que tem o "mal hábito de comprar celulares baratos" que possuem pouca memória, de "16 mega ou giga, que fala né". De novo, por ingenuidade ou burrice.
 
-Seria *impossível* você fazer login num novo dispositivo do telegram (ou qualquer outro aplicativo) e acessar as conversas sem que as mesmas estejam salvas em algum lugar. No caso do whatsapp, o app te impede de acessar mais de um dispositivo ao mesmo tempo. Com a exceção do navegador, mas isso é o que nós programadores chamamos de gambiarra; tanto é gambiarra que o whatsapp precisa que seu celular esteja ligado e conectado à internet para que sua versão web funcione. Ao entrar num novo celular, para recuperar as conversas você precisa de um backup, no que muita gente usa o Google Drive para isso.
+Seria *impossível* você fazer login num novo dispositivo do telegram (ou qualquer outro aplicativo) e acessar as conversas sem que as mesmas estejam salvas em algum lugar. No caso do whatsapp, o app te impede de acessar mais de um dispositivo ao mesmo tempo. Com a exceção do navegador, mas isso é o que nós programadores chamamos de gambiarra: o whatsapp precisa que seu celular esteja ligado e conectado à internet para que sua versão web funcione. Ao entrar num novo celular, para recuperar as conversas você precisa de um backup. Muita gente usa o Google Drive para isso.
 
-No caso do telegram, como o usuário não gerencia esse backup, as mensagens estão nos servidores do telegram. Não existe outra possibilidade. Por isso a afirmação de que o que o ex-juíx alega é **impossível**.
+No caso do telegram, como o usuário não gerencia esse backup, as mensagens estão nos servidores do telegram. Não existe outra possibilidade. Por isso a afirmação que o ex-juíx fez é **impossível**.
 
 ## Criptomoedas, aves misteriosas e etc
 
@@ -59,7 +59,8 @@ Sinceramente, eu até ia me esforçar mais para falar sobre assunto, mas já fiz
 
 ## A fonte do Intercept não é conhecida
 
-Invadindo ou não o celular de alguém, a ação poderia muito bem ter sido feita por um usuário avançado que nenhum conhecimento sobre código ou essas coisas de ráquer. Apesar de que pelo que eu entendi até agora, as informações vieram da **conta do telegram** (diferente de afirmar que é o celular, como veremos a seguir) do fã de super-homem conhecido como Deltan Dallagnol.
+Invadindo ou não o celular de alguém, a ação poderia muito bem ter sido feita por um usuário avançado que nenhum conhecimento sobre código ou essas coisas de ráquer. Pelo que eu entendi até agora, as informações vieram da **conta do telegram** (diferente de afirmar que é o celular, como veremos a seguir) do fã de super-homem conhecido como Deltan Dallagnol, ou seja: uma pessoa apenas.
+
 Dito, isso, apenas quem sabe como as informações foram obtidas é a fonte do Intercept, ou talvez os próprios jornalistas. Mas daí a falar que foi hacker é [especulação](https://theintercept.com/2019/06/17/hackers-criminosos-vazajato-sergio-moro/).
 
 ## Algumas especulações minhas de como poderia ter acontecido
