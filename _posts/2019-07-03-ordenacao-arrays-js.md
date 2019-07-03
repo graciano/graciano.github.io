@@ -9,6 +9,8 @@ description: Uma erro muito comum cometido ao usar a função Array.sort()
 permalink: /:categories/:year/:month/:day/ordenacao-array-javascript-sort-funcao-funcional
 ---
 
+Vejo muitos programadores javascript cometerem um erro básico ao usar a função de ordenação de arrays. Aqui um tutorial de como usar a função e uma correção para as abordagens "erradas" que vejo por aí.
+
 Para o tutorial, vamos considerar este array, onde os pilotos podem ser ordenados por ordem alfabética de nome ou veículo, ou também por idade:
 ```javascript
 const listaPilotos = [
