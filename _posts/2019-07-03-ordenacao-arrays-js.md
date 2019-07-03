@@ -2,7 +2,7 @@
 layout: post
 title:  Ordenação de Arrays em Javascript
 date:   2019-07-03 17:32:00 -0300
-description: Uma erro muito comum cometido ao usar a função Array.sort()
+description: Tutorial básico de Array.sort() e sobre um erro muito comum cometido ao usar a função
 # image: assets/img/path/da/imagem.jpg
 # altimg: descreva sua img
 # img_full: true
