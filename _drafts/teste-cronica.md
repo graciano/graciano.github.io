@@ -9,7 +9,9 @@ description: ! ''
 permalink: /:categories/:year/:month/:day/cronica-dev-william-programacao-angular-angularjs-javascript
 ---
 
-*William não existe, mas eu quis criá-lo para mostrar o outro lado daquele anúncio de vaga que glamouriza nossa profissão. Sinto que tudo que está aqui já aconteceu um milhão de vezes, apesar de ser ficcção.*
+*William não existe, mas o criei para mostrar outro lado daquele anúncio de vaga que glamouriza nossa profissão. Sinto que tudo que está aqui já aconteceu um milhão de vezes, apesar de ser ficcção.*
+
+***
 
 Outro dia William voltou mais cedo do almoço, o escritório em silêncio, uma paz. O corredor entre as mesas sem aquela movimentação que dali uns minutos ia começar. Ele odeia Escritórios Abertos&trade;, pois produzem um barulho de feira enquanto é preciso se concentrar nas 839 linguagens diferentes que a profissão exige em 2019. Deveria ter nascido com 20 anos de antecedência pra trabalhar num cubículo em paz. Sonha com um emprego remoto, ganhando em dólar, mas tem inseguranças quanto ao inglês e quanto a estar atualizado nas 839 tecnologias.
 
