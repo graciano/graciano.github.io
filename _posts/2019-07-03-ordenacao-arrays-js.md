@@ -42,9 +42,7 @@ Se você já conhece a função, [clique aqui para pular a explicação](#aborda
  - um número positivo, caso `b` deva ser ordenado antes de `a`
  - zero, caso seja indiferente a ordem entre os dois elementos; em outras palavras, são considerados "iguais"
 
-### Abordagem incorreta
-
-Muita gente acredita que o retorno da função de comparação precise **necessariamente** ser apenas 1 ou -1 ao invés de **qualquer valor** positivo ou negativo respectivamente. Dessa maneira, ao ordenar por idade, acabam usando lógicas complicadas de maneira desnecessária, por exemplo:
+Um exemplo parecido com a [documentação da função na mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) para ordenar um array de objetos por um campo string seria:
 
 ```javascript
 const pilotosOrdenados = listaPilotos.sort((a, b) => {
@@ -60,11 +58,26 @@ const pilotosOrdenados = listaPilotos.sort((a, b) => {
 });
 ```
 
-Ou a alternativa em uma linha para casos numéricos (confesso que já usei): `listaPilotos.sort((a, b) => Math.sign(a.idade - b.idade))`. Isso porque a função `Math.sign()` retorna justamente 1, -1 ou 0, dependendo do **sinal** do valor informado.
+### Abordagem incorreta
+
+Muita gente acredita que o retorno da função de comparação precise **necessariamente** ser apenas 1 ou -1 ao invés de **qualquer valor** positivo ou negativo respectivamente. Dessa maneira, ao ordenar por idade, acabam usando lógicas complicadas de maneira desnecessária, por exemplo:
+```javascript
+const pilotosOrdenados = listaPilotos.sort((a, b) => {
+  if (a.idade === b.idade) {
+    return 0;
+  } else if (a.idade < b.idade) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+```
+
+Ou a alternativa em uma linha (confesso que já usei): `listaPilotos.sort((a, b) => Math.sign(a.idade - b.idade))`. Isso porque a função `Math.sign()` [retorna justamente 1, -1 ou 0](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sign), dependendo do **sinal** do valor informado.
 
 ### Abordagem correta
 
-Como você provavelmente já percebeu, usar o `Math.sign()` na função de comparação não é necessário, logo a maneira correta (para números) fica *bem mais simples*:
+Como você provavelmente já percebeu, usar o `Math.sign()` na função de comparação não é necessário. Logo, a maneira correta (para números) fica *bem mais simples*:
 ```javascript
 const ordenados = listaPilotos.sort((a, b) => a.idade - b.idade);
 ```
