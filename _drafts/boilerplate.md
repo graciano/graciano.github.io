@@ -6,6 +6,7 @@ description: Chamadinha caça-clique
 # image: assets/img/path/da/imagem.jpg
 # altimg: descreva sua img
 # img_full: true
+# permalink: /:categories/:year/:month/:day/palavras-chave-pra-seo
 ---
 ## Referência de kramdown
 
