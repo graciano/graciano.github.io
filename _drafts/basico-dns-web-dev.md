@@ -8,6 +8,7 @@ description: >-
 image: assets/img/dns/yellow-pages.jpg
 altimg: livro de páginas amarelas, com o efeito 3D de sempre
 img_full: true
+permalink: /:categories/:year/:month/:day/basico-dns-paginas-amarelas-web-dev-dominio-subdominios-historia-do-request
 ---
 
 Depois que se clicar num link ou digitar o endereço manualmente no seu navegador e se aperta "enter", acontece uma coisa mágica chamada request. Mas especificamente do tipo GET. Muitos devs juniores (e sandy 🙃) já sabem disso,mas não entendem o processo por completo. Principalmente no mercado atual que cobra uma formação na velocidade da luz em que a gente só aprende "o que interessa", priorizando *comos* em detrimento de *porquês*. Então vem comigo que **aqui tem informação!!**
