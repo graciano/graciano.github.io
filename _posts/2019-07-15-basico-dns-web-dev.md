@@ -2,7 +2,7 @@
 layout: post
 title: >-
   Domínios e DNS: o mínimo que um web dev precisa saber
-date: 2019-07-16 10:20:00 -0300
+date: 2019-07-15 18:43:00 -0300
 description: >-
   Básico sobre domínios, subdomínios e a história de um request: o que acontece quando se digita uma URL e depois aperta enter ⤵
 image: assets/img/dns/yellow-pages.jpg
