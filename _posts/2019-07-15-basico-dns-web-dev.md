@@ -25,9 +25,9 @@ Um domínio é como se fosse um reino, um território. Podem existir mais de um 
 
 ***
 
-No caso da weblocalidade deste texto, há uns meses comprei o domínio [graciano.me] no GoDaddy, que tem seus próprios servidores DNS, ou seja, sua própria lista telefônica. Servidores no plural porque geralmente se usam duas ou mais listas públicas com redundância para caso de uma cair. Afinal, não é literalmente uma lista física e ao ser consultado, um servidor pode estar fora do ar 😉. Para quem já viu por aí, normalmente se usa a nomenclatura ns1, ns2, ns3...
+No caso da weblocalidade deste texto, há uns meses comprei o domínio [graciano.me](graciano.me) no GoDaddy, que tem seus próprios servidores DNS, ou seja, sua própria lista telefônica. Servidores no plural porque geralmente se usam duas ou mais listas públicas com redundância para caso de uma cair. Afinal, não é literalmente uma lista física e ao ser consultado, um servidor pode estar fora do ar 😉. Para quem já viu por aí, normalmente se usa a nomenclatura ns1, ns2, ns3...
 
-A netlify usa no meu site um registro CNAME para redirecionar para um outro domínio da máquina da amazon. E também para redirecionar o subdomínio www.graciano.me para o endereço graciano.me, que é o caso deste site.
+A netlify usa no meu site um registro CNAME para redirecionar para um outro domínio da máquina da amazon. E também para redirecionar o subdomínio www.graciano.me para o endereço [graciano.me](graciano.me), que é o caso deste site.
 
 ## A história do request
 
