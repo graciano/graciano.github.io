@@ -27,6 +27,8 @@ Um domínio é como se fosse um reino, um território. Podem existir mais de um 
 
 No caso da weblocalidade deste texto, há uns meses comprei o domínio [graciano.me] no GoDaddy, que tem seus próprios servidores DNS, ou seja, sua própria lista telefônica. Servidores no plural porque geralmente se usam duas ou mais listas públicas com redundância para caso de uma cair. Afinal, não é literalmente uma lista física e ao ser consultado, um servidor pode estar fora do ar 😉. Para quem já viu por aí, normalmente se usa a nomenclatura ns1, ns2, ns3...
 
+A netlify usa no meu site um registro CNAME para redirecionar para um outro domínio da máquina da amazon. E também para redirecionar o subdomínio www.graciano.me para o endereço graciano.me, que é o caso deste site.
+
 ## A história do request
 
 A conclusão é que quando se digita "graciano.me/qualquer-coisa" no browser, há uma procura na lista telefônica do endereço físico atribuído a "graciano.me", que é um IP. Na prática, como eu uso a [netlify](https://www.netlify.com/), o site está "na nuvem", então corresponde a uma outra URL com domínio da ferramenta EC2 da Amazon. Porém, como muito sabiamente se diz por aí, a nuvem é uma abstração, que no *fim das contas* é um computador físico com um IP em algum lugar. E quem faz as "contas" para chegar no endereço final é um algoritmo espertinho chamado DNS Resolver, traduzindo porcamente seria o "resolvedor" de DNS. Com isso, finalmente o request GET chega num computador em algum lugar, que faz o que os devs juniores e sandys do mundo já estão acostumados a trabalhar.
