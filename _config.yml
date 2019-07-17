@@ -55,6 +55,7 @@ assets:
     - "*.jpg"
     - "*.woff2"
     - "*.otf"
+    - "assets/icon/*"
 
   autoprefixer:
     browsers: ["last 2 versions","> 5%"]
