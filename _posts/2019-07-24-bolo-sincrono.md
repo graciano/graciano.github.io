@@ -4,9 +4,9 @@ title: O bolo síncrono e o sorvete assíncrono
 date: 2019-07-24 19:06:00 -0300
 description: >-
   Funções Síncronas e Assíncronas explicadas com analogia de receitas de 🍦 doces 🍰
-# image: assets/img/path/da/imagem.jpg
-# altimg: descreva sua img
-# img_full: true
+image: assets/img/bolo-assincrono/bolo.png
+altimg: bolo de morango com glacê branco, foto com efeito 3D da hora
+img_full: true
 permalink: /:categories/:year/:month/:day/🍦-🍰-funcao-sincrona-assincrona-bolo-doces
 ---
 
