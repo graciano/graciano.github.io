@@ -10,7 +10,7 @@ description: >-
 permalink: /:categories/:year/:month/:day/🍦-🍰-funcao-sincrona-assincrona-bolo-doces
 ---
 
-Em Javascript e outras tecnologias que lidam muito com eventos e I/O, se fala muito em síncrono/assíncrono. Neste site, eu já expliquei como trabalhar com [promessas]({% 2019-05-15-promessas-em-javascript %}), que é a API nativa específica do Javascript para isso. Aqui será uma explicação dos conceitos, mais introdutória.
+Em Javascript e outras tecnologias que lidam muito com eventos e I/O, se fala muito em síncrono/assíncrono. Neste site, eu já expliquei como trabalhar com [promessas]({{ site.baseurl }}{% post_url 2019-05-15-promessas-em-javascript %}), que é a API nativa específica do Javascript para isso. Aqui será uma explicação dos conceitos, mais introdutória.
 
 Antes de entender esses conceitos é necessário refletir sobre o que é um algoritmo propriamente dito, e como o conceito de algoritmo se relaciona com sincronia. Um algoritmo não passa de uma sequência de passos para um computador executar. Uma receita de bolo. Ou de sorvete.
 
@@ -36,4 +36,4 @@ Minha mãe me ensinou uma receita de sorvete caseiro que faz sucesso com meus am
 
 No passo 2 há uma palavrinha mágica: *enquanto*. Isso significa que necessariamente, para o sucesso do algoritmo, um passo precisa ser executado ao mesmo tempo de outro. A isso se dá o nome de concorrência, e é um assunto bem complicado, então vou deixar de lado por enquanto. Há um outro aspecto possível desta receita: Os cremes 1 e 2 podem ser feitos ao mesmo tempo por pessoas diferentes. Quase todo natal eu faço o creme 2 enquanto mamãe bate as claras em neve. É um algoritmo **assíncrono**.
 
-Espero ter ajudado com esta analogia e caso você queira colocar isso em prática com Javascript, dê uma conferida no meu tutorial de [promises]({% 2019-05-15-promessas-em-javascript %}).
+Espero ter ajudado com esta analogia e caso você queira colocar isso em prática com Javascript, dê uma conferida no meu tutorial de [promises]({{ site.baseurl }}{% post_url 2019-05-15-promessas-em-javascript %}).
