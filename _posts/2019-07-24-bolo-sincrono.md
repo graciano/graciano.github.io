@@ -1,7 +1,7 @@
 ---
 layout: post
 title: O bolo síncrono e o sorvete assíncrono
-date: 2019-07-24 18:20:00 -0300
+date: 2019-07-24 19:06:00 -0300
 description: >-
   Funções Síncronas e Assíncronas explicadas com analogia de receitas de 🍦 doces 🍰
 # image: assets/img/path/da/imagem.jpg
@@ -17,7 +17,7 @@ Antes de entender esses conceitos é necessário refletir sobre o que é um algo
 Exemplo de receita 🍰🍌:
 
  1. Bata no liquidificador os ovos, o açúcar, o óleo e as bananas.
- 2. Passe tudo para uma tigela e bata com fermento e farinha de trigo.
+ 2. Despeje numa tigela e bata com fermento e farinha de trigo.
  3. Asse numa forma previamente untada por 30 minutos.
 
 Para simplificar eu omiti a declaração de variáveis do algoritmo, que seriam os ingredientes e suas quantidades (na verdade é porque eu nunca fiz um bolo de banana 🤷). Na hora de fazer este bolo, cada passo precisa ser executado *necessariamente* após o passo anterior. Mesmo com outras pessoas te ajudando, você não conseguiria fazer o bolo em menos de 30 minutos. Ou, quando meu chefe tenta forçar um prazo impossível, falamos pra ele: *9 pessoas grávidas não dão a luz a um filho em 1 mês*. Dizemos que esta receita de bolo é **síncrona**.
