@@ -5,4 +5,4 @@
 
 See more [here](https://github.com/1995parham/github-do-not-ban-us)
 
-Check my gitlab profile in https://gitlab.com/wtfgraciano
+Migrated this repo to gitlab. Check my profile: https://gitlab.com/wtfgraciano
